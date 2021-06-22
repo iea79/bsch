@@ -1,0 +1,152 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Управление курсами', 'Добавление курса'])
+
+            .lk__head
+                h1.page__title Добавление курса
+
+            .lk__body
+                .lk__content
+                    h2.subtitle Данные стартового экрана
+
+
+                    .form.form_grid
+                        .form__col.form__col_3_4
+                            label.form__label Заголовок курса
+                            input(type="text", placeholder="Введите полное название")
+                        .form__col.form__col_3
+                            label.form__label Стоимость обучения
+                            input(type="text", placeholder="Введите стоимость обучения в рублях")
+                        .form__col.form__col_3
+                            label.form__label Сколько времени нужно на изучение курса
+                            select.select(data-placeholder="Выберите время, нужное на изучение")
+                                option(value="")
+                                option(value="Вариант 1") Вариант 1
+                                option(value="Вариант 2") Вариант 2
+
+                    h3.smalltitle Преподаватели курса
+
+                    .lkGroup
+                        .lkAvatar.lkAvatar_small
+                            .lkAvatar__photo
+                                .lkAvatar__add
+                            .lkAvatar__delete
+                                i.icon_close 
+                                | Удалить
+
+                        .form.form_grid
+                            .form__col.form__col_3
+                                label.form__label Введите ФИО преподавателя
+                                input(type="text", placeholder="Введите категорию")
+                            .form__col.form__col_3
+                                label.form__label Категория курса
+                                input(type="text", placeholder="Введите категорию")
+                        button.btn.btn_add Добавить преподавателя
+
+                    h2.subtitle Темы курса
+
+                    .lkGroup
+                        .form.form_grid
+                            .form__col.form__col_3
+                                label.form__label Введите номер недели
+                                input(type="text", placeholder="Введите номер недели")
+
+                        .lkCourseBlock
+                            h3.smalltitle Блок 1
+
+                            .form.form_grid
+                                .form__col.form__col_2_3
+                                    label.form__label Введите заголовок блока 1
+                                    input(type="text", placeholder="Введите заголовок")
+                                .form__col.form__col_3
+                                    label.form__label Сложность блока 1
+                                    select.select(data-placeholder="выберите сложность")
+                                        option(value="")
+                                        option(value="Вариант 1") Вариант 1
+                                        option(value="Вариант 2") Вариант 2
+                                .form__col.form__col_2_3
+                                    label.form__label Текстовое описание блока 1
+                                    textarea(placeholder="Введите небольшое текстовое описание (не более 300 символов)")
+                                .form__col.form__col_3
+                                    label.form__label Необходимое время на выполнение задание
+                                    select.select(data-placeholder="выберите время на выполнение")
+                                        option(value="")
+                                        option(value="Вариант 1") Вариант 1
+                                        option(value="Вариант 2") Вариант 2
+                                .form__col.form__col_2_3
+                                    label.form__label Материалы урока
+                                    input(type="text", placeholder="Перечислите материалы к уроку, которые нужно просмотреть")
+
+                        button.btn.btn_add Добавить еще один блок
+
+                        .lkCourseMonth
+                            button.btn.btn_add.btn_plus Добавить неделю
+
+
+
+                    h2.subtitle Подробнее о курсе
+
+                    .lkGroup
+                        .form.form_grid
+                            .form__col.form__col_2_3
+                                label.form__label Введите текстовое описание курса
+                                textarea.lg(placeholder="Введите текстовое описание (не более 1 000 символов)")
+
+                    h2.subtitle Партнеры курса
+
+                    .lkGroup
+                        .form.form_grid
+                            .form__col
+                                label.form__label Введите партнера 1
+                                input(type="text", placeholder="Введите имя партнера")
+                            .form__col
+                                label.form__label Введите партнера 2
+                                input(type="text", placeholder="Введите имя партнера")
+                            .form__col
+                                label.form__label Введите партнера 3
+                                input(type="text", placeholder="Введите имя партнера")
+
+                        button.btn.btn_add Добавить еще один блок с партнером
+
+                    h2.subtitle О клиенте
+                    .lkGroup
+                        .form.form_grid
+                            .form__col.form__col_2_3
+                                label.form__label Кто клиент
+                                input(type="text", placeholder="Введите имя партнера")
+
+                    .lkCourseFooter
+                        button.btn.btn_border Предварительный просмотр
+                        button.btn(data-toggle="modal" data-target="#delete-course") Опубликовать
+
+
+    // begin courseOrder
+    .courseOrder.bg_primary(style="background-image: url('img/course-order.jpg')")
+        .container_center
+            .courseOrder__content
+                .courseOrder__left
+                    h2.courseOrder__title Запись на курс
+                    .courseOrder__sub Вы можете записаться и оплатить как физическое или юридическое лицо
+                .courseOrder__action
+                    button.btn.btn_success Для юридических лиц
+                    button.btn.btn_contrast Для физических лиц
+
+
+    // end courseOrder
+    //- // Button trigger modal delete-course
+    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#delete-course") Click to open modal
+    // Begin Modal delete-course
+    .modal.fade.modal-info#delete-course
+        .modal-dialog.modal-dialog_small
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-title Добавление курса
+                .modal-info__text Данный курс обновится после проверки модератором
+                .modal-info__action
+                    button.btn(data-dismiss="modal") Понятно
+    // End modal delete-course

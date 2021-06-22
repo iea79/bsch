@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.5"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="Бизнес-школа"/></a></div>
+        <nav class="header__nav">
+          <div class="navbar__toggle"></div>
+          <ul class="navbar">
+            <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__right">
+          <div class="header__info">
+            <div class="lang">
+              <div class="lang__current">RU</div>
+              <ul class="lang__list">
+                <li><a href="#">RU</a></li>
+                <li><a href="#">EN</a></li>
+              </ul>
+            </div>
+            <div class="user">
+              <div class="user__icons"><i class="icon_search"></i><i class="icon_view"></i><a class="icon_chat" href="">
+                  <div class="counter">3</div></a><a class="icon_bell" href="">
+                  <div class="counter">9</div></a>
+              </div>
+              <div class="user__info">
+                <div class="user__row">
+                  <div class="user__avatar"><img src="img/ava.png" alt=""/></div>
+                  <div class="user__name">Иванов И.И.<i class="icon_caret"></i>
+                    <div class="user__drop">
+                      <div class="user__dropItem"><a href=""><i class="icon_logout"> </i>Выход</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main_content">
+      <div class="lk">
+        <div class="container_center">
+              <div class="breadcrumb">
+                <ul>
+                  <li><a href="/">Главная страница</a></li>
+                  <li><a href="">Личный кабинет</a></li>
+                </ul>
+              </div>
+          <div class="lk__head">
+            <h1 class="page__title">Личный кабинет</h1>
+          </div>
+          <div class="lk__body">
+            <div class="lk__aside">
+              <ul class="lkNav">
+                <li class="lkNav__item"><a class="lkNav__link" href="">Мои данные</a>
+                </li>
+                <li class="lkNav__item"><a class="lkNav__link active" href="">Мои курсы</a>
+                </li>
+                <li class="lkNav__item"><a class="lkNav__link" href="">Мои сертификаты</a>
+                </li>
+                <li class="lkNav__item"><a class="lkNav__link" href="">Оплата и договор</a>
+                </li>
+                <li class="lkNav__item"><a class="lkNav__link" href="">Настройки</a>
+                </li>
+              </ul>
+            </div>
+            <div class="lk__content">
+              <h2 class="subtitle">Курсы в разработке</h2>
+              <!-- begin lkDeveloping-->
+              <div class="lkDeveloping">
+                <div class="lkDeveloping__item">
+                  <div class="lkDeveloping__descr">
+                    <div class="lkDeveloping__tasks">Заданий добавлено: 52/<span>143</span></div>
+                    <div class="lkDeveloping__name">Высший менеджмент</div>
+                    <div class="lkDeveloping__deadline">Необходимо сдать до: 22.04.2021 </div>
+                    <div class="lkDeveloping__link"><a href="">Перейти к курсу <i class="icon_arrow"></i></a></div>
+                  </div>
+                  <div class="lkDeveloping__status">
+                    <div class="lkDeveloping__bage success">Принято</div>
+                  </div>
+                </div>
+                <div class="lkDeveloping__item">
+                  <div class="lkDeveloping__descr">
+                    <div class="lkDeveloping__tasks">Заданий добавлено: 52/<span>143</span></div>
+                    <div class="lkDeveloping__name">Астрология</div>
+                    <div class="lkDeveloping__deadline">Необходимо сдать до: 22.04.2021 </div>
+                    <div class="lkDeveloping__link"><a href="">Перейти к курсу <i class="icon_arrow"></i></a></div>
+                  </div>
+                  <div class="lkDeveloping__status">
+                    <div class="lkDeveloping__bage primary">На модерации</div>
+                  </div>
+                </div>
+                <div class="lkDeveloping__item">
+                  <div class="lkDeveloping__descr">
+                    <div class="lkDeveloping__tasks">Заданий добавлено: 52/<span>143</span></div>
+                    <div class="lkDeveloping__name">Высший менеджмент</div>
+                    <div class="lkDeveloping__deadline">Необходимо сдать до: 22.04.2021 </div>
+                    <div class="lkDeveloping__link"><a href="">Перейти к курсу <i class="icon_arrow"></i></a></div>
+                  </div>
+                  <div class="lkDeveloping__status">
+                    <div class="lkDeveloping__bage danger">Просрочено</div>
+                  </div>
+                </div>
+                <div class="lkDeveloping__item">
+                  <div class="lkDeveloping__descr">
+                    <div class="lkDeveloping__tasks">Заданий добавлено: 52/<span>143</span></div>
+                    <div class="lkDeveloping__name">Астрология</div>
+                    <div class="lkDeveloping__deadline">Необходимо сдать до: 22.04.2021 </div>
+                    <div class="lkDeveloping__link"><a href="">Перейти к курсу <i class="icon_arrow"></i></a></div>
+                  </div>
+                  <div class="lkDeveloping__status">
+                    <div class="lkDeveloping__bage">Отклонено<i class="icon_info"></i></div>
+                  </div>
+                </div>
+                <div class="lkDeveloping__item">
+                  <div class="lkDeveloping__descr">
+                    <div class="lkDeveloping__tasks">Заданий добавлено: 52/<span>143</span></div>
+                    <div class="lkDeveloping__name">Высший менеджмент</div>
+                    <div class="lkDeveloping__deadline">Необходимо сдать до: 22.04.2021 </div>
+                    <div class="lkDeveloping__link"><a href="">Перейти к курсу <i class="icon_arrow"></i></a></div>
+                  </div>
+                  <div class="lkDeveloping__status">
+                    <div class="lkDeveloping__bage">Отклонено<i class="icon_info"></i></div>
+                  </div>
+                </div>
+              </div>
+              <!-- end lkDeveloping-->
+              <h2 class="subtitle">Мое расписание</h2>
+              <div class="scheduleBox"><img src="img/calendar.jpg" alt=""/></div>
+              <h2 class="subtitle">Мои популярные курсы</h2>
+              <!-- begin lkPopular-->
+              <div class="lkPopular">
+                <div class="lkPopular__item">
+                  <div class="lkPopular__name">Высший менеджмент</div>
+                  <div class="lkPopular__stats">
+                    <div class="smallBox__rate">
+                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                    </div>
+                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
+                  </div>
+                </div>
+                <div class="lkPopular__item">
+                  <div class="lkPopular__name">Название курса на котором я преподаю</div>
+                  <div class="lkPopular__stats">
+                    <div class="smallBox__rate">
+                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                    </div>
+                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
+                  </div>
+                </div>
+                <div class="lkPopular__item">
+                  <div class="lkPopular__name">Физика и геометрия. Полный курс</div>
+                  <div class="lkPopular__stats">
+                    <div class="smallBox__rate">
+                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                    </div>
+                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
+                  </div>
+                </div>
+                <div class="lkPopular__item">
+                  <div class="lkPopular__name">Астрономия и астрология</div>
+                  <div class="lkPopular__stats">
+                    <div class="smallBox__rate">
+                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                    </div>
+                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
+                  </div>
+                </div>
+                <div class="lkPopular__item">
+                  <div class="lkPopular__name">Гадание на картах Таро</div>
+                  <div class="lkPopular__stats">
+                    <div class="smallBox__rate">
+                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                    </div>
+                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
+                  </div>
+                </div>
+                <div class="lkPopular__item">
+                  <div class="lkPopular__name">Дихотомия добра и зла</div>
+                  <div class="lkPopular__stats">
+                    <div class="smallBox__rate">
+                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                    </div>
+                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
+                  </div>
+                </div>
+              </div>
+              <div class="lk__more"><a class="btn" href="#">все курсы</a></div>
+              <!-- end lkPopular-->
+              <h2 class="subtitle">Активность слушателей на курсах</h2>
+              <div class="chartBox"><img src="img/chart.jpg" alt=""/></div>
+              <h2 class="subtitle">Среднее выполнение заданий слушателями</h2>
+              <!-- begin lkAverage-->
+              <div class="lkAverage">
+                <div class="lkAverage__item primary">
+                  <div class="lkAverage__num">15</div>
+                  <div class="lkAverage__label">Сейчас в моих <br>курсах </div>
+                </div>
+                <div class="lkAverage__item danger">
+                  <div class="lkAverage__num">200</div>
+                  <div class="lkAverage__label">Всего пользователей <br>в моих курсах</div>
+                </div>
+                <div class="lkAverage__item warning">
+                  <div class="lkAverage__num">43</div>
+                  <div class="lkAverage__label">Пользователи, <br>завершившие мои курсы</div>
+                </div>
+              </div>
+              <!-- end lkAverage-->
+              <h2 class="subtitle">Последние непроверенные работы</h2>
+              <!-- begin lkForCheck-->
+              <div class="lkForCheck">
+                <div class="lkForCheck__item">
+                  <div class="lkForCheck__name">Высший менеджмент</div>
+                  <div class="lkForCheck__props">
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Тема:  </div>
+                      <div class="lkForCheck__data">Как общаться с клиентами</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Было сдано: </div>
+                      <div class="lkForCheck__data">05.04.2021 в 17:30</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Студент: </div>
+                      <div class="lkForCheck__data">Иванов Ивана Ивановича</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Статус: </div>
+                      <div class="lkForCheck__data danger">Не проверено</div>
+                    </div>
+                  </div>
+                  <div class="lkForCheck__check"><a class="btn btn_small" href="#">Проверить</a></div>
+                </div>
+                <div class="lkForCheck__item">
+                  <div class="lkForCheck__name">Высший менеджмент</div>
+                  <div class="lkForCheck__props">
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Тема:  </div>
+                      <div class="lkForCheck__data">Как общаться с клиентами</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Было сдано: </div>
+                      <div class="lkForCheck__data">05.04.2021 в 17:30</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Студент: </div>
+                      <div class="lkForCheck__data">Иванов Ивана Ивановича</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Статус: </div>
+                      <div class="lkForCheck__data danger">Не проверено</div>
+                    </div>
+                  </div>
+                  <div class="lkForCheck__check"><a class="btn btn_small" href="#">Проверить</a></div>
+                </div>
+                <div class="lkForCheck__item">
+                  <div class="lkForCheck__name">Высший менеджмент</div>
+                  <div class="lkForCheck__props">
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Тема:  </div>
+                      <div class="lkForCheck__data">Как общаться с клиентами</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Было сдано: </div>
+                      <div class="lkForCheck__data">05.04.2021 в 17:30</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Студент: </div>
+                      <div class="lkForCheck__data">Иванов Ивана Ивановича</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Статус: </div>
+                      <div class="lkForCheck__data danger">Не проверено</div>
+                    </div>
+                  </div>
+                  <div class="lkForCheck__check"><a class="btn btn_small" href="#">Проверить</a></div>
+                </div>
+                <div class="lkForCheck__item">
+                  <div class="lkForCheck__name">Высший менеджмент</div>
+                  <div class="lkForCheck__props">
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Тема:  </div>
+                      <div class="lkForCheck__data">Как общаться с клиентами</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Было сдано: </div>
+                      <div class="lkForCheck__data">05.04.2021 в 17:30</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Студент: </div>
+                      <div class="lkForCheck__data">Иванов Ивана Ивановича</div>
+                    </div>
+                    <div class="lkForCheck__prop">
+                      <div class="lkForCheck__label">Статус: </div>
+                      <div class="lkForCheck__data danger">Не проверено</div>
+                    </div>
+                  </div>
+                  <div class="lkForCheck__check"><a class="btn btn_small" href="#">Проверить</a></div>
+                </div>
+              </div>
+              <div class="lk__more"><a class="btn btn_border" href="#">все работы</a></div>
+              <!-- end lkForCheck-->
+              <h2 class="subtitle">Общая статистика по курсам</h2>
+              <!-- begin lkStats-->
+              <div class="lkStats">
+                <div class="lkStats__item">
+                  <div class="lkStats__body">
+                    <div class="lkStats__num">1516
+                      <div class="lkStats__icon"><i class="icon_user"></i></div>
+                    </div>
+                    <div class="lkStats__text">Общее количество зарегистрированных слушателей</div>
+                  </div>
+                  <div class="lkStats__link"><a href="">Показать полностью<i class="icon_caret"></i></a></div>
+                </div>
+                <div class="lkStats__item">
+                  <div class="lkStats__body">
+                    <div class="lkStats__num">234
+                      <div class="lkStats__icon"><i class="icon_flag"></i></div>
+                    </div>
+                    <div class="lkStats__text">Слушателей дошли до конца курса</div>
+                  </div>
+                  <div class="lkStats__link"><a href="">Показать полностью<i class="icon_caret"></i></a></div>
+                </div>
+                <div class="lkStats__item">
+                  <div class="lkStats__body">
+                    <div class="lkStats__num">112
+                      <div class="lkStats__icon"><i class="icon_eye"></i></div>
+                    </div>
+                    <div class="lkStats__text">Активных слушателей за прошлую неделю</div>
+                  </div>
+                  <div class="lkStats__link"><a href="">Показать полностью<i class="icon_caret"></i></a></div>
+                </div>
+                <div class="lkStats__item">
+                  <div class="lkStats__body">
+                    <div class="lkStats__num">12
+                      <div class="lkStats__icon"><i class="icon_trophy"></i></div>
+                    </div>
+                    <div class="lkStats__text">Курсов полностью завершено</div>
+                  </div>
+                  <div class="lkStats__link"><a href="">Показать полностью<i class="icon_caret"></i></a></div>
+                </div>
+              </div>
+              <!-- end lkStats-->
+              <div class="subtitle__inline">
+                <h2 class="subtitle">Полный отчет по курсам</h2><a class="subtitle__link" href="">Загрузить полный отчет</a>
+              </div>
+              <!-- begin thSort-->
+              <div class="thSort">
+                <div class="thSort__label">Показывать</div>
+                <div class="thSort__group">
+                  <div class="thSort__item">
+                    <select class="select" data-placeholder="Все курсы">
+                      <option value=""> </option>
+                      <option value="Курс 1">Курс 1</option>
+                      <option value="Курс 2">Курс 2</option>
+                      <option value="Курс 3">Курс 3</option>
+                    </select>
+                  </div>
+                  <div class="thSort__item">
+                    <input class="form__date" type="text" placeholder="Дата начала курса" onfocus="(this.type='date')" onblur="(this.type='text')"/>
+                  </div>
+                  <div class="thSort__item">
+                    <input type="text" placeholder="Поиск по электронной почте"/>
+                  </div>
+                </div>
+                <div class="thSort__action">
+                  <button class="btn btn_border" type="button">Применить</button>
+                </div>
+              </div>
+              <!-- end thSort-->
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>E-mail</th>
+                    <th>Название курса</th>
+                    <th>Цена курса</th>
+                    <th>Дата начала</th>
+                    <th>Дата окончания</th>
+                    <th>Прогресс</th>
+                    <th>Срок истекает</th>
+                    <th>Статус</th>
+                    <th>активность</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="">pochta@pochta.ru</a></td>
+                    <td class="table__name">Основы Веб-дизайна для чайников</td>
+                    <td>159 000 руб.</td>
+                    <td>12.02.2021</td>
+                    <td>01.12.2021</td>
+                    <td>12%</td>
+                    <td>12.04.2021</td>
+                    <td class="success">Успешно</td>
+                    <td>01.03.2021</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">pochta@pochta.ru</a></td>
+                    <td class="table__name">Основы Веб-дизайна для чайников</td>
+                    <td>159 000 руб.</td>
+                    <td>12.02.2021</td>
+                    <td>01.12.2021</td>
+                    <td>12%</td>
+                    <td>12.04.2021</td>
+                    <td class="danger">Успешно</td>
+                    <td>01.03.2021</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">pochta@pochta.ru</a></td>
+                    <td class="table__name">Основы Веб-дизайна для чайников</td>
+                    <td>159 000 руб.</td>
+                    <td>12.02.2021</td>
+                    <td>01.12.2021</td>
+                    <td>12%</td>
+                    <td>12.04.2021</td>
+                    <td class="success">Успешно</td>
+                    <td>01.03.2021</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">pochta@pochta.ru</a></td>
+                    <td class="table__name">Основы Веб-дизайна для чайников</td>
+                    <td>159 000 руб.</td>
+                    <td>12.02.2021</td>
+                    <td>01.12.2021</td>
+                    <td>12%</td>
+                    <td>12.04.2021</td>
+                    <td class="success">Успешно</td>
+                    <td>01.03.2021</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">pochta@pochta.ru</a></td>
+                    <td class="table__name">Основы Веб-дизайна для чайников</td>
+                    <td>159 000 руб.</td>
+                    <td>12.02.2021</td>
+                    <td>01.12.2021</td>
+                    <td>12%</td>
+                    <td>12.04.2021</td>
+                    <td class="danger">Успешно</td>
+                    <td>01.03.2021</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">pochta@pochta.ru</a></td>
+                    <td class="table__name">Основы Веб-дизайна для чайников</td>
+                    <td>159 000 руб.</td>
+                    <td>12.02.2021</td>
+                    <td>01.12.2021</td>
+                    <td>12%</td>
+                    <td>12.04.2021</td>
+                    <td class="success">Успешно</td>
+                    <td>01.03.2021</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">pochta@pochta.ru</a></td>
+                    <td class="table__name">Основы Веб-дизайна для чайников</td>
+                    <td>159 000 руб.</td>
+                    <td>12.02.2021</td>
+                    <td>01.12.2021</td>
+                    <td>12%</td>
+                    <td>12.04.2021</td>
+                    <td class="success">Успешно</td>
+                    <td>01.03.2021</td>
+                  </tr>
+                  <tr>
+                    <td><a href="">pochta@pochta.ru</a></td>
+                    <td class="table__name">Основы Веб-дизайна для чайников</td>
+                    <td>159 000 руб.</td>
+                    <td>12.02.2021</td>
+                    <td>01.12.2021</td>
+                    <td>12%</td>
+                    <td>12.04.2021</td>
+                    <td class="success">Успешно</td>
+                    <td>01.03.2021</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__content">
+          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a>
+        </div>
+      </div>
+      <div class="footer__middle">
+        <div class="footer__content">
+          <div class="footer__nav">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="graduates.html">Выпускники</a></li>
+            </ul>
+          </div>
+          <div class="footer__soc">
+            <div class="footer__label">Мы в соцсетях</div>
+            <div class="soc"><a class="soc__link icon_vk" href="#"></a><a class="soc__link icon_youtube" href="#"></a><a class="soc__link icon_insta" href="#"></a><a class="soc__link icon_watsapp" href="#"></a><a class="soc__link icon_viber" href="#"></a></div>
+          </div>
+          <div class="footer__app">
+            <div class="footer__label">Скачать приложение</div>
+            <div class="apps"><a class="apps__link" href="#"><img src="img/google-play.svg" alt=""/></a><a class="apps__link" href="#"><img src="img/app-store.svg" alt=""/></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__content">
+          <div class="footer__copy">&copy; 2001-2025</div><a class="footer__policy" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Begin Modal login-->
+    <div class="modal fade login" id="login">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Вход в систему</div>
+          </div>
+          <div class="modal-body">
+            <div class="form">
+              <div class="form__row">
+                <input type="text" placeholder="Логин"/>
+              </div>
+              <div class="form__row">
+                <input type="password" placeholder="Пароль"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Войти</button>
+              </div>
+              <div class="form__links"><a href="" data-toggle="modal" data-target="#restore">Не помню пароль</a><span>Нет логина и пароля? <a href="" data-toggle="modal" data-target="#register">Зарегистрироваться</a></span></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="socialAuth">
+              <div class="socialAuth__label"><span>Или войдите с помощью</span></div>
+              <div class="socialAuth__links"><a class="icon_google" href=""> </a><a class="icon_vk" href=""> </a><a class="icon_fb" href=""> </a><a class="icon_sber" href=""> </a><a class="icon_gos" href=""> </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal login-->
+    <!-- Begin Modal restore-->
+    <div class="modal fade restore" id="restore">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Восстановление пароля</div>
+            <p>Введите вашу почту, которую вы указали при регистрации, на нее будет выслан новый пароль для входа.</p>
+          </div>
+          <div class="modal-body">
+            <div class="form">
+              <div class="form__row">
+                <input type="text" placeholder="Введите ваш e-mail"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Выслать пароль</button>
+              </div>
+              <div class="form__links"><span><a href="" data-toggle="modal" data-target="#register">Регистрация </a>| <a href="" data-toggle="modal" data-target="#login">Вход</a></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal restore-->
+    <!-- Begin Modal register-->
+    <div class="modal fade register" id="register">
+      <div class="modal-dialog modal-dialog_lg">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Регистрация</div>
+          </div>
+          <div class="modal-body">
+            <div class="form form_grid">
+              <div class="form__row form__row_full">
+                <label class="form__label">Фамилия</label>
+                <input type="text" placeholder="Введите вашу фамилию"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Ваше имя</label>
+                <input type="text" placeholder="Введите имя"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Ваше отчество</label>
+                <input type="text" placeholder="Введите отчество"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Электронная почта</label>
+                <input type="text" placeholder="Введите ваш e-mail"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Дата рождения</label>
+                <div class="form__date">
+                  <input type="text" placeholder="Выберите дату рождения"/><i class="icon_calendar"></i>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__label">Пол</div>
+                <div class="form__checks">
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r1"/><span>Мужской</span>
+                  </label>
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r1"/><span>Женский</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__label">Гражданство</div>
+                <div class="form__checks">
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r2"/><span>Гражданин РФ</span>
+                  </label>
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r2"/><span>Гражданин другой страны</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Пароль</label>
+                <input type="password" placeholder="Введите пароль"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Повторите пароль</label>
+                <input type="password" placeholder="Введите пароль повторно"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Выслать пароль</button>
+              </div>
+              <div class="form__row form__row_center">
+                <label class="form__check">
+                  <input type="checkbox" checked=""/><span>Даю согласие на <a href="">обработку персональных данных</a></span>
+                </label>
+              </div>
+            </div>
+            <div class="form__links"><span>Уже зарегистрированы? <a href="" data-toggle="modal" data-target="#login">Ввести логин и пароль</a></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal register-->
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/modal.js"></script><script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/function.js?0.5"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Анкета'])
+
+            .lk__head
+                h1.page__title Анкета
+
+            .lk__body
+                .lk__content
+                    h2.subtitle Выберите направление 
+
+                    .lkChecked
+                        each item in ['PHP-разработчик', 'Разработчик интерфейсов', 'Менеджер проектов', 'Менеджер по продажам', 'Frontend-разработчик', 'Дизайнер', 'Python-разработчик', 'Frontend-разработчик', 'Microservice Architecture', 'Highload Architect']
+                            .lkChecked__item
+                                label.lkChecked__label
+                                    input(type="radio" name="dir")
+                                    span.lkChecked__name=item
+
+                    .lkNext
+                        button.btn Подобрать

@@ -1,0 +1,92 @@
+extends layout/layout.pug
+block variables
+    - activePage = 'Программы обучения';
+    - isLogin = true;
+
+block content
+    .container_center
+        +breadcrumb(['Программы обучения'])
+
+        h1.page__title Программы обучения
+
+        .sorting
+            .sorting__label Сортировка
+            .sorting__item
+                select.select(name="" data-placeholder="по категории")
+                    option(value="")
+                    option(value="Вариант 1") Вариант 1
+                    option(value="Вариант 2") Вариант 2
+            .sorting__item
+                select.select(name="" data-placeholder="по популярности")
+                    option(value="")
+                    option(value="Вариант 1") Вариант 1
+                    option(value="Вариант 2") Вариант 2
+            .sorting__item
+                select.select(name="" data-placeholder="по дате добавления")
+                    option(value="")
+                    option(value="Вариант 1") Вариант 1
+                    option(value="Вариант 2") Вариант 2
+
+
+        .coursesList__row
+            each item, i in ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+                .coursesList__item
+                    .coursesList__head
+                        .coursesList__duration
+                            i.icon_clock 
+                            | 18 месяцев
+                        .coursesList__complexity
+                            | Сложность
+                            .coursesList__progress
+                                .progressCol
+                                    if i === 5
+                                        each item in ['success', 'success', 'success', 'success', 'success', '', '', '', '', '']
+                                            .progressCol__item(class=item)
+                                    else if i === 3
+                                        each item in ['warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', '', '']
+                                            .progressCol__item(class=item)
+                                    else
+                                        each item in ['danger', 'danger', '', '', '', '', '', '', '', '']
+                                            .progressCol__item(class=item)
+
+                    if i === 1
+                        .coursesList__name Стратегический менеджмент в контексте управления государством
+                    else
+                        .coursesList__name Стратегический менеджмент
+                    .coursesList__middle
+                        .coursesList__rate
+                            .rating
+                                i.icon_star.active 
+                                i.icon_star.active 
+                                i.icon_star.active 
+                                i.icon_star 
+                                i.icon_star 
+                            | (3.2)
+                        .coursesList__price 12 000 рублей
+                    if i === 1
+                        .coursesList__description Стратегия определяет направления и ориентиры. <br>Вы определяете ориентиры и направления?
+                    else
+                        .coursesList__description Стратегия определяет направления и ориентиры. <br>Вы определяете ориентиры и направления? <br>Тогда этот курс для Вас.
+                    .coursesList__action
+                        button.btn.btn_small(type="button") Записаться
+
+        // begin pagination
+        ul.pagination
+            li.prev
+                a(href="") 
+            li.current
+                a(href="") 1
+            li
+                a(href="") 2
+            li
+                a(href="") 3
+            li
+                a(href="") 4
+            li.dotts
+                a(href="") ...
+            li
+                a(href="") 9
+            li.next
+                a(href="") 
+
+        // end pagination

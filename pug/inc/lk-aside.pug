@@ -1,0 +1,23 @@
+.lk__aside
+    ul.lkNav
+        each item, i in [{name: 'Мои данные', href: ''},{name: 'Мои курсы', href: ''},{name: 'Мои сертификаты', href: ''},{name: 'Оплата и договор', href: ''},{name: 'Настройки', href: ''}]
+            li.lkNav__item
+                if i === 1
+                    a.lkNav__link.active(href=item.href)=item.name
+                else
+                    a.lkNav__link(href=item.href)=item.name
+
+    if st
+        // begin prmoSlider
+        .prmoSlider
+            each item in ['', '', '']
+                .prmoSlider__item
+                    .prmoSlider__img
+                        img(src="img/promo.jpg", alt="")
+                    .prmoSlider__body
+                        .prmoSlider__title Зарабатывай на обучении
+                        .prmoSlider__text Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас.
+                        .prmoSlider__action
+                            a.btn.btn_small(href="#") Подробнее
+
+        // end prmoSlider

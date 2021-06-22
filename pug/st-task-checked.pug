@@ -1,0 +1,112 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    //- - st = true;
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Мои курсы', 'Стратегический менеджмент', 'Первое задание по менеджменту'])
+
+            .lk__head
+                h1.page__title Первое задание по менеджменту
+
+            .lk__body
+                .task
+                    .task__head
+                        // .task__status.primary на проверке
+                        // .task__status Не выполнено
+                        // .task__status.danger Просрочено
+                        .task__status.success
+                            i.icon_checked 
+                            | Проверено
+
+                        .task__time
+                            i.icon_clock 
+                            | Примерное время выполнения: 20 минут
+
+                    // begin task__body
+                    .task__body
+                        .task__content
+                            .task__title Текст задания
+                            .task__text
+                                p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+                                p Так же доступно по ссылке: 
+                                    | 
+                                    a(href="") www.loom.ru/123_89/@sph.kx
+                        .task__aside
+                            .taskLinks
+                                .taskLinks__title Файлы к заданию
+                                .taskLinks__list
+                                    a(href="" download)
+                                        i.taskLinks__icon
+                                            img(src="img/pdf.svg", alt="") 
+                                        span Рабочие материалы.pdf
+                                    a(href="" download)
+                                        i.taskLinks__icon
+                                            img(src="img/word.svg", alt="") 
+                                        span Образец оригинального заявление.doc
+                                    a(href="" download)
+                                        i.taskLinks__icon
+                                            img(src="img/excel.svg", alt="") 
+                                        span Таблица с данными.exсel
+                                    a(href="" download)
+                                        i.taskLinks__icon
+                                            img(src="img/ppt.svg", alt="") 
+                                        span Презентация финальная.ppt
+                                    a(href="www.tik-tok.com", target="_blank")
+                                        span www.tik-tok.com
+
+                    // end task__body
+
+                    // begin taskAnswer
+                    .taskAnswer
+                        .task__body
+                            .task__content
+                                .task__title Ваш ответ
+                                .task__text
+                                    p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+                                    p Так же доступно по ссылке: 
+                                        | 
+                                        a(href="") www.loom.ru/123_89/@sph.kx
+                            .task__aside
+                                .taskLinks
+                                    .taskLinks__title Прикрепленные к ответу файлы
+                                    .taskLinks__list
+                                        a(href="" download)
+                                            i.taskLinks__icon
+                                                img(src="img/word.svg", alt="") 
+                                            span Образец оригинального заявление.doc
+                                        a(href="" download)
+                                            i.taskLinks__icon
+                                                img(src="img/excel.svg", alt="") 
+                                            span Таблица с данными.exсel
+                                        a(href="" download)
+                                            i.taskLinks__icon
+                                                img(src="img/ppt.svg", alt="") 
+                                            span Презентация финальная.ppt
+                                        a(href="www.tik-tok.com", target="_blank")
+                                            span www.tik-tok.com
+
+
+                    // end taskAnswer
+
+                    // begin taskComment
+                    .taskComment
+                        .taskComment__title Комментарий преподавателя
+                            .taskComment__bage
+                                .taskComment__ball 90 
+                                | баллов
+                        .taskComment__body
+                            .taskComment__head
+                                .taskComment__photo
+                                    img(src="img/ava.png", alt="")
+                                .taskComment__user
+                                    .taskComment__name Иванов Иван
+                                    .taskComment__prof Преподаватель высшей категории
+                            .taskComment__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.
+
+                    // end taskComment
+
+                    .lkNext
+                        a.btn(href="#") следующее задание

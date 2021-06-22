@@ -1,0 +1,74 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Аналитика'])
+
+            .lk__head
+                h1.page__title Аналитика
+
+            .lk__body
+                include inc/lk-aside.pug
+                .lk__content
+                    h2.subtitle Интерес к моим курсам
+                    table.table
+                        thead
+                            tr
+                                th Самый популярный курс
+                                th Интерес к моим курсам 
+                                th Количество слушателей на моих курсах
+                        tbody
+                            tr
+                                td
+                                    a(href="") Стратегический менеджмент
+                                td 10%
+                                td 10 000
+                            tr
+                                td
+                                    a(href="") Система управления аэропортом
+                                td 10%
+                                td 10 000
+                            tr
+                                td
+                                    a(href="") Менеджмент в финансовой организации
+                                td 10%
+                                td 10 000
+                            tr
+                                td
+                                    a(href="") Управление персоналом
+                                td 10%
+                                td 10 000
+
+
+                    h2.subtitle Статистика по курсам
+
+                    table.table
+                        thead
+                            tr
+                                th Наименование курса
+                                th Записались на курс
+                                th Завершили обучение
+                        tbody
+                            tr
+                                td
+                                    a(href="") Стратегический менеджмент
+                                td 1 000
+                                td 100% (1 000 человек)
+                            tr
+                                td
+                                    a(href="") Система управления аэропортом
+                                td 700
+                                td 50% (350 человек)
+                            tr
+                                td
+                                    a(href="") Менеджмент в финансовой организации
+                                td 800
+                                td 25% (200 человек)
+                            tr
+                                td
+                                    a(href="") Управление персоналом
+                                td 15 000
+                                td 33% (5 000 человек)

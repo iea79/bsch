@@ -1,0 +1,41 @@
+// Breadcrumb ==================================================================
+
+.breadcrumb {
+	margin: 35px 0 49px;
+	padding: 0;
+	color: #838383;
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: baseline;
+
+		&:not(:first-child) {
+			&:before {
+				content: '•';
+				display: inline-block;
+				margin: 0 5px;
+			}
+		}
+
+		&:last-child {
+			a {
+				cursor: default;
+				text-decoration: none;
+			}
+		}
+
+		a {
+			font-size: 13px;
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}

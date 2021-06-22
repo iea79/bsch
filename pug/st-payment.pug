@@ -1,0 +1,104 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Оплата и договор'])
+
+            .lk__head
+                h1.page__title Оплата и договор
+                button.btn Подобрать курсы
+
+            .lk__body
+                include inc/lk-aside.pug
+                .lk__content
+                    h2.subtitle Квитанции об оплате
+
+                    // begin lkReceipts
+                    .lkReceipts
+                        each item in [{name: 'Квитанция об оплате № 123 4545 У', summ: '11 000', payed: 'Не оплачено', link: 'Оплатить'}, {name: 'Квитанция об оплате № 123 4555', summ: '14 000', payed: 'Оплачено', link: 'Подробности'}, {name: 'Квитанция об оплате № 454 544', summ: '21 000', payed: 'Не оплачено', link: 'Оплатить'}]
+                            .lkReceipts__item
+                                .lkReceipts__head=item.name
+                                .lkReceipts__body
+                                    .lkReceipts__list
+                                        dl
+                                            dt Сумма: 
+                                            dd=item.summ + " рублей"
+                                        dl
+                                            dt Статус: 
+                                            if item.payed === "Оплачено"
+                                                dd.success=item.payed
+                                            else
+                                                dd.danger=item.payed
+
+                                    .lkReceipts__link
+                                        a(href="")=item.link
+
+                    // end lkReceipts
+
+                    // begin lkDownload
+                    .lkDownload
+                        a(href="" download)
+                            i.icon_arrowlg 
+                            | Получить закрывающие документы
+                        a(href="" download)
+                            i.icon_arrowlg 
+                            | Получить договор об обучении
+
+                    // end lkDownload                    
+
+                    h2.subtitle Мое обучение оплачивает организация
+
+                    .form.form_grid.form_bb
+                        .form__col
+                            label.form__label Начните вводить ИНН организации
+                            input(type="text", placeholder="Введите ИНН")
+                        .form__col
+                            label.form__label Полное наименование организации
+                            input(type="text", placeholder="Введите наименование организации")
+                        .form__col
+                            label.form__label Номер расчетного счета
+                            input(type="text", placeholder="Введите номер расчетного счета")
+                        .form__col
+                            label.form__label Номер кор. счета
+                            input(type="text", placeholder="Введите номер кор. счета")
+                        .form__col
+                            label.form__label Номер телефона
+                            input(type="tel", placeholder="Телефонный номер")
+                        .form__col
+                            label.form__label Адрес компании
+                            input(type="text", placeholder="Введите фактический адрес компании")
+                        .form__col
+                            label.form__label КПП
+                            input(type="text", placeholder="введите КПП")
+                        .form__col
+                            label.form__label БИК
+                            input(type="text", placeholder="Введите БИК")
+                        .form__col
+                            label.form__label Электронная почта
+                            input(type="text", placeholder="введите e-mail")
+                        .form__action
+                            button.btn(type="submit") Сохранить
+
+                    h2.subtitle Ранее прикрепленные организации
+
+                    // begin lkOrganization
+                    .lkOrganization
+                        each item in ['ИП Иванов', 'ИП СеверстальМорсгорстрой', 'ТОО НефтегазСтрой']
+                            .lkOrganization__item
+                                .lkOrganization__head
+                                    .lkOrganization__name=item
+                                    i.icon_trash
+                                .lkOrganization__list
+                                    ul
+                                        li г. Москва ул.Новая д.14
+                                        li 04	45	25	225
+                                        li 123 211 5577
+                                        li ОГРН: 315125400014444 от 19.04.2017
+                                        li ИНН / КПП 624242312424
+                                .lkOrganization__more
+                                    a(href="" data-hide="Показать полностью" data-show="свернуть") Показать полностью
+
+                    // end lkOrganization

@@ -1,0 +1,111 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    //- - st = true;
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Мои данные'])
+
+            .lk__head
+                h1.page__title Мои данные
+                button.btn Подобрать курсы
+
+            .lk__body
+                include inc/lk-aside.pug
+                .lk__content
+                    h2.subtitle Основные данные
+
+                    .lkAlert.lkAlert_primary
+                        .lkAlert__icon
+                            i.icon_info
+                        .lkAlert__text
+                            b Ваш профиль заполнен на 50%. 
+                            | 
+                            | Для получения документа об образовании заполните дополнительную информацию
+                        .lkAlert__close
+                            i.icon_close
+
+
+                    .lkAvatar
+                        .lkAvatar__photo
+                            img(src="img/ava-lk.png", alt="")
+                            .lkAvatar__add
+                        .lkAvatar__delete
+                            i.icon_close 
+                            | Удалить
+
+                    .form.form_grid
+                        .form__col
+                            label.form__label Ваше имя
+                            input(type="text", placeholder="Введите имя")
+                        .form__col
+                            label.form__label Фамилия
+                            input(type="text", placeholder="Введите фамилию")
+                        .form__col
+                            label.form__label Ваше отчество
+                            input(type="text", placeholder="Введите отчество")
+                        .form__col
+                            label.form__label Электронная почта
+                            input(type="text", placeholder="Введите ваш e-mail")
+
+                    h2.subtitle Дополнительные данные
+
+                    .form.form_grid
+                        .form__col.form__col_3
+                            label.form__label Серия
+                            input(type="text", placeholder="Введите серию пасспорта")
+                        .form__col.form__col_3
+                            label.form__label Номер
+                            input(type="text", placeholder="номер в формате N*****")
+                        .form__col.form__col_3
+                            label.form__label Дата получения
+                            input(type="text", placeholder="Введите дату")
+                        .form__col.form__col_3
+                            label.form__label Код подразделения
+                            input(type="text", placeholder="Введите код")
+                        .form__col.form__col_2_3
+                            label.form__label Кем выдан
+                            input(type="text", placeholder="к примеру: мимнистерство юстиции РФ")
+                    .form__save
+                        button.btn(type="submit") Сохранить
+                        label.form__check
+                            input(type="checkbox" checked) 
+                            span Даю согласие на 
+                                | 
+                                a(href="") обработку персональных данных
+
+                    h2.subtitle Безопасность
+
+                    .smalltitle Смена пароля
+
+                    .form.form_grid
+                        .form__col.form__col_3
+                            label.form__label Старый пароль
+                            input(type="password", placeholder="Введите старый пароль")
+                        .form__col.form__col_3
+                            label.form__label Придумайте новый пароль
+                            input(type="password", placeholder="Введите новый пароль")
+                        .form__col.form__col_3
+                            label.form__label Повторите новый пароль
+                            input(type="password", placeholder="новый пароль повторно")
+
+                    .form__save
+                        button.btn(type="submit") Обновить пароль
+
+                    .smalltitle Смена e-mail
+
+                    .form.form_grid
+                        .form__col.form__col_3
+                            label.form__label Старый email
+                            input(type="text", placeholder="Введите Старый email")
+                        .form__col.form__col_3
+                            label.form__label Введите новый email
+                            input(type="text", placeholder="Введите новый email")
+                        .form__col.form__col_3
+                            label.form__label Введите пароль
+                            input(type="password", placeholder="Введите пароль")
+
+                    .form__save
+                        button.btn(type="submit") подтвердить email

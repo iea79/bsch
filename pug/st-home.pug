@@ -1,0 +1,63 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    - st = true;
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет'])
+
+            .lk__head
+                h1.page__title Личный кабинет
+                button.btn Подобрать курсы
+
+            .lk__body
+                include inc/lk-aside.pug
+                .lk__content
+                    h2.subtitle Курсы
+
+                    .lkBox
+                        .lkProgress
+                            each item in [{name: 'Стратегический менеджмент в контексте управления государством', percent: '35%'},{name: 'Стратегический менеджмент', percent: '50%'},{name: 'Стратегический менеджмент', percent: '15%'},{name: 'Стратегический менеджмент в контексте управления государством', percent: '75%'},{name: 'Стратегический менеджмент', percent: '92%'},{name: 'Стратегический менеджмент в контексте управления государством', percent: '60'}]
+                                .lkProgress__item
+                                    .lkProgress__label=item.name
+                                    .lkProgress__line
+                                        span(style="width: "+item.percent+"")
+                                    .lkProgress__percent= item.percent + " пройдено"
+
+                    h2.subtitle Мое расписание
+
+                    .scheduleBox
+                        img(src="img/calendar.jpg", alt="")
+
+
+                    include inc/lkRecomend.pug
+
+
+                    h2.subtitle Личный прогресс
+
+                    // begin progressBar
+                    .progressBar__wrap
+                        .progressBar
+                            .progressBar__line(style="width: 100%; background: #2B89F8")
+                                .progressBar__text(style="color: #FFFFFF") Первый курс 100%
+                        .progressBar
+                            .progressBar__line(style="width: 75%; background: #279F5E")
+                                .progressBar__text(style="color: #FFFFFF") Второй курс 75%
+                        .progressBar
+                            .progressBar__line(style="width: 25%; background: #FFAB48")
+                                .progressBar__text(style="color: #2F2B38") Третий курс 25%
+                        .progressBar
+                            .progressBar__line(style="width: 7%; background: #FF3205")
+                            .progressBar__text(style="color: #2F2B38") первая программа обучения 7%
+                        .progressBar
+                            .progressBar__line(style="width: 35%; background: #D937BF")
+                                .progressBar__text(style="color: #FFFFFF") Вторая программа обучения 35%
+
+                    // end progressBar
+
+                    h2.subtitle Общий прогресс
+
+                    .chartBox
+                        img(src="img/chart.jpg", alt="")

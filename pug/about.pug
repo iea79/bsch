@@ -1,0 +1,229 @@
+extends layout/layout.pug
+block variables
+    - activePage = 'О школе';
+    - isLogin = true;
+
+block content
+    .container_center
+        +breadcrumb(['Вторая страница', 'Третья страница'])
+
+        h1.page__title О нас
+        .page__sub Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+
+    picture.about__pict
+        source(srcset="img/about-top.jpg" media="(max-width: 767px)")
+        img(src="img/about-top.jpg" alt="")
+
+    .container_center
+        h2.subtitle Our history
+        .columns Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+
+        // begin counterGrid
+        .counterGrid
+            each item in [{num: '125 000', label: 'программ'},{num: '10 000', label: 'ежедневный онлайн'},{num: '15 000', label: 'сейчас обучаются'},{num: '8 000', label: 'получили сертификаты'},]
+                .counterGrid__item
+                    .counterGrid__number=item.num 
+                    .counterGrid__label=item.label
+
+        // end counterGrid
+
+        // begin inverseGrid
+        .inverseGrid
+            .inverseGrid__row
+                picture.inverseGrid__pict
+                    source(srcset="img/history-0.jpg" media="(max-width: 767px)")
+                    img(src="img/history-0.jpg" alt="")
+                .inverseGrid__descr
+                    .inverseGrid__name Mission 
+                    .inverseGrid__text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            .inverseGrid__row
+                picture.inverseGrid__pict
+                    source(srcset="img/history-1.jpg" media="(max-width: 767px)")
+                    img(src="img/history-1.jpg" alt="")
+                .inverseGrid__descr
+                    .inverseGrid__name Values
+                    .inverseGrid__text Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+
+        // end inverseGrid
+
+        h2.page__subtitle О школе
+
+        // begin aboutVideo
+        .aboutVideo
+            .aboutVideo__item
+                .video__wrapper.js-youtube#OuOXvavAy1c
+
+            .aboutVideo__item
+                // begin counterGrid
+                .counterGrid.counterGrid_short
+                    each item in [{num: '125 000', label: 'программ'},{num: '10 000', label: 'ежедневный онлайн'},{num: '15 000', label: 'сейчас обучаются'},{num: '8 000', label: 'получили сертификаты'},]
+                        .counterGrid__item
+                            .counterGrid__number=item.num 
+                            .counterGrid__label=item.label
+
+            // end counterGrid
+
+            .aboutVideo__text
+                .columns Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+
+        // end aboutVideo
+
+        .slider__head
+            h2.page__subtitle Руководство
+            .slider__arrows
+                .slick-arrow.slick-prev.leaders__prev
+                .slick-arrow.slick-next.leaders__next
+
+        // begin leaders
+        .leaders
+            each item, i in ['','','','','']
+                .leaders__item
+                    .leaders__img
+                        img(src="img/leaders-"+i+".jpg", alt="")
+                    .leaders__name Иванов Иван Иванович 
+                    .leaders__prof Заместитель генерального директора
+
+
+        // end leaders
+
+        .teachers__wrap
+            .slider__head.teachers__head
+                h2.page__subtitle Спикеры <br>и преподаватели <br>школы
+                .slider__arrows
+                    .slick-arrow.slick-prev.teachers__prev
+                    .slick-arrow.slick-next.teachers__next
+
+            // begin teachers
+            .teachers
+                each item, i in [0,1,2,3,4,0,1,2,3,4]
+                    .teachers__item
+                        .teachers__content
+                            .teachers__img
+                                img(src="img/teachers-"+item+".png", alt="")
+                            .teachers__descr
+                                .teachers__name Иванов Иван Иванович
+                                .teachers__text Достижения, заслуги, регалии, награды государства и прочее важное <br>и не очень
+
+
+        // end teachers
+
+        .slider__head
+            h2.page__subtitle Аккредитации
+            .slider__arrows
+                .slick-arrow.slick-prev.accreditation__prev
+                .slick-arrow.slick-next.accreditation__next
+
+        .page__descr Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+
+        // begin accreditation
+        .accreditation
+            each item, i in ['','','','','']
+                .accreditation__item
+                    .accreditation__img
+                        img(src="img/accreditation-"+i+".jpg", alt="")
+
+        // end accreditation
+
+        .slider__head
+            h2.page__subtitle Рейтинги и награды
+            .slider__arrows
+                .slick-arrow.slick-prev.awards__prev
+                .slick-arrow.slick-next.awards__next
+
+        // begin awards
+        .awards
+            each item, i in ['','','','']
+                .awards__item
+                    .awards__img
+                        img(src="img/awards-"+i+".png", alt="")
+                    .awards__descr
+                        .awards__name Достижение
+                        .awards__text Здесь текстовое описание
+
+
+        // end awards
+
+
+        .slider__head
+            h2.page__subtitle Аккредитации
+            .slider__arrows
+                .slick-arrow.slick-prev.international__prev
+                .slick-arrow.slick-next.international__next
+
+        .page__descr Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+
+
+        // begin international
+        .international
+            each item, i in ['','','','', '', '']
+                .international__item
+                    img(src="img/international-"+i+".png", alt="")
+
+        // end international
+
+        .inlineBox
+            h2.page__subtitle.inlineBox__title Механизм построения <br>индивидуальных <br>траекторий
+            .inlineBox__text
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                p Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+
+    // begin fullwidthGallery
+    .fullwidthGallery
+        each item in [1,2,3,4]
+            .fullwidthGallery__item
+                img(src="img/galley-"+item+".jpg", alt="")
+
+    // end fullwidthGallery
+
+    // begin questionBox
+    .questionBox.bg_primary(style="background-image: url('img/question-box.jpg')")
+        .container_center
+            .questionBox__content
+                .questionBox__left
+                    .questionBox__title Контакты школы
+                    .questionBox__data
+                        p 123123, Дом Гоголя, Никитский бул., 7А
+                        p +8 (900) 000 00 00, +8 (900) 000 00 00
+                        p info@info.ru
+                        p ИНН: 0001231111
+                        p ОГРН: 12345678910123
+                    .questionBox__office
+                        .questionBox__officeImg
+                            img(src="img/office-photo.jpg", alt="")
+                        .questionBox__officeText Наш офис на Никитском бульваре
+                .questionBox__form
+                    .form
+                        .form__title Задайте свой вопрос
+                        .form__grid
+                            .form__col
+                                input(type="text", placeholder="Ваше имя")
+                            .form__col
+                                input(type="text", placeholder="Телефон")
+                            .form__col.form__col_full
+                                textarea(placeholder="Напишите свой вопрос")
+                            .form__col
+                                button.btn.btn_success(type="submit") Отправить
+                            .form__col.form__col_middle
+                                label.form__check
+                                    input(type="checkbox", checked="") 
+                                    span Даю согласие на 
+                                        a(href="") обработку персональных данных
+
+    // end questionBox
+
+    .map#map
+    script(
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4v5N9THMUfeAqGbCXcSSYvf9UnbV5pL8&callback=initMap&libraries=&v=weekly"
+        async
+    )
+
+    script.
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8,
+            });
+        }

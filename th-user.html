@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.5"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="Бизнес-школа"/></a></div>
+        <nav class="header__nav">
+          <div class="navbar__toggle"></div>
+          <ul class="navbar">
+            <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__right">
+          <div class="header__info">
+            <div class="lang">
+              <div class="lang__current">RU</div>
+              <ul class="lang__list">
+                <li><a href="#">RU</a></li>
+                <li><a href="#">EN</a></li>
+              </ul>
+            </div>
+            <div class="user">
+              <div class="user__icons"><i class="icon_search"></i><i class="icon_view"></i><a class="icon_chat" href="">
+                  <div class="counter">3</div></a><a class="icon_bell" href="">
+                  <div class="counter">9</div></a>
+              </div>
+              <div class="user__info">
+                <div class="user__row">
+                  <div class="user__avatar"><img src="img/ava.png" alt=""/></div>
+                  <div class="user__name">Иванов И.И.<i class="icon_caret"></i>
+                    <div class="user__drop">
+                      <div class="user__dropItem"><a href=""><i class="icon_logout"> </i>Выход</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main_content">
+      <div class="lk">
+        <div class="container_center">
+              <div class="breadcrumb">
+                <ul>
+                  <li><a href="/">Главная страница</a></li>
+                  <li><a href="">Личный кабинет</a></li>
+                  <li><a href="">Мои данные</a></li>
+                </ul>
+              </div>
+          <div class="lk__head">
+            <h1 class="page__title">Мои данные</h1>
+          </div>
+          <div class="lk__body">
+            <div class="lk__aside">
+              <ul class="lkNav">
+                <li class="lkNav__item"><a class="lkNav__link" href="">Мои данные</a>
+                </li>
+                <li class="lkNav__item"><a class="lkNav__link active" href="">Мои курсы</a>
+                </li>
+                <li class="lkNav__item"><a class="lkNav__link" href="">Мои сертификаты</a>
+                </li>
+                <li class="lkNav__item"><a class="lkNav__link" href="">Оплата и договор</a>
+                </li>
+                <li class="lkNav__item"><a class="lkNav__link" href="">Настройки</a>
+                </li>
+              </ul>
+            </div>
+            <div class="lk__content">
+              <h2 class="subtitle">Основные данные</h2>
+              <div class="lkAlert lkAlert_primary">
+                <div class="lkAlert__icon"><i class="icon_info"></i></div>
+                <div class="lkAlert__text"><b>Ваш профиль заполнен на 50%. </b> 
+                  Для получения документа об образовании заполните дополнительную информацию
+                </div>
+                <div class="lkAlert__close"><i class="icon_close"></i></div>
+              </div>
+              <div class="lkAvatar">
+                <div class="lkAvatar__photo"><img src="img/ava-lk.png" alt=""/>
+                  <div class="lkAvatar__add"></div>
+                </div>
+                <div class="lkAvatar__delete"><i class="icon_close"> </i>Удалить</div>
+              </div>
+              <div class="form form_grid">
+                <div class="form__col">
+                  <label class="form__label">Ваше имя</label>
+                  <input type="text" placeholder="Введите имя"/>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Фамилия</label>
+                  <input type="text" placeholder="Введите фамилию"/>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Ваше отчество</label>
+                  <input type="text" placeholder="Введите отчество"/>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Электронная почта</label>
+                  <input type="text" placeholder="Введите ваш e-mail"/>
+                </div>
+              </div>
+              <h2 class="subtitle">Образование</h2>
+              <!-- begin lkEducation-->
+              <div class="lkEducation">
+                <div class="lkEducation__item">
+                  <div class="lkEducation__name">Высшее образование</div>
+                  <div class="lkEducation__list">
+                    <div class="lkEducation__props">
+                      <div class="lkEducation__label">Наименование учебного заведения: </div>
+                      <div class="lkEducation__prop">Московская высшая школа социальных и экономических наук</div>
+                    </div>
+                    <div class="lkEducation__props">
+                      <div class="lkEducation__label">Специализация: </div>
+                      <div class="lkEducation__prop">Мировая политика</div>
+                    </div>
+                    <div class="lkEducation__props">
+                      <div class="lkEducation__label">Года обучения: </div>
+                      <div class="lkEducation__prop">2017 - 2021</div>
+                    </div>
+                  </div>
+                  <div class="lkEducation__doc"><img src="img/pdf.svg" alt=""/>Документ об образовании.pdf</div>
+                </div>
+                <div class="lkEducation__item">
+                  <div class="lkEducation__name">Средне-техническое образование</div>
+                  <div class="lkEducation__list">
+                    <div class="lkEducation__props">
+                      <div class="lkEducation__label">Наименование учебного заведения: </div>
+                      <div class="lkEducation__prop">Московская высшая школа социальных и экономических наук</div>
+                    </div>
+                    <div class="lkEducation__props">
+                      <div class="lkEducation__label">Специализация: </div>
+                      <div class="lkEducation__prop">Мировая политика</div>
+                    </div>
+                    <div class="lkEducation__props">
+                      <div class="lkEducation__label">Года обучения: </div>
+                      <div class="lkEducation__prop">2017 - 2021</div>
+                    </div>
+                  </div>
+                  <div class="lkEducation__doc"><img src="img/pdf.svg" alt=""/>Документ об образовании.pdf</div>
+                </div>
+              </div>
+              <!-- end lkEducation-->
+              <div class="lkForm">
+                <div class="form__title">Добавление образования</div>
+                <div class="form form_grid">
+                  <div class="form__col form__col_3">
+                    <label class="form__label">Уровень образования</label>
+                    <select class="select" data-placeholder="Нажмите для выбора">
+                      <option value=""> </option>
+                      <option value="Вариант 1">Вариант 1</option>
+                      <option value="Вариант 2">Вариант 2</option>
+                      <option value="Вариант 3">Вариант 3</option>
+                      <option value="Вариант 4">Вариант 4</option>
+                      <option value="Вариант 5">Вариант 5</option>
+                      <option value="Вариант 6">Вариант 6</option>
+                      <option value="Вариант 7">Вариант 7</option>
+                      <option value="Вариант 8">Вариант 8</option>
+                      <option value="Вариант 9">Вариант 9</option>
+                      <option value="Вариант 10">Вариант 10</option>
+                    </select>
+                  </div>
+                  <div class="form__col form__col_2_3">
+                    <label class="form__label">Учреждение</label>
+                    <input type="text" placeholder="введите название учебного заведения"/>
+                  </div>
+                  <div class="form__col form__col_3">
+                    <label class="form__label">Года обучения</label>
+                    <input type="text" placeholder="Введите года обучения"/>
+                  </div>
+                  <div class="form__col form__col_2_3">
+                    <div class="form__label">Прикрепите подтверждающий документ</div>
+                    <label class="form__file">
+                      <div class="form__field" data-placeholder="Укажите путь до файла"></div>
+                      <input type="file"/>
+                      <button class="btn btn_border">Прикрепить файл</button>
+                    </label>
+                  </div>
+                  <div class="form__action">
+                    <button class="btn">добавить ученую степень</button>
+                  </div>
+                </div>
+              </div>
+              <h2 class="subtitle">Мои сертификаты</h2>
+                  <div class="lkSerts">
+                    <div class="lkSerts__item">
+                      <div class="lkSerts__img"><img src="img/sert-1.jpg" alt=""/></div>
+                      <div class="lkSerts__name">«Сертифицированный <br>менеджер»</div>
+                    </div>
+                    <div class="lkSerts__item">
+                      <div class="lkSerts__img"><img src="img/sert-2.jpg" alt=""/></div>
+                      <div class="lkSerts__name">«Сертифицированный <br>менеджер»</div>
+                    </div>
+                    <div class="lkSerts__item">
+                      <div class="lkSerts__img"><img src="img/sert-3.jpg" alt=""/></div>
+                      <div class="lkSerts__name">«Сертифицированный <br>менеджер»</div>
+                    </div>
+                  </div>
+              <div class="lkForm">
+                <div class="form__title">Добавление сертификата</div>
+                <div class="form form_grid">
+                  <div class="form__col form__col_full">
+                    <label class="form__label">Название сертификата</label>
+                    <input type="text" placeholder="введите название"/>
+                  </div>
+                  <div class="form__col form__col_2_3">
+                    <div class="form__label">Прикрепите подтверждающий документ</div>
+                    <label class="form__file">
+                      <div class="form__field" data-placeholder="Укажите путь до файла"></div>
+                      <input type="file"/>
+                      <button class="btn btn_border">Прикрепить файл</button>
+                    </label>
+                  </div>
+                  <div class="form__action">
+                    <button class="btn">добавить ученую степень</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__content">
+          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a>
+        </div>
+      </div>
+      <div class="footer__middle">
+        <div class="footer__content">
+          <div class="footer__nav">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="graduates.html">Выпускники</a></li>
+            </ul>
+          </div>
+          <div class="footer__soc">
+            <div class="footer__label">Мы в соцсетях</div>
+            <div class="soc"><a class="soc__link icon_vk" href="#"></a><a class="soc__link icon_youtube" href="#"></a><a class="soc__link icon_insta" href="#"></a><a class="soc__link icon_watsapp" href="#"></a><a class="soc__link icon_viber" href="#"></a></div>
+          </div>
+          <div class="footer__app">
+            <div class="footer__label">Скачать приложение</div>
+            <div class="apps"><a class="apps__link" href="#"><img src="img/google-play.svg" alt=""/></a><a class="apps__link" href="#"><img src="img/app-store.svg" alt=""/></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__content">
+          <div class="footer__copy">&copy; 2001-2025</div><a class="footer__policy" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Begin Modal login-->
+    <div class="modal fade login" id="login">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Вход в систему</div>
+          </div>
+          <div class="modal-body">
+            <div class="form">
+              <div class="form__row">
+                <input type="text" placeholder="Логин"/>
+              </div>
+              <div class="form__row">
+                <input type="password" placeholder="Пароль"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Войти</button>
+              </div>
+              <div class="form__links"><a href="" data-toggle="modal" data-target="#restore">Не помню пароль</a><span>Нет логина и пароля? <a href="" data-toggle="modal" data-target="#register">Зарегистрироваться</a></span></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="socialAuth">
+              <div class="socialAuth__label"><span>Или войдите с помощью</span></div>
+              <div class="socialAuth__links"><a class="icon_google" href=""> </a><a class="icon_vk" href=""> </a><a class="icon_fb" href=""> </a><a class="icon_sber" href=""> </a><a class="icon_gos" href=""> </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal login-->
+    <!-- Begin Modal restore-->
+    <div class="modal fade restore" id="restore">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Восстановление пароля</div>
+            <p>Введите вашу почту, которую вы указали при регистрации, на нее будет выслан новый пароль для входа.</p>
+          </div>
+          <div class="modal-body">
+            <div class="form">
+              <div class="form__row">
+                <input type="text" placeholder="Введите ваш e-mail"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Выслать пароль</button>
+              </div>
+              <div class="form__links"><span><a href="" data-toggle="modal" data-target="#register">Регистрация </a>| <a href="" data-toggle="modal" data-target="#login">Вход</a></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal restore-->
+    <!-- Begin Modal register-->
+    <div class="modal fade register" id="register">
+      <div class="modal-dialog modal-dialog_lg">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Регистрация</div>
+          </div>
+          <div class="modal-body">
+            <div class="form form_grid">
+              <div class="form__row form__row_full">
+                <label class="form__label">Фамилия</label>
+                <input type="text" placeholder="Введите вашу фамилию"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Ваше имя</label>
+                <input type="text" placeholder="Введите имя"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Ваше отчество</label>
+                <input type="text" placeholder="Введите отчество"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Электронная почта</label>
+                <input type="text" placeholder="Введите ваш e-mail"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Дата рождения</label>
+                <div class="form__date">
+                  <input type="text" placeholder="Выберите дату рождения"/><i class="icon_calendar"></i>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__label">Пол</div>
+                <div class="form__checks">
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r1"/><span>Мужской</span>
+                  </label>
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r1"/><span>Женский</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__label">Гражданство</div>
+                <div class="form__checks">
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r2"/><span>Гражданин РФ</span>
+                  </label>
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r2"/><span>Гражданин другой страны</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Пароль</label>
+                <input type="password" placeholder="Введите пароль"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Повторите пароль</label>
+                <input type="password" placeholder="Введите пароль повторно"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Выслать пароль</button>
+              </div>
+              <div class="form__row form__row_center">
+                <label class="form__check">
+                  <input type="checkbox" checked=""/><span>Даю согласие на <a href="">обработку персональных данных</a></span>
+                </label>
+              </div>
+            </div>
+            <div class="form__links"><span>Уже зарегистрированы? <a href="" data-toggle="modal" data-target="#login">Ввести логин и пароль</a></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal register-->
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/modal.js"></script><script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/function.js?0.5"></script>
+  </body>
+</html>

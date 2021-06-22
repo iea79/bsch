@@ -1,0 +1,32 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    - st = true;
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Мои курсы', 'Стратегический менеджмент'])
+
+            .lk__head
+                h1.page__title Стратегический менеджмент
+
+            .lk__body
+                .coloredBox.coloredBox_grid
+                    each item, i in [{color: 'success', name: 'Первое задание в курсе «Стратегический менеджмент»'},{color: 'success', name: 'Тест по теме “Стратегический менеджмент” '},{color: 'danger', name: 'Третье задание в курсе “Стратегический менеджмент”'},{color: 'primary', name: 'Четвертое задание в курсе “Стратегический менеджмент”'},{color: '', name: 'Пятое задание в курсе “Стратегический менеджмент”'},{color: '', name: 'Шестое задание в курсе “Стратегический менеджмент”'}]
+                        .coloredBox__item
+                            .coloredBox__head(class=item.color)
+                                if item.color === 'success'
+                                    | Выполнено
+                                else if item.color === 'danger'
+                                    | Просрочено
+                                else if item.color === 'primary'
+                                    | Текущее
+                                else
+                                    | Предстоящее
+                            .coloredBox__body
+                                .coloredBox__name=item.name
+                                    .coloredBox__count= "0" +(i+1)
+                                .coloredBox__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                                .coloredBox__more
+                                    a(href="") Подробнее

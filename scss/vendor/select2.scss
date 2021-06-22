@@ -1,0 +1,156 @@
+.select2 {
+    &-hidden-accessible {
+        display: none;
+    }
+
+    &-search__field {
+        display: none;
+    }
+
+    &-container {
+        span {
+            display: block;
+        }
+
+        .form__row & {
+            width: 100% !important;
+            // display: block;
+        }
+
+        &--open {
+            z-index: 1050;
+
+        }
+
+        &--default {
+            &.select2-container--open {
+                &.select2 {
+                    &-container {
+                        &--above,
+                        &--below {
+                            .select2 {
+                                &-selection {
+                                    &--multiple,
+                                    &--single {
+                                        border-radius: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .select2 {
+                &-results {
+                    &__options {
+                        list-style: none;
+                        padding: 10px 0 18px;
+                        margin: 0;
+                        font-size: 16px;
+                    }
+
+                    &__option {
+                        padding: 15px 24px;
+                        cursor: pointer;
+
+                        &--highlighted[aria-selected],
+                        &[aria-selected] {
+                            background-color: rgba(#000, 0);
+                            color: $main_color;
+                        }
+
+                        &:hover {
+                            color: #2B89F8;
+                        }
+                    }
+                }
+
+                &-dropdown {
+                    position: absolute;
+                    // z-index: 150;
+                    background: #FFFFFF;
+                    box-shadow: 0 35px 40px rgba(24, 33, 42, 0.11);
+                    border-radius: 15px;
+                    margin-top: 4px;
+                    border: 0;
+                    animation: slideUp 0.5s;
+
+                    &--below {}
+
+                    &--above {}
+                }
+
+                &-selection {
+                    padding: 0;
+                    outline: none;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: $main_font_family;
+                    border-radius: 6px;
+                    transition: all 0.3s;
+                    background: #FFFFFF;
+                    border: 1px solid #E7E7E7;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    height: 69px;
+                    color: $main_color;
+
+                    .sorting & {
+                        height: 44px;
+                    }
+
+                    &:hover {
+                        border: 1px solid lighten(#F5F5F5, 2%);
+                        background-color: $color_withe;
+                        color: #2B89F8;
+                    }
+
+                    &:focus {
+                        border: 1px solid #2B89F8;
+                        background-color: $color_withe;
+                    }
+
+                    &--single {
+                        .select2 {
+                            &-selection {
+                                &__rendered {
+                                    line-height: 69px;
+                                    height: 69px;
+                                    padding-left: 14px;
+                                    padding-right: 40px;
+
+                                    .sorting & {
+                                        line-height: 42px;
+                                        height: 44px;
+                                    }
+                                }
+
+                                &__placeholder {}
+
+                                &__arrow {
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 46px;
+
+                                    &:before {
+                                        font-family: 'bsch';
+                                        content: $icon_caret;
+                                        font-size: 6px;
+                                        color: #C4C4C4;
+                                    }
+
+                                    b {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,281 @@
+extends layout/layout.pug
+block variables
+    - trsHead = true;
+    - isLogin = true;
+block content
+
+    mixin state(arr)
+        // begin courseState
+        .courseState
+            .courseState__charts
+                .courseState__col
+                    .courseState__donut
+                        svg.donut.donut_success(width='100%' height='100%' viewBox='0 0 42 42')
+                            circle.donut__ring(cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke-width='3')
+                            // Процент задается через stroke-dasharray Первая цифра % заполнение, вторая пустой интервал. Рассчитывается как процент от 100.
+                            circle.donut__segment(cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke-width='3' stroke-dasharray='14 86' stroke-dashoffset='25' stroke-linecap="round")
+                            g.donut__text
+                                text.donut__number(x='28%' y='59%')
+                                    | 14%
+                    .courseState__text Начали новую карьеру, пройдя эти курсы
+                .courseState__col
+                    .courseState__donut
+                        svg.donut.donut_primary(width='100%' height='100%' viewBox='0 0 42 42')
+                            circle.donut__ring(cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke-width='3')
+                            circle.donut__segment(cx='21' cy='21' r='15.91549430918954' fill='transparent' stroke-width='3' stroke-dasharray='65 35' stroke-dashoffset='25' stroke-linecap="round")
+                            g.donut__text
+                                text.donut__number(x='28%' y='59%')
+                                    | 65%
+                    .courseState__text Получили значимые преимущества  в карьере, благодаря этому курсу
+
+            .courseState__list
+                each item in arr
+                    .courseState__row
+                        .courseState__icon
+                            img(src="img/state-"+item.icon+".svg", alt="")
+                        | !{item.text}
+
+        // end courseState
+
+    // begin course
+    .course
+        .courseHome
+            .courseHome__bg
+                img(src="img/course-bg.jpg", alt="")
+            .container_center
+                +breadcrumb(['Программы обучения', 'Стратегический менеджмент в контексте управления государством'])
+
+                .courseHome__content
+                    .courseHome__left
+                        h1.courseHome__title Стратегический менеджмент <br>в контексте управления государством
+                        .courseHome__action
+                            button.btn.btn_success Записаться
+                            .courseHome__props
+                                .courseHome__price 12 000 рублей
+                                .courseHome__duration
+                                    i.icon_clock 
+                                    | 2 месяца и 7 дней
+                        .courseHome__teacher
+                            .courseHome__label Преподаватели курса
+                            .courseHome__teacherList
+                                each item, i in ['', '', '', '']
+                                    .courseHome__teacherItem
+                                        .courseHome__teacherImg
+                                            img(src="img/leaders-"+i+".jpg", alt="")
+                                        .courseHome__teacherName Сергей Сергеев
+                                        .courseHome__teacherDescr доцент, доктор психиатрических наук
+
+                    .courseHome__state
+                        .courseHome__label Карьерные результаты учащихся
+                        +state([{text: 'Сертификат, ссылками на который можно делиться с другними людьми', icon: 'certificate'}, {text: '100% онлайн', icon: 'globe'}, {text: 'Гибкие сроки', icon: 'calendar'}, {text: 'Приблизительно 19 часов <br>на выполнение', icon: 'chronometer'}, {text:'Английский', icon: 'english'}])
+
+        .container_center
+            // begin course__content
+            .course__content
+                .course__body
+                    .page__title Темы курса
+                    // begin courseHead
+                    .courseHead
+                        .courseHead__rate
+                            .courseHead__label Оценка контента
+                            .rating
+                                i.icon_star.active 
+                                i.icon_star.active 
+                                i.icon_star.active 
+                                i.icon_star 
+                                i.icon_star 
+                            | (3.2)
+                        .courseHead__duration
+                            i.icon_clock 
+                            | 2 месяца 7 дней
+
+                    // end courseHead
+
+                    // begin courseItem
+                    each item, i in ['Неделя 1', 'Неделя 2', 'Неделя 3']
+                        .courseItem
+                            .courseItem__head
+                                .courseItem__name=item
+                                .courseItem__progress
+                                    | Сложность 
+                                    .progressCol
+                                        if i === 2
+                                            each item in ['warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', '', '']
+                                                .progressCol__item(class=item)
+                                        else
+                                            each item in ['danger', 'danger', '', '', '', '', '', '', '', '']
+                                                .progressCol__item(class=item)
+
+                            .courseItem__body
+                                .courseItem__row
+                                    .courseItem__title Введение
+                                    .courseItem__text(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                                        .courseItem__materials
+                                            i.icon_book 
+                                            | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
+                                            a.courseItem__all(href="") Просмотреть все
+                                    .courseItem__show(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") Показать полностью
+                                .courseItem__row
+                                    .courseItem__title Первая часть
+                                    .courseItem__text.open(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                                        .courseItem__materials
+                                            i.icon_book 
+                                            | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
+                                            a.courseItem__all(href="") Просмотреть все
+                                    .courseItem__show.active(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") свернуть
+                                .courseItem__row
+                                    .courseItem__title Вторая часть
+                                    .courseItem__text(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                                        .courseItem__materials
+                                            i.icon_book 
+                                            | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
+                                            a.courseItem__all(href="") Просмотреть все
+                                    .courseItem__show(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") Показать полностью
+                                .courseItem__row
+                                    .courseItem__title Третья часть
+                                    .courseItem__text(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                                        .courseItem__materials
+                                            i.icon_book 
+                                            | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
+                                            a.courseItem__all(href="") Просмотреть все
+                                    .courseItem__show(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") Показать полностью
+
+                    // end courseItem
+                    .courseItem__more
+                        button.btn.btn_border показать больше
+
+                .course__state
+                    .course__stateTitle 
+                    +state([{text: 'Сертификат, ссылками на который можно делиться с другними людьми', icon: 'certificate-blue'}, {text: '100% онлайн', icon: 'globe-blue'}, {text: 'Гибкие сроки', icon: 'calendar-blue'}, {text: 'Приблизительно 19 часов <br>на выполнение', icon: 'chronometer-blue'}, {text:'Английский', icon: 'english-blue'}])
+
+                    .course__tags
+                        a.course__tag.course__tag_primary(href="") Подборка Грефа
+                        a.course__tag(href="") IT-технологии
+                        a.course__tag(href="") Продвижение
+
+            // end course__content
+
+        // begin courseReview
+        .courseReview
+            .container_center
+                h2.page__title Отзывы о курсе
+                .courseReview__content
+                    .courseReview__total
+                        .courseReview__totalHead
+                            .courseReview__totalNum 4.2
+                            .courseReview__totalRate
+                                .rating
+                                    i.icon_star.active 
+                                    i.icon_star.active 
+                                    i.icon_star.active 
+                                    i.icon_star.active 
+                                    i.icon_star 
+                                .courseReview__totalFull 1045 оценок
+                        .courseReview__progress
+                            each item in [{n: 5, perc: '35%'},{n: 4, perc: '55%'},{n: 3, perc: '5%'},{n: 2, perc: '4.77%'},{n: 1, perc: '0.33%'}]
+                                .courseReview__progressRow
+                                    .courseReview__progressNum=item.n
+                                    .courseReview__progressLine
+                                        span(style="width: "+item.perc+"")
+                                    .courseReview__progressPercent=item.perc
+
+                    .courseReview__list
+                        each item in ['', '', '']
+                            .courseReview__item
+                                .courseReview__head
+                                    .courseReview__photo
+                                        img(src="img/ava.png", alt="")
+                                    .courseReview__user
+                                        .courseReview__name Сергей Сергеев
+                                        .courseReview__expire Закончил курс в декабре 2020
+                                .courseReview__rate
+                                    .rating
+                                        i.icon_star.active 
+                                        i.icon_star.active 
+                                        i.icon_star.active 
+                                        i.icon_star.active 
+                                        i.icon_star 
+                                    | (3.2)
+                                .courseReview__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн
+
+
+        // end courseReview
+
+        // begin courseSert
+        .courseSert
+            .container_center
+                .courseSert__content
+                    .courseSert__left
+                        h2.page__title Сертификат <br>по окончании курса установленного образца
+                        .courseSert__list
+                            .courseSert__listItem Вид обучения: 
+                                b дистанционный
+                            .courseSert__listItem Еще какой-то параметр: 
+                                b значение
+                            .courseSert__listItem Еще какой-то параметр 2: 
+                                b значение 2
+                    .courseSert__img
+                        img(src="img/sert.png", alt="")
+
+        // end courseSert
+
+        // begin courseFaq
+        .courseFaq
+            .container_center
+                h2.page__title 
+                .courseFaq__content
+                    .courseFaq__list
+                        .courseFaq__item.open(data-collapse-body="")
+                            .courseFaq__name(data-collapse-toggle="") Что я получу, оплатив сертификацию?
+                                i.icon_caret
+                            .courseFaq__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. 
+                        .courseFaq__item(data-collapse-body="")
+                            .courseFaq__name(data-collapse-toggle="") Когда я получу доступ к лекциям и заданиям?
+                                i.icon_caret
+                            .courseFaq__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. 
+                        .courseFaq__item(data-collapse-body="")
+                            .courseFaq__name(data-collapse-toggle="") Получу ли я зачеты в университете за прохождение курса?
+                                i.icon_caret
+                            .courseFaq__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. 
+                        .courseFaq__item(data-collapse-body="")
+                            .courseFaq__name(data-collapse-toggle="") Из чего складывается стоимость курса?
+                                i.icon_caret
+                            .courseFaq__text Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. 
+
+                    .courseFaq__img
+                        img(src="img/faq.jpg", alt="")
+
+        // end courseFaq
+
+        .container_center
+            h2.page__title Подробнее о курсе
+
+            .columns
+                p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+                p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+
+
+            .slider__head
+                h2.page__title Партнеры курса
+                .slider__arrows
+                    .slick-arrow.slick-prev.parthners__prev
+                    .slick-arrow.slick-next.parthners__next
+            .parthnersList.parthnersSlider
+                each item, i in [0, 1, 2, 3, 4, 4, 3, 2, 1, 0, 1, 2]
+                    .parthnersList__item
+                        img(src="img/parthners-"+item+".png", alt="")
+
+        // begin courseOrder
+        .courseOrder.bg_primary(style="background-image: url('img/course-order.jpg')")
+            .container_center
+                .courseOrder__content
+                    .courseOrder__left
+                        h2.courseOrder__title Запись на курс
+                        .courseOrder__sub Вы можете записаться и оплатить как физическое или юридическое лицо
+                    .courseOrder__action
+                        button.btn.btn_success Для юридических лиц
+                        button.btn.btn_contrast Для физических лиц
+
+
+        // end courseOrder
+        // end course

@@ -1,0 +1,21 @@
+// Social link
+
+.soc {
+	// float: left;
+	font-size: 39px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -24px;
+
+	&__link {
+		padding-left: 24px;
+		margin-bottom: 24px;
+		display: inline-block;
+		color: #56A4FF;
+		text-decoration: none;
+
+		&:hover {
+			color: #DFEEFF;
+		}
+	}
+}

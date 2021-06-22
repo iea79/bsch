@@ -1,0 +1,272 @@
+$icomoon-font-family: "bsch" !default;
+$icomoon-font-path: "../fonts/bsch" !default;
+
+$icon_plus: "\e922";
+$icon_arrowlg: "\e921";
+$icon_info: "\e920";
+$icon_trophy: "\e917";
+$icon_eye: "\e918";
+$icon_flag: "\e919";
+$icon_arrow: "\e91a";
+$icon_user: "\e91b";
+$icon_trash: "\e91c";
+$icon_pencil: "\e91d";
+$icon_clip: "\e91e";
+$icon_link: "\e91f";
+$icon_gos: "\e901";
+$icon_sber: "\e914";
+$icon_fb: "\e915";
+$icon_google: "\e916";
+$icon_logout: "\e900";
+$icon_bell: "\e902";
+$icon_book: "\e903";
+$icon_calendar: "\e904";
+$icon_call: "\e905";
+$icon_caret: "\e906";
+$icon_chat: "\e907";
+$icon_checked: "\e908";
+$icon_clock: "\e909";
+$icon_close: "\e90a";
+$icon_insta: "\e90b";
+$icon_mail: "\e90c";
+$icon_search: "\e90d";
+$icon_star: "\e90e";
+$icon_viber: "\e90f";
+$icon_view: "\e910";
+$icon_vk: "\e911";
+$icon_watsapp: "\e912";
+$icon_youtube: "\e913";
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?llch2") format('truetype'), url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?llch2") format('woff'), url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?llch2##{$icomoon-font-family}") format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon_"],
+[class*=" icon_"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_plus {
+    &:before {
+        content: $icon_plus;
+    }
+}
+
+.icon_arrowlg {
+    &:before {
+        content: $icon_arrowlg;
+    }
+}
+
+.icon_info {
+    &:before {
+        content: $icon_info;
+    }
+}
+
+.icon_trophy {
+    &:before {
+        content: $icon_trophy;
+    }
+}
+
+.icon_eye {
+    &:before {
+        content: $icon_eye;
+    }
+}
+
+.icon_flag {
+    &:before {
+        content: $icon_flag;
+    }
+}
+
+.icon_arrow {
+    &:before {
+        content: $icon_arrow;
+    }
+}
+
+.icon_user {
+    &:before {
+        content: $icon_user;
+    }
+}
+
+.icon_trash {
+    &:before {
+        content: $icon_trash;
+    }
+}
+
+.icon_pencil {
+    &:before {
+        content: $icon_pencil;
+    }
+}
+
+.icon_clip {
+    &:before {
+        content: $icon_clip;
+    }
+}
+
+.icon_link {
+    &:before {
+        content: $icon_link;
+    }
+}
+
+.icon_gos {
+    &:before {
+        content: $icon_gos;
+    }
+}
+
+.icon_sber {
+    &:before {
+        content: $icon_sber;
+    }
+}
+
+.icon_fb {
+    &:before {
+        content: $icon_fb;
+    }
+}
+
+.icon_google {
+    &:before {
+        content: $icon_google;
+    }
+}
+
+.icon_logout {
+    &:before {
+        content: $icon_logout;
+    }
+}
+
+.icon_bell {
+    &:before {
+        content: $icon_bell;
+    }
+}
+
+.icon_book {
+    &:before {
+        content: $icon_book;
+    }
+}
+
+.icon_calendar {
+    &:before {
+        content: $icon_calendar;
+    }
+}
+
+.icon_call {
+    &:before {
+        content: $icon_call;
+    }
+}
+
+.icon_caret {
+    &:before {
+        content: $icon_caret;
+    }
+}
+
+.icon_chat {
+    &:before {
+        content: $icon_chat;
+    }
+}
+
+.icon_checked {
+    &:before {
+        content: $icon_checked;
+    }
+}
+
+.icon_clock {
+    &:before {
+        content: $icon_clock;
+    }
+}
+
+.icon_close {
+    &:before {
+        content: $icon_close;
+    }
+}
+
+.icon_insta {
+    &:before {
+        content: $icon_insta;
+    }
+}
+
+.icon_mail {
+    &:before {
+        content: $icon_mail;
+    }
+}
+
+.icon_search {
+    &:before {
+        content: $icon_search;
+    }
+}
+
+.icon_star {
+    &:before {
+        content: $icon_star;
+    }
+}
+
+.icon_viber {
+    &:before {
+        content: $icon_viber;
+    }
+}
+
+.icon_view {
+    &:before {
+        content: $icon_view;
+    }
+}
+
+.icon_vk {
+    &:before {
+        content: $icon_vk;
+    }
+}
+
+.icon_watsapp {
+    &:before {
+        content: $icon_watsapp;
+    }
+}
+
+.icon_youtube {
+    &:before {
+        content: $icon_youtube;
+    }
+}

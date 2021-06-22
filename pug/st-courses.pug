@@ -1,0 +1,50 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    - st = true;
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Мои курсы'])
+
+            .lk__head
+                h1.page__title Мои курсы
+                button.btn Подобрать курсы
+
+            .lk__body
+                include inc/lk-aside.pug
+                .lk__content
+                    h2.subtitle Траектория
+
+                    .chartBox
+                        img(src="img/chart-trangle.jpg", alt="")
+
+                    h2.subtitle Список курсов
+
+                    .smallBox
+                        each item, i in [{title: 'Стратегический менеджмент в контексте управления государством', color: 'danger', perc: '15%'},{title: 'Стратегический менеджмент', color: 'primary', perc: '70%', alert: true},{title: 'Видные политические деятели советского союза в эпоху Первой Пятилетки (ПП)', color: 'warning', perc: '40%'},{title: 'Основы управления государством', color: 'success', perc: '100%'}]
+                            .smallBox__item
+                                .smallBox__body(class=item.color)
+                                    .smallBox__name=item.title
+                                    .smallBox__line
+                                        .smallBox__lineLabel
+                                            .smallBox__lineText
+                                                span.smallBox__lineColored Пройдено 18
+                                                span /110 заданий
+                                            if item.alert
+                                                .smallBox__lineAlert 2 просрочены
+                                        .smallBox__lineLine
+                                            span(style="width: "+item.perc+"")
+                                        .smallBox__linePerc=item.perc 
+                                            | 
+                                            | пройдено
+
+                                    .smallBox__action
+                                        button.btn.btn_small(type="button") Подробнее
+
+                    .lk__more
+                        a.btn.btn_border(href="#") показать больше
+
+
+                    include inc/lkRecomend.pug

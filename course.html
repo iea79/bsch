@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.5"/>
+  </head>
+  <body>
+    <header class="header header_transition">
+      <div class="header__content">
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="Бизнес-школа"/></a></div>
+        <nav class="header__nav">
+          <div class="navbar__toggle"></div>
+          <ul class="navbar">
+            <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__right">
+          <div class="header__info">
+            <div class="lang">
+              <div class="lang__current">RU</div>
+              <ul class="lang__list">
+                <li><a href="#">RU</a></li>
+                <li><a href="#">EN</a></li>
+              </ul>
+            </div>
+            <div class="user">
+              <div class="user__icons"><i class="icon_search"></i><i class="icon_view"></i><a class="icon_chat" href="">
+                  <div class="counter">3</div></a><a class="icon_bell" href="">
+                  <div class="counter">9</div></a>
+              </div>
+              <div class="user__info">
+                <div class="user__row">
+                  <div class="user__avatar"><img src="img/ava.png" alt=""/></div>
+                  <div class="user__name">Иванов И.И.<i class="icon_caret"></i>
+                    <div class="user__drop">
+                      <div class="user__dropItem"><a href=""><i class="icon_logout"> </i>Выход</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main_content">
+      <!-- begin course-->
+      <div class="course">
+        <div class="courseHome">
+          <div class="courseHome__bg"><img src="img/course-bg.jpg" alt=""/></div>
+          <div class="container_center">
+                <div class="breadcrumb">
+                  <ul>
+                    <li><a href="/">Главная страница</a></li>
+                    <li><a href="">Программы обучения</a></li>
+                    <li><a href="">Стратегический менеджмент в контексте управления государством</a></li>
+                  </ul>
+                </div>
+            <div class="courseHome__content">
+              <div class="courseHome__left">
+                <h1 class="courseHome__title">Стратегический менеджмент <br>в контексте управления государством</h1>
+                <div class="courseHome__action">
+                  <button class="btn btn_success">Записаться</button>
+                  <div class="courseHome__props">
+                    <div class="courseHome__price">12 000 рублей</div>
+                    <div class="courseHome__duration"><i class="icon_clock"> </i>2 месяца и 7 дней</div>
+                  </div>
+                </div>
+                <div class="courseHome__teacher">
+                  <div class="courseHome__label">Преподаватели курса</div>
+                  <div class="courseHome__teacherList">
+                    <div class="courseHome__teacherItem">
+                      <div class="courseHome__teacherImg"><img src="img/leaders-0.jpg" alt=""/></div>
+                      <div class="courseHome__teacherName">Сергей Сергеев</div>
+                      <div class="courseHome__teacherDescr">доцент, доктор психиатрических наук</div>
+                    </div>
+                    <div class="courseHome__teacherItem">
+                      <div class="courseHome__teacherImg"><img src="img/leaders-1.jpg" alt=""/></div>
+                      <div class="courseHome__teacherName">Сергей Сергеев</div>
+                      <div class="courseHome__teacherDescr">доцент, доктор психиатрических наук</div>
+                    </div>
+                    <div class="courseHome__teacherItem">
+                      <div class="courseHome__teacherImg"><img src="img/leaders-2.jpg" alt=""/></div>
+                      <div class="courseHome__teacherName">Сергей Сергеев</div>
+                      <div class="courseHome__teacherDescr">доцент, доктор психиатрических наук</div>
+                    </div>
+                    <div class="courseHome__teacherItem">
+                      <div class="courseHome__teacherImg"><img src="img/leaders-3.jpg" alt=""/></div>
+                      <div class="courseHome__teacherName">Сергей Сергеев</div>
+                      <div class="courseHome__teacherDescr">доцент, доктор психиатрических наук</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="courseHome__state">
+                <div class="courseHome__label">Карьерные результаты учащихся</div>
+                      <!-- begin courseState-->
+                      <div class="courseState">
+                        <div class="courseState__charts">
+                          <div class="courseState__col">
+                            <div class="courseState__donut">
+                              <svg class="donut donut_success" width="100%" height="100%" viewBox="0 0 42 42">
+                                <circle class="donut__ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke-width="3"></circle>
+                                <!-- Процент задается через stroke-dasharray Первая цифра % заполнение, вторая пустой интервал. Рассчитывается как процент от 100.-->
+                                <circle class="donut__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke-width="3" stroke-dasharray="14 86" stroke-dashoffset="25" stroke-linecap="round"></circle>
+                                <g class="donut__text">
+                                  <text class="donut__number" x="28%" y="59%">14%</text>
+                                </g>
+                              </svg>
+                            </div>
+                            <div class="courseState__text">Начали новую карьеру, пройдя эти курсы</div>
+                          </div>
+                          <div class="courseState__col">
+                            <div class="courseState__donut">
+                              <svg class="donut donut_primary" width="100%" height="100%" viewBox="0 0 42 42">
+                                <circle class="donut__ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke-width="3"></circle>
+                                <circle class="donut__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke-width="3" stroke-dasharray="65 35" stroke-dashoffset="25" stroke-linecap="round"></circle>
+                                <g class="donut__text">
+                                  <text class="donut__number" x="28%" y="59%">65%</text>
+                                </g>
+                              </svg>
+                            </div>
+                            <div class="courseState__text">Получили значимые преимущества  в карьере, благодаря этому курсу</div>
+                          </div>
+                        </div>
+                        <div class="courseState__list">
+                          <div class="courseState__row">
+                            <div class="courseState__icon"><img src="img/state-certificate.svg" alt=""/></div>Сертификат, ссылками на который можно делиться с другними людьми
+                          </div>
+                          <div class="courseState__row">
+                            <div class="courseState__icon"><img src="img/state-globe.svg" alt=""/></div>100% онлайн
+                          </div>
+                          <div class="courseState__row">
+                            <div class="courseState__icon"><img src="img/state-calendar.svg" alt=""/></div>Гибкие сроки
+                          </div>
+                          <div class="courseState__row">
+                            <div class="courseState__icon"><img src="img/state-chronometer.svg" alt=""/></div>Приблизительно 19 часов <br>на выполнение
+                          </div>
+                          <div class="courseState__row">
+                            <div class="courseState__icon"><img src="img/state-english.svg" alt=""/></div>Английский
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end courseState-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container_center">
+          <!-- begin course__content-->
+          <div class="course__content">
+            <div class="course__body">
+              <div class="page__title">Темы курса</div>
+              <!-- begin courseHead-->
+              <div class="courseHead">
+                <div class="courseHead__rate">
+                  <div class="courseHead__label">Оценка контента</div>
+                  <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                </div>
+                <div class="courseHead__duration"><i class="icon_clock"> </i>2 месяца 7 дней</div>
+              </div>
+              <!-- end courseHead-->
+              <!-- begin courseItem-->
+              <div class="courseItem">
+                <div class="courseItem__head">
+                  <div class="courseItem__name">Неделя 1</div>
+                  <div class="courseItem__progress">Сложность 
+                    <div class="progressCol">
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="courseItem__body">
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Введение</div>
+                    <div class="courseItem__text" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">Показать полностью</div>
+                  </div>
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Первая часть</div>
+                    <div class="courseItem__text open" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show active" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">свернуть</div>
+                  </div>
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Вторая часть</div>
+                    <div class="courseItem__text" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">Показать полностью</div>
+                  </div>
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Третья часть</div>
+                    <div class="courseItem__text" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">Показать полностью</div>
+                  </div>
+                </div>
+              </div>
+              <div class="courseItem">
+                <div class="courseItem__head">
+                  <div class="courseItem__name">Неделя 2</div>
+                  <div class="courseItem__progress">Сложность 
+                    <div class="progressCol">
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="courseItem__body">
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Введение</div>
+                    <div class="courseItem__text" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">Показать полностью</div>
+                  </div>
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Первая часть</div>
+                    <div class="courseItem__text open" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show active" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">свернуть</div>
+                  </div>
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Вторая часть</div>
+                    <div class="courseItem__text" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">Показать полностью</div>
+                  </div>
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Третья часть</div>
+                    <div class="courseItem__text" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">Показать полностью</div>
+                  </div>
+                </div>
+              </div>
+              <div class="courseItem">
+                <div class="courseItem__head">
+                  <div class="courseItem__name">Неделя 3</div>
+                  <div class="courseItem__progress">Сложность 
+                    <div class="progressCol">
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="courseItem__body">
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Введение</div>
+                    <div class="courseItem__text" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">Показать полностью</div>
+                  </div>
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Первая часть</div>
+                    <div class="courseItem__text open" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show active" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">свернуть</div>
+                  </div>
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Вторая часть</div>
+                    <div class="courseItem__text" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">Показать полностью</div>
+                  </div>
+                  <div class="courseItem__row">
+                    <div class="courseItem__title">Третья часть</div>
+                    <div class="courseItem__text" data-more-text="">Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                      <div class="courseItem__materials"><i class="icon_book"> </i>Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест <a class="courseItem__all" href="">Просмотреть все</a></div>
+                    </div>
+                    <div class="courseItem__show" data-show="Показать полностью" data-hide="свернуть" data-more-toggle="">Показать полностью</div>
+                  </div>
+                </div>
+              </div>
+              <!-- end courseItem-->
+              <div class="courseItem__more">
+                <button class="btn btn_border">показать больше</button>
+              </div>
+            </div>
+            <div class="course__state">
+              <div class="course__stateTitle"> </div>
+                    <!-- begin courseState-->
+                    <div class="courseState">
+                      <div class="courseState__charts">
+                        <div class="courseState__col">
+                          <div class="courseState__donut">
+                            <svg class="donut donut_success" width="100%" height="100%" viewBox="0 0 42 42">
+                              <circle class="donut__ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke-width="3"></circle>
+                              <!-- Процент задается через stroke-dasharray Первая цифра % заполнение, вторая пустой интервал. Рассчитывается как процент от 100.-->
+                              <circle class="donut__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke-width="3" stroke-dasharray="14 86" stroke-dashoffset="25" stroke-linecap="round"></circle>
+                              <g class="donut__text">
+                                <text class="donut__number" x="28%" y="59%">14%</text>
+                              </g>
+                            </svg>
+                          </div>
+                          <div class="courseState__text">Начали новую карьеру, пройдя эти курсы</div>
+                        </div>
+                        <div class="courseState__col">
+                          <div class="courseState__donut">
+                            <svg class="donut donut_primary" width="100%" height="100%" viewBox="0 0 42 42">
+                              <circle class="donut__ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke-width="3"></circle>
+                              <circle class="donut__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke-width="3" stroke-dasharray="65 35" stroke-dashoffset="25" stroke-linecap="round"></circle>
+                              <g class="donut__text">
+                                <text class="donut__number" x="28%" y="59%">65%</text>
+                              </g>
+                            </svg>
+                          </div>
+                          <div class="courseState__text">Получили значимые преимущества  в карьере, благодаря этому курсу</div>
+                        </div>
+                      </div>
+                      <div class="courseState__list">
+                        <div class="courseState__row">
+                          <div class="courseState__icon"><img src="img/state-certificate-blue.svg" alt=""/></div>Сертификат, ссылками на который можно делиться с другними людьми
+                        </div>
+                        <div class="courseState__row">
+                          <div class="courseState__icon"><img src="img/state-globe-blue.svg" alt=""/></div>100% онлайн
+                        </div>
+                        <div class="courseState__row">
+                          <div class="courseState__icon"><img src="img/state-calendar-blue.svg" alt=""/></div>Гибкие сроки
+                        </div>
+                        <div class="courseState__row">
+                          <div class="courseState__icon"><img src="img/state-chronometer-blue.svg" alt=""/></div>Приблизительно 19 часов <br>на выполнение
+                        </div>
+                        <div class="courseState__row">
+                          <div class="courseState__icon"><img src="img/state-english-blue.svg" alt=""/></div>Английский
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end courseState-->
+              <div class="course__tags"><a class="course__tag course__tag_primary" href="">Подборка Грефа</a><a class="course__tag" href="">IT-технологии</a><a class="course__tag" href="">Продвижение</a></div>
+            </div>
+          </div>
+          <!-- end course__content-->
+        </div>
+        <!-- begin courseReview-->
+        <div class="courseReview">
+          <div class="container_center">
+            <h2 class="page__title">Отзывы о курсе</h2>
+            <div class="courseReview__content">
+              <div class="courseReview__total">
+                <div class="courseReview__totalHead">
+                  <div class="courseReview__totalNum">4.2</div>
+                  <div class="courseReview__totalRate">
+                    <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i></div>
+                    <div class="courseReview__totalFull">1045 оценок</div>
+                  </div>
+                </div>
+                <div class="courseReview__progress">
+                  <div class="courseReview__progressRow">
+                    <div class="courseReview__progressNum">5</div>
+                    <div class="courseReview__progressLine"><span style="width: 35%"></span></div>
+                    <div class="courseReview__progressPercent">35%</div>
+                  </div>
+                  <div class="courseReview__progressRow">
+                    <div class="courseReview__progressNum">4</div>
+                    <div class="courseReview__progressLine"><span style="width: 55%"></span></div>
+                    <div class="courseReview__progressPercent">55%</div>
+                  </div>
+                  <div class="courseReview__progressRow">
+                    <div class="courseReview__progressNum">3</div>
+                    <div class="courseReview__progressLine"><span style="width: 5%"></span></div>
+                    <div class="courseReview__progressPercent">5%</div>
+                  </div>
+                  <div class="courseReview__progressRow">
+                    <div class="courseReview__progressNum">2</div>
+                    <div class="courseReview__progressLine"><span style="width: 4.77%"></span></div>
+                    <div class="courseReview__progressPercent">4.77%</div>
+                  </div>
+                  <div class="courseReview__progressRow">
+                    <div class="courseReview__progressNum">1</div>
+                    <div class="courseReview__progressLine"><span style="width: 0.33%"></span></div>
+                    <div class="courseReview__progressPercent">0.33%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="courseReview__list">
+                <div class="courseReview__item">
+                  <div class="courseReview__head">
+                    <div class="courseReview__photo"><img src="img/ava.png" alt=""/></div>
+                    <div class="courseReview__user">
+                      <div class="courseReview__name">Сергей Сергеев</div>
+                      <div class="courseReview__expire">Закончил курс в декабре 2020</div>
+                    </div>
+                  </div>
+                  <div class="courseReview__rate">
+                    <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i></div>(3.2)
+                  </div>
+                  <div class="courseReview__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн</div>
+                </div>
+                <div class="courseReview__item">
+                  <div class="courseReview__head">
+                    <div class="courseReview__photo"><img src="img/ava.png" alt=""/></div>
+                    <div class="courseReview__user">
+                      <div class="courseReview__name">Сергей Сергеев</div>
+                      <div class="courseReview__expire">Закончил курс в декабре 2020</div>
+                    </div>
+                  </div>
+                  <div class="courseReview__rate">
+                    <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i></div>(3.2)
+                  </div>
+                  <div class="courseReview__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн</div>
+                </div>
+                <div class="courseReview__item">
+                  <div class="courseReview__head">
+                    <div class="courseReview__photo"><img src="img/ava.png" alt=""/></div>
+                    <div class="courseReview__user">
+                      <div class="courseReview__name">Сергей Сергеев</div>
+                      <div class="courseReview__expire">Закончил курс в декабре 2020</div>
+                    </div>
+                  </div>
+                  <div class="courseReview__rate">
+                    <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i></div>(3.2)
+                  </div>
+                  <div class="courseReview__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end courseReview-->
+        <!-- begin courseSert-->
+        <div class="courseSert">
+          <div class="container_center">
+            <div class="courseSert__content">
+              <div class="courseSert__left">
+                <h2 class="page__title">Сертификат <br>по окончании курса установленного образца</h2>
+                <div class="courseSert__list">
+                  <div class="courseSert__listItem">Вид обучения: <b>дистанционный</b></div>
+                  <div class="courseSert__listItem">Еще какой-то параметр: <b>значение</b></div>
+                  <div class="courseSert__listItem">Еще какой-то параметр 2: <b>значение 2</b></div>
+                </div>
+              </div>
+              <div class="courseSert__img"><img src="img/sert.png" alt=""/></div>
+            </div>
+          </div>
+        </div>
+        <!-- end courseSert-->
+        <!-- begin courseFaq-->
+        <div class="courseFaq">
+          <div class="container_center">
+            <h2 class="page__title"> </h2>
+            <div class="courseFaq__content">
+              <div class="courseFaq__list">
+                <div class="courseFaq__item open" data-collapse-body="">
+                  <div class="courseFaq__name" data-collapse-toggle="">Что я получу, оплатив сертификацию?<i class="icon_caret"></i></div>
+                  <div class="courseFaq__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. </div>
+                </div>
+                <div class="courseFaq__item" data-collapse-body="">
+                  <div class="courseFaq__name" data-collapse-toggle="">Когда я получу доступ к лекциям и заданиям?<i class="icon_caret"></i></div>
+                  <div class="courseFaq__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. </div>
+                </div>
+                <div class="courseFaq__item" data-collapse-body="">
+                  <div class="courseFaq__name" data-collapse-toggle="">Получу ли я зачеты в университете за прохождение курса?<i class="icon_caret"></i></div>
+                  <div class="courseFaq__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. </div>
+                </div>
+                <div class="courseFaq__item" data-collapse-body="">
+                  <div class="courseFaq__name" data-collapse-toggle="">Из чего складывается стоимость курса?<i class="icon_caret"></i></div>
+                  <div class="courseFaq__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. </div>
+                </div>
+              </div>
+              <div class="courseFaq__img"><img src="img/faq.jpg" alt=""/></div>
+            </div>
+          </div>
+        </div>
+        <!-- end courseFaq-->
+        <div class="container_center">
+          <h2 class="page__title">Подробнее о курсе</h2>
+          <div class="columns">
+            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+            <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+          </div>
+          <div class="slider__head">
+            <h2 class="page__title">Партнеры курса</h2>
+            <div class="slider__arrows">
+              <div class="slick-arrow slick-prev parthners__prev"></div>
+              <div class="slick-arrow slick-next parthners__next"></div>
+            </div>
+          </div>
+          <div class="parthnersList parthnersSlider">
+            <div class="parthnersList__item"><img src="img/parthners-0.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-1.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-2.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-3.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-4.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-4.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-3.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-2.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-1.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-0.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-1.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-2.png" alt=""/></div>
+          </div>
+        </div>
+        <!-- begin courseOrder-->
+        <div class="courseOrder bg_primary" style="background-image: url('img/course-order.jpg')">
+          <div class="container_center">
+            <div class="courseOrder__content">
+              <div class="courseOrder__left">
+                <h2 class="courseOrder__title">Запись на курс</h2>
+                <div class="courseOrder__sub">Вы можете записаться и оплатить как физическое или юридическое лицо</div>
+              </div>
+              <div class="courseOrder__action">
+                <button class="btn btn_success">Для юридических лиц</button>
+                <button class="btn btn_contrast">Для физических лиц</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end courseOrder-->
+        <!-- end course-->
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__content">
+          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a>
+        </div>
+      </div>
+      <div class="footer__middle">
+        <div class="footer__content">
+          <div class="footer__nav">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="graduates.html">Выпускники</a></li>
+            </ul>
+          </div>
+          <div class="footer__soc">
+            <div class="footer__label">Мы в соцсетях</div>
+            <div class="soc"><a class="soc__link icon_vk" href="#"></a><a class="soc__link icon_youtube" href="#"></a><a class="soc__link icon_insta" href="#"></a><a class="soc__link icon_watsapp" href="#"></a><a class="soc__link icon_viber" href="#"></a></div>
+          </div>
+          <div class="footer__app">
+            <div class="footer__label">Скачать приложение</div>
+            <div class="apps"><a class="apps__link" href="#"><img src="img/google-play.svg" alt=""/></a><a class="apps__link" href="#"><img src="img/app-store.svg" alt=""/></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__content">
+          <div class="footer__copy">&copy; 2001-2025</div><a class="footer__policy" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Begin Modal login-->
+    <div class="modal fade login" id="login">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Вход в систему</div>
+          </div>
+          <div class="modal-body">
+            <div class="form">
+              <div class="form__row">
+                <input type="text" placeholder="Логин"/>
+              </div>
+              <div class="form__row">
+                <input type="password" placeholder="Пароль"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Войти</button>
+              </div>
+              <div class="form__links"><a href="" data-toggle="modal" data-target="#restore">Не помню пароль</a><span>Нет логина и пароля? <a href="" data-toggle="modal" data-target="#register">Зарегистрироваться</a></span></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="socialAuth">
+              <div class="socialAuth__label"><span>Или войдите с помощью</span></div>
+              <div class="socialAuth__links"><a class="icon_google" href=""> </a><a class="icon_vk" href=""> </a><a class="icon_fb" href=""> </a><a class="icon_sber" href=""> </a><a class="icon_gos" href=""> </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal login-->
+    <!-- Begin Modal restore-->
+    <div class="modal fade restore" id="restore">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Восстановление пароля</div>
+            <p>Введите вашу почту, которую вы указали при регистрации, на нее будет выслан новый пароль для входа.</p>
+          </div>
+          <div class="modal-body">
+            <div class="form">
+              <div class="form__row">
+                <input type="text" placeholder="Введите ваш e-mail"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Выслать пароль</button>
+              </div>
+              <div class="form__links"><span><a href="" data-toggle="modal" data-target="#register">Регистрация </a>| <a href="" data-toggle="modal" data-target="#login">Вход</a></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal restore-->
+    <!-- Begin Modal register-->
+    <div class="modal fade register" id="register">
+      <div class="modal-dialog modal-dialog_lg">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Регистрация</div>
+          </div>
+          <div class="modal-body">
+            <div class="form form_grid">
+              <div class="form__row form__row_full">
+                <label class="form__label">Фамилия</label>
+                <input type="text" placeholder="Введите вашу фамилию"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Ваше имя</label>
+                <input type="text" placeholder="Введите имя"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Ваше отчество</label>
+                <input type="text" placeholder="Введите отчество"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Электронная почта</label>
+                <input type="text" placeholder="Введите ваш e-mail"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Дата рождения</label>
+                <div class="form__date">
+                  <input type="text" placeholder="Выберите дату рождения"/><i class="icon_calendar"></i>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__label">Пол</div>
+                <div class="form__checks">
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r1"/><span>Мужской</span>
+                  </label>
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r1"/><span>Женский</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__label">Гражданство</div>
+                <div class="form__checks">
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r2"/><span>Гражданин РФ</span>
+                  </label>
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r2"/><span>Гражданин другой страны</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Пароль</label>
+                <input type="password" placeholder="Введите пароль"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Повторите пароль</label>
+                <input type="password" placeholder="Введите пароль повторно"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Выслать пароль</button>
+              </div>
+              <div class="form__row form__row_center">
+                <label class="form__check">
+                  <input type="checkbox" checked=""/><span>Даю согласие на <a href="">обработку персональных данных</a></span>
+                </label>
+              </div>
+            </div>
+            <div class="form__links"><span>Уже зарегистрированы? <a href="" data-toggle="modal" data-target="#login">Ввести логин и пароль</a></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal register-->
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/modal.js"></script><script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/function.js?0.5"></script>
+  </body>
+</html>

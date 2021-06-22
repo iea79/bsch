@@ -1,0 +1,71 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Анкета', 'Заполнение анкеты'])
+
+            .lk__head
+                h1.page__title Анкета
+
+            .lk__body
+                .lk__content
+                    h2.subtitle Мы подобрали для вас следующие курсы и программы обучений 
+
+
+                    .coursesList__row
+                        each item, i in ['', '', '', '', '', '']
+                            .coursesList__item
+                                .coursesList__head
+                                    .coursesList__duration
+                                        i.icon_clock 
+                                        | 145 часов
+                                    .coursesList__complexity
+                                        if i < 3
+                                            | Количество дисциплин: 25
+                                        else
+                                            | Сложность
+                                            .coursesList__progress
+                                                .progressCol
+                                                    if i === 5
+                                                        each item in ['success', 'success', 'success', 'success', 'success', '', '', '', '', '']
+                                                            .progressCol__item(class=item)
+                                                    else if i === 3
+                                                        each item in ['warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', '', '']
+                                                            .progressCol__item(class=item)
+                                                    else
+                                                        each item in ['danger', 'danger', '', '', '', '', '', '', '', '']
+                                                            .progressCol__item(class=item)
+
+                                if i === 1
+                                    .coursesList__name Стратегический менеджмент в контексте управления государством
+                                else
+                                    .coursesList__name Стратегический менеджмент
+                                if i > 2
+                                    .coursesList__middle
+                                        .coursesList__rate
+                                            .rating
+                                                i.icon_star.active 
+                                                i.icon_star.active 
+                                                i.icon_star.active 
+                                                i.icon_star 
+                                                i.icon_star 
+                                            | (3.2)
+                                        .coursesList__price 12 000 рублей
+                                if i === 1
+                                    .coursesList__description Стратегия определяет направления и ориентиры. <br>Вы определяете ориентиры и направления?
+                                else
+                                    .coursesList__description Стратегия определяет направления и ориентиры. <br>Вы определяете ориентиры и направления? <br>Тогда этот курс для Вас.
+                                .coursesList__action
+                                    button.btn.btn_small(type="button") Записаться
+
+                                if i > 2
+                                    .coursesList__tags
+                                        a(href="") Подборка Грефа
+                                        a.danger(href="") IT-технологии
+                                        a.success(href="") Продвижение
+
+                    .lk__more
+                        a.btn.btn_border(href="") показать больше

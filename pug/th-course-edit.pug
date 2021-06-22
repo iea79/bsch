@@ -1,0 +1,183 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Управление курсами', 'Редактирование курса'])
+
+            .lk__head
+                h1.page__title Редактирование курса
+
+            .lk__body
+                .lk__content
+                    .lkFormEdit
+                        h2.subtitle Основные данные по курсу
+                        .form.form_grid
+                            .form__col
+                                label.form__label Полное название курса
+                                input(type="text", placeholder="Введите полное название")
+                            .form__col
+                                label.form__label Краткое название курса
+                                input(type="text", placeholder="Краткое название курса")
+                            .form__col
+                                label.form__label Категория курса
+                                input(type="text", placeholder="Введите категорию")
+                            .form__col
+                                label.form__label Видимость курса
+                                select.select(data-placeholder="Выберите видимость")
+                                    option(value="")
+                                    option(value="Вариант 1") Вариант 1
+                                    option(value="Вариант 2") Вариант 2
+                                .form__check
+                                    input(type="checkbox" checked="")
+                                    span Создать скрытый курс
+                            .form__col
+                                label.form__label Дата начала курса
+                                input(type="text", placeholder="Введите дату начала курса")
+                            .form__col
+                                label.form__label Дата окончания курса
+                                input(type="text", placeholder="Введите дату окончания курса")
+                                .form__check
+                                    input(type="checkbox" )
+                                    span Без даты окончания
+                            .form__col
+                                label.form__label Формат курса
+                                select.select(data-placeholder="Выберите формат")
+                                    option(value="")
+                                    option(value="Вариант 1") Вариант 1
+                                    option(value="Вариант 2") Вариант 2
+
+                            .form__col
+                                label.form__label Идентификационный номер курса
+                                input.form__number(type="number", placeholder="Не более 8 цифр")
+
+                            .form__col
+                                label.form__label Для кого предназначен курс
+                                select.select(data-placeholder="Выберите для кого предназначен курс")
+                                    option(value="")
+                                    option(value="Вариант 1") Вариант 1
+                                    option(value="Вариант 2") Вариант 2
+                            .form__col.form__col_full
+                                label.form__label Описание курса
+                                textarea.lg(placeholder="Введите описание курса")
+                            .form__col.form__col_full
+                                label.form__label Облако тегов
+                                input(type="text", placeholder="Введите теги")
+                            .form__col.form__col_2_3
+                                .form__label Прикрепите файлы 
+                                label.form__file
+                                    .form__field(data-placeholder="Укажите путь до файла")
+                                    input(type="file")
+                                    button.btn.btn_border Обзор
+                                button.btn.btn_add
+                                    | Добавить еще один файл
+
+                        h2.subtitle Система оценки курса
+                        p Укажите диапазон оценок. Система оценки стобальная.
+
+                        // begin lkColor
+                        .lkColor
+                            .lkColor__item
+                                .lkColor__name Оценка «отлично»
+                                .lkColor__fields
+                                    | от 
+                                    input(type="text" value="85%")
+                                    | до 
+                                    input(type="text" value="100%")
+                                .lkColor__colored
+                                    .lkColor__label Цвет
+                                    .lkColor__list
+                                        .lkColor__current
+                                            .lkColor__color.exelent
+                                        .lkColor__drop
+                                            .lkColor__color.good
+                                            .lkColor__color.middle
+                                            .lkColor__color.bad
+                                            .lkColor__color.verybad
+                            .lkColor__item
+                                .lkColor__name Оценка «хорошо»
+                                .lkColor__fields
+                                    | от 
+                                    input(type="text" value="70%")
+                                    | до 
+                                    input(type="text" value="84%")
+                                .lkColor__colored
+                                    .lkColor__label Цвет
+                                    .lkColor__list
+                                        .lkColor__current
+                                            .lkColor__color.good
+                                        .lkColor__drop
+                                            .lkColor__color.exelent
+                                            .lkColor__color.middle
+                                            .lkColor__color.bad
+                                            .lkColor__color.verybad
+                            .lkColor__item
+                                .lkColor__name Оценка «приемлемо»
+                                .lkColor__fields
+                                    | от 
+                                    input(type="text" value="55%")
+                                    | до 
+                                    input(type="text" value="69%")
+                                .lkColor__colored
+                                    .lkColor__label Цвет
+                                    .lkColor__list
+                                        .lkColor__current
+                                            .lkColor__color.middle
+                                        .lkColor__drop
+                                            .lkColor__color.exelent
+                                            .lkColor__color.good
+                                            .lkColor__color.bad
+                                            .lkColor__color.verybad
+                            .lkColor__item
+                                .lkColor__name Оценка «плохо»
+                                .lkColor__fields
+                                    | от 
+                                    input(type="text" value="44%")
+                                    | до 
+                                    input(type="text" value="54%")
+                                .lkColor__colored
+                                    .lkColor__label Цвет
+                                    .lkColor__list
+                                        .lkColor__current
+                                            .lkColor__color.bad
+                                        .lkColor__drop
+                                            .lkColor__color.exelent
+                                            .lkColor__color.good
+                                            .lkColor__color.middle
+                                            .lkColor__color.verybad
+                            .lkColor__item
+                                .lkColor__name Оценка «очень плохо»
+                                .lkColor__fields
+                                    | от 
+                                    input(type="text" value="1%")
+                                    | до 
+                                    input(type="text" value="43%")
+                                .lkColor__colored
+                                    .lkColor__label Цвет
+                                    .lkColor__list
+                                        .lkColor__current
+                                            .lkColor__color.verybad
+                                        .lkColor__drop
+                                            .lkColor__color.exelent
+                                            .lkColor__color.good
+                                            .lkColor__color.middle
+                                            .lkColor__color.bad
+
+                        .lkColor__line
+                            .verybad(style="width: 30%")
+                            .bad(style="width: 17.5%") 
+                            .middle(style="width: 17.5%") 
+                            .good(style="width: 17.5%") 
+                            .exelent(style="width: 17.5%")
+
+                        // end lkColor
+
+                        h2.subtitle Аналитика по курсу
+
+                        .chartBox
+                            img(src="img/chart.jpg", alt="")
+
+                        .lkNext
+                            button.btn Подобрать

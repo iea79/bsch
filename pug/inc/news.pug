@@ -1,0 +1,49 @@
+- 
+    newsList = [
+        {
+            img: 1,
+            title: 'Россия вводит удаленку во всех ВУЗах страны'
+        },
+        {
+            img: 2,
+            title: 'ЕГЭ 2021. Изменения'
+        },
+        {
+            img: 3,
+            title: 'В какой ВУЗ лучше поступать?'
+        },
+        {
+            img: 4,
+            title: 'Новое в специальности дизайнера интерфейсов в 2021'
+        },
+        {
+            img: 2,
+            title: 'ЕГЭ 2021. Изменения'
+        },
+        {
+            img: 1,
+            title: 'Россия вводит удаленку во всех ВУЗах страны'
+        },
+        {
+            img: 4,
+            title: 'Новое в специальности дизайнера интерфейсов в 2021'
+        },
+        {
+            img: 3,
+            title: 'В какой ВУЗ лучше поступать?'
+        },
+    ]
+
+// begin newsList
+.newsList
+    each item in newsList
+        .newsList__item
+            .newsList__img
+                img(src="img/news-"+item.img+".jpg", alt="")
+            .newsList__date 15 февраля 2021
+            .newsList__title=item.title
+            .newsList__short Здесь будет текстовое описание новости которое может быть разной длинны
+            .newsList__more
+                a(href="new.html") Подробнее
+
+// end newsList

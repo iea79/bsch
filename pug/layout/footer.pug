@@ -1,0 +1,159 @@
+footer.footer
+    .footer__top
+        .footer__content
+            .footer__logo
+                a.logo(href="/")
+                    img(src="img/logo.svg", alt="")
+            a.footer__link(href="mailto: info@mail.ru")
+                i.icon_mail 
+                | info@mail.ru
+            a.footer__link(href="tel: +7 (495) 000 00 00") 
+                i.icon_call 
+                | +7 (495) 000 00 00
+    .footer__middle
+        .footer__content
+            .footer__nav
+                ul.navbar
+                    - var navbar = [{name: 'О школе', anchor: 'about.html'}, {name: 'Новости', anchor: 'news.html'}, {name: 'Кампус', anchor: 'campus.html'}, {name: 'Программы обучения', anchor: 'programm.html'}, {name: 'Преподаватели и спикеры', anchor: 'teachers.html'}, {name: 'Выпускники', anchor: 'graduates.html'}];
+                    each item in navbar
+                        li.navbar__item
+                            a.navbar__link(href=item.anchor)= item.name
+            .footer__soc
+                .footer__label Мы в соцсетях
+                .soc
+                    a.soc__link.icon_vk(href="#")
+                    a.soc__link.icon_youtube(href="#")
+                    a.soc__link.icon_insta(href="#")
+                    a.soc__link.icon_watsapp(href="#")
+                    a.soc__link.icon_viber(href="#")
+
+            .footer__app
+                .footer__label Скачать приложение
+                .apps
+                    a.apps__link(href="#")
+                        img(src="img/google-play.svg", alt="")
+                    a.apps__link(href="#")
+                        img(src="img/app-store.svg", alt="")
+    .footer__bottom
+        .footer__content
+            .footer__copy &copy; 2001-2025
+            a.footer__policy(href='#') Политика конфиденциальности
+
+
+//- Button trigger modal login
+//- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#login") Click to open modal
+// Begin Modal login
+.modal.fade.login#login
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-header
+                .modal-title Вход в систему
+            .modal-body
+                .form
+                    .form__row
+                        input(type="text", placeholder="Логин")
+                    .form__row
+                        input(type="password", placeholder="Пароль")
+                    .form__row
+                        button.btn(type="submit") Войти
+                    .form__links
+                        a(href="" data-toggle="modal" data-target="#restore") Не помню пароль
+                        span Нет логина и пароля? 
+                            a(href="" data-toggle="modal" data-target="#register") Зарегистрироваться
+            .modal-footer
+                .socialAuth
+                    .socialAuth__label
+                        span Или войдите с помощью
+                    .socialAuth__links
+                        a.icon_google(href="") 
+                        a.icon_vk(href="") 
+                        a.icon_fb(href="") 
+                        a.icon_sber(href="") 
+                        a.icon_gos(href="") 
+// End modal login
+
+// Begin Modal restore
+.modal.fade.restore#restore
+    .modal-dialog
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-header
+                .modal-title Восстановление пароля
+                p Введите вашу почту, которую вы указали при регистрации, на нее будет выслан новый пароль для входа.
+            .modal-body
+                .form
+                    .form__row
+                        input(type="text", placeholder="Введите ваш e-mail")
+                    .form__row
+                        button.btn(type="submit") Выслать пароль
+                    .form__links
+                        span
+                            a(href="" data-toggle="modal" data-target="#register") Регистрация 
+                            | | 
+                            a(href="" data-toggle="modal" data-target="#login") Вход
+
+// End modal restore
+
+// Begin Modal register
+.modal.fade.register#register
+    .modal-dialog.modal-dialog_lg
+        .modal-content
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-header
+                .modal-title Регистрация
+            .modal-body
+                .form.form_grid
+                    .form__row.form__row_full
+                        label.form__label Фамилия
+                        input(type="text", placeholder="Введите вашу фамилию")
+                    .form__row
+                        label.form__label Ваше имя
+                        input(type="text", placeholder="Введите имя")
+                    .form__row
+                        label.form__label Ваше отчество
+                        input(type="text", placeholder="Введите отчество")
+                    .form__row
+                        label.form__label Электронная почта
+                        input(type="text", placeholder="Введите ваш e-mail")
+                    .form__row
+                        label.form__label Дата рождения
+                        .form__date
+                            input(type="text", placeholder="Выберите дату рождения")
+                            i.icon_calendar
+                    .form__row
+                        .form__label Пол
+                        .form__checks
+                            label.form__check.form__check_inline
+                                input(type="radio" name="r1") 
+                                span Мужской
+                            label.form__check.form__check_inline
+                                input(type="radio" name="r1") 
+                                span Женский
+                    .form__row
+                        .form__label Гражданство
+                        .form__checks
+                            label.form__check.form__check_inline
+                                input(type="radio" name="r2") 
+                                span Гражданин РФ
+                            label.form__check.form__check_inline
+                                input(type="radio" name="r2") 
+                                span Гражданин другой страны
+                    .form__row
+                        label.form__label Пароль
+                        input(type="password", placeholder="Введите пароль")
+                    .form__row
+                        label.form__label Повторите пароль
+                        input(type="password", placeholder="Введите пароль повторно")
+                    .form__row
+                        button.btn(type="submit") Выслать пароль
+                    .form__row.form__row_center
+                        label.form__check
+                            input(type="checkbox" checked="") 
+                            span Даю согласие на 
+                                a(href="") обработку персональных данных
+                .form__links
+                    span Уже зарегистрированы? 
+                        a(href="" data-toggle="modal" data-target="#login") Ввести логин и пароль
+
+// End modal register

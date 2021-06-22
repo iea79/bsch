@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css?0.5"/>
+  </head>
+  <body>
+    <header class="header header_transition">
+      <div class="header__content">
+        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="Бизнес-школа"/></a></div>
+        <nav class="header__nav">
+          <div class="navbar__toggle"></div>
+          <ul class="navbar">
+            <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a>
+            </li>
+            <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__right">
+          <div class="header__info">
+            <div class="lang">
+              <div class="lang__current">RU</div>
+              <ul class="lang__list">
+                <li><a href="#">RU</a></li>
+                <li><a href="#">EN</a></li>
+              </ul>
+            </div>
+            <div class="user">
+              <div class="user__icons"><i class="icon_search"></i><i class="icon_view"></i>
+              </div>
+              <div class="user__info">
+                <div class="user__auth"><a href="#" data-toggle="modal" data-target="#register">Регистрация</a>|<a href="#" data-toggle="modal" data-target="#login">Вход</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main_content">
+      <!-- begin firstScreen-->
+      <div class="firstScreen">
+        <picture class="firstScreen__bg">
+          <source srcset="img/home-bg.jpg" media="(max-width: 767px)"/><img src="img/home-bg.jpg" alt=""/>
+        </picture>
+        <div class="container_center">
+          <div class="firstScreen__content">
+            <h1 class="firstScreen__title">Бизнес-школа – современный и эффективный формат онлайн-обучения</h1>
+            <div class="firstScreen__sub">Бизнес-школа – современный и эффективный формат <br>онлайн-обучения (Текст 2-3 предложения о школе)</div>
+            <div class="firstScreen__action">
+              <button class="btn btn_success">начать обучение</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end firstScreen-->
+      <!-- begin announcements-->
+      <div class="announcements">
+        <div class="announcements__item">
+          <div class="announcements__img"><img src="img/announcements-1.jpg" alt=""/></div>
+          <div class="announcements__text">Самые популярные <br>курсы для менеджеров</div>
+        </div>
+        <div class="announcements__item">
+          <div class="announcements__img"><img src="img/announcements-2.jpg" alt=""/></div>
+          <div class="announcements__text">Личная подборка Германа Грефа</div>
+        </div>
+        <div class="announcements__item">
+          <div class="announcements__img"><img src="img/announcements-3.jpg" alt=""/></div>
+          <div class="announcements__text">Лучшие курсы по мнению выпускников</div>
+        </div>
+      </div>
+      <!-- end announcements-->
+      <!-- begin coursesList-->
+      <div class="coursesList section">
+        <div class="container_center">
+          <div class="page__titleInline">
+            <h2 class="page__title">Популярные курсы</h2><a class="page__titleMore" href="">Все курсы</a>
+          </div>
+          <div class="coursesFilter">
+            <div class="coursesFilter__item">Подборка Грефа
+              <div class="coursesFilter__count">5</div>
+            </div>
+            <div class="coursesFilter__item">Управление и менеджмент
+              <div class="coursesFilter__count">3</div>
+            </div>
+            <div class="coursesFilter__item">IT технологии 
+              <div class="coursesFilter__count">8</div>
+            </div>
+            <div class="coursesFilter__item">Продвижение
+              <div class="coursesFilter__count">2</div>
+            </div>
+          </div>
+          <div class="coursesList__row">
+            <div class="coursesList__item">
+              <div class="coursesList__head">
+                <div class="coursesList__duration"><i class="icon_clock"> </i>18 месяцев</div>
+                <div class="coursesList__complexity">Сложность
+                  <div class="coursesList__progress">
+                    <div class="progressCol">
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="coursesList__name">Стратегический менеджмент</div>
+              <div class="coursesList__middle">
+                <div class="coursesList__rate">
+                  <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                </div>
+                <div class="coursesList__price">12 000 рублей</div>
+              </div>
+              <div class="coursesList__description">Стратегия определяет направления и ориентиры. <br>Вы определяете ориентиры и направления? <br>Тогда этот курс для Вас.</div>
+              <div class="coursesList__action">
+                <button class="btn btn_small" type="button">Записаться</button>
+              </div>
+            </div>
+            <div class="coursesList__item">
+              <div class="coursesList__head">
+                <div class="coursesList__duration"><i class="icon_clock"> </i>18 месяцев</div>
+                <div class="coursesList__complexity">Сложность
+                  <div class="coursesList__progress">
+                    <div class="progressCol">
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="coursesList__name">Стратегический менеджмент в контексте управления государством</div>
+              <div class="coursesList__middle">
+                <div class="coursesList__rate">
+                  <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                </div>
+                <div class="coursesList__price">12 000 рублей</div>
+              </div>
+              <div class="coursesList__description">Стратегия определяет направления и ориентиры. <br>Вы определяете ориентиры и направления?</div>
+              <div class="coursesList__action">
+                <button class="btn btn_small" type="button">Записаться</button>
+              </div>
+            </div>
+            <div class="coursesList__item">
+              <div class="coursesList__head">
+                <div class="coursesList__duration"><i class="icon_clock"> </i>18 месяцев</div>
+                <div class="coursesList__complexity">Сложность
+                  <div class="coursesList__progress">
+                    <div class="progressCol">
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="coursesList__name">Стратегический менеджмент</div>
+              <div class="coursesList__middle">
+                <div class="coursesList__rate">
+                  <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                </div>
+                <div class="coursesList__price">12 000 рублей</div>
+              </div>
+              <div class="coursesList__description">Стратегия определяет направления и ориентиры. <br>Вы определяете ориентиры и направления? <br>Тогда этот курс для Вас.</div>
+              <div class="coursesList__action">
+                <button class="btn btn_small" type="button">Записаться</button>
+              </div>
+            </div>
+            <div class="coursesList__item">
+              <div class="coursesList__head">
+                <div class="coursesList__duration"><i class="icon_clock"> </i>18 месяцев</div>
+                <div class="coursesList__complexity">Сложность
+                  <div class="coursesList__progress">
+                    <div class="progressCol">
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item warning"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="coursesList__name">Стратегический менеджмент</div>
+              <div class="coursesList__middle">
+                <div class="coursesList__rate">
+                  <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                </div>
+                <div class="coursesList__price">12 000 рублей</div>
+              </div>
+              <div class="coursesList__description">Стратегия определяет направления и ориентиры. <br>Вы определяете ориентиры и направления? <br>Тогда этот курс для Вас.</div>
+              <div class="coursesList__action">
+                <button class="btn btn_small" type="button">Записаться</button>
+              </div>
+            </div>
+            <div class="coursesList__item">
+              <div class="coursesList__head">
+                <div class="coursesList__duration"><i class="icon_clock"> </i>18 месяцев</div>
+                <div class="coursesList__complexity">Сложность
+                  <div class="coursesList__progress">
+                    <div class="progressCol">
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item danger"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="coursesList__name">Стратегический менеджмент</div>
+              <div class="coursesList__middle">
+                <div class="coursesList__rate">
+                  <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                </div>
+                <div class="coursesList__price">12 000 рублей</div>
+              </div>
+              <div class="coursesList__description">Стратегия определяет направления и ориентиры. <br>Вы определяете ориентиры и направления? <br>Тогда этот курс для Вас.</div>
+              <div class="coursesList__action">
+                <button class="btn btn_small" type="button">Записаться</button>
+              </div>
+            </div>
+            <div class="coursesList__item">
+              <div class="coursesList__head">
+                <div class="coursesList__duration"><i class="icon_clock"> </i>18 месяцев</div>
+                <div class="coursesList__complexity">Сложность
+                  <div class="coursesList__progress">
+                    <div class="progressCol">
+                      <div class="progressCol__item success"></div>
+                      <div class="progressCol__item success"></div>
+                      <div class="progressCol__item success"></div>
+                      <div class="progressCol__item success"></div>
+                      <div class="progressCol__item success"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                      <div class="progressCol__item"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="coursesList__name">Стратегический менеджмент</div>
+              <div class="coursesList__middle">
+                <div class="coursesList__rate">
+                  <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
+                </div>
+                <div class="coursesList__price">12 000 рублей</div>
+              </div>
+              <div class="coursesList__description">Стратегия определяет направления и ориентиры. <br>Вы определяете ориентиры и направления? <br>Тогда этот курс для Вас.</div>
+              <div class="coursesList__action">
+                <button class="btn btn_small" type="button">Записаться</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end coursesList-->
+      <div class="stepsLine bg_primary" style="background-image: url('img/question-box.jpg')">
+        <div class="container_center">
+          <div class="stepsLine__row">
+            <div class="stepsLine__item">
+              <div class="stepsLine__num">10</div>
+              <div class="stepsLine__name">программ</div>
+            </div>
+            <div class="stepsLine__item">
+              <div class="stepsLine__num">100</div>
+              <div class="stepsLine__name">курсов</div>
+            </div>
+            <div class="stepsLine__item">
+              <div class="stepsLine__num">1000</div>
+              <div class="stepsLine__name">экспертов</div>
+            </div>
+          </div>
+          <div class="stepsLine__content">
+            <div class="stepsLine__descr">
+              <div class="stepsLine__title">Не знаете, с чего начать?</div>
+              <div class="stepsLine__text">Пройдите небольшое тестирование и узнайте, какие курсы подходят именно Вам</div>
+            </div>
+            <div class="stepsLine__action"><a class="btn btn_contrast btn_lg" href="#">начать тест</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container_center">
+          <h2 class="page__title">Партнеры школы</h2>
+          <div class="parthnersList">
+            <div class="parthnersList__item"><img src="img/parthners-0.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-1.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-2.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-3.png" alt=""/></div>
+            <div class="parthnersList__item"><img src="img/parthners-4.png" alt=""/></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__content">
+          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a>
+        </div>
+      </div>
+      <div class="footer__middle">
+        <div class="footer__content">
+          <div class="footer__nav">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a></li>
+              <li class="navbar__item"><a class="navbar__link" href="graduates.html">Выпускники</a></li>
+            </ul>
+          </div>
+          <div class="footer__soc">
+            <div class="footer__label">Мы в соцсетях</div>
+            <div class="soc"><a class="soc__link icon_vk" href="#"></a><a class="soc__link icon_youtube" href="#"></a><a class="soc__link icon_insta" href="#"></a><a class="soc__link icon_watsapp" href="#"></a><a class="soc__link icon_viber" href="#"></a></div>
+          </div>
+          <div class="footer__app">
+            <div class="footer__label">Скачать приложение</div>
+            <div class="apps"><a class="apps__link" href="#"><img src="img/google-play.svg" alt=""/></a><a class="apps__link" href="#"><img src="img/app-store.svg" alt=""/></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__content">
+          <div class="footer__copy">&copy; 2001-2025</div><a class="footer__policy" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Begin Modal login-->
+    <div class="modal fade login" id="login">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Вход в систему</div>
+          </div>
+          <div class="modal-body">
+            <div class="form">
+              <div class="form__row">
+                <input type="text" placeholder="Логин"/>
+              </div>
+              <div class="form__row">
+                <input type="password" placeholder="Пароль"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Войти</button>
+              </div>
+              <div class="form__links"><a href="" data-toggle="modal" data-target="#restore">Не помню пароль</a><span>Нет логина и пароля? <a href="" data-toggle="modal" data-target="#register">Зарегистрироваться</a></span></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="socialAuth">
+              <div class="socialAuth__label"><span>Или войдите с помощью</span></div>
+              <div class="socialAuth__links"><a class="icon_google" href=""> </a><a class="icon_vk" href=""> </a><a class="icon_fb" href=""> </a><a class="icon_sber" href=""> </a><a class="icon_gos" href=""> </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal login-->
+    <!-- Begin Modal restore-->
+    <div class="modal fade restore" id="restore">
+      <div class="modal-dialog">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Восстановление пароля</div>
+            <p>Введите вашу почту, которую вы указали при регистрации, на нее будет выслан новый пароль для входа.</p>
+          </div>
+          <div class="modal-body">
+            <div class="form">
+              <div class="form__row">
+                <input type="text" placeholder="Введите ваш e-mail"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Выслать пароль</button>
+              </div>
+              <div class="form__links"><span><a href="" data-toggle="modal" data-target="#register">Регистрация </a>| <a href="" data-toggle="modal" data-target="#login">Вход</a></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal restore-->
+    <!-- Begin Modal register-->
+    <div class="modal fade register" id="register">
+      <div class="modal-dialog modal-dialog_lg">
+        <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-header">
+            <div class="modal-title">Регистрация</div>
+          </div>
+          <div class="modal-body">
+            <div class="form form_grid">
+              <div class="form__row form__row_full">
+                <label class="form__label">Фамилия</label>
+                <input type="text" placeholder="Введите вашу фамилию"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Ваше имя</label>
+                <input type="text" placeholder="Введите имя"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Ваше отчество</label>
+                <input type="text" placeholder="Введите отчество"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Электронная почта</label>
+                <input type="text" placeholder="Введите ваш e-mail"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Дата рождения</label>
+                <div class="form__date">
+                  <input type="text" placeholder="Выберите дату рождения"/><i class="icon_calendar"></i>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__label">Пол</div>
+                <div class="form__checks">
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r1"/><span>Мужской</span>
+                  </label>
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r1"/><span>Женский</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__label">Гражданство</div>
+                <div class="form__checks">
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r2"/><span>Гражданин РФ</span>
+                  </label>
+                  <label class="form__check form__check_inline">
+                    <input type="radio" name="r2"/><span>Гражданин другой страны</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Пароль</label>
+                <input type="password" placeholder="Введите пароль"/>
+              </div>
+              <div class="form__row">
+                <label class="form__label">Повторите пароль</label>
+                <input type="password" placeholder="Введите пароль повторно"/>
+              </div>
+              <div class="form__row">
+                <button class="btn" type="submit">Выслать пароль</button>
+              </div>
+              <div class="form__row form__row_center">
+                <label class="form__check">
+                  <input type="checkbox" checked=""/><span>Даю согласие на <a href="">обработку персональных данных</a></span>
+                </label>
+              </div>
+            </div>
+            <div class="form__links"><span>Уже зарегистрированы? <a href="" data-toggle="modal" data-target="#login">Ввести логин и пароль</a></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End modal register-->
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/modal.js"></script><script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/function.js?0.5"></script>
+  </body>
+</html>

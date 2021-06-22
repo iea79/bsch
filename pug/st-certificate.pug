@@ -1,0 +1,31 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+
+block content
+    - st = true;
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Мои сертификаты'])
+
+            .lk__head
+                h1.page__title Мои сертификаты
+                button.btn Подобрать курсы
+
+            .lk__body
+                include inc/lk-aside.pug
+                .lk__content
+                    h2.subtitle Иван, Вы успешно завершили 5 программ обучения
+
+                    p В данном разделе Вы можете получить электронные сертификаты
+
+                    +sert([1,2,3,2,1])
+
+                    h2.subtitle Сертификаты в процессе
+
+                    +sert([2,1,4])
+
+                    h2.subtitle Рекомендованные к получению сертификаты
+
+                    +sert([2,1,4])

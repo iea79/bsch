@@ -1,0 +1,55 @@
+if trsHead
+    - trs = 'header_transition';
+else
+    - trs = '';
+header.header(class=trs)
+    .header__content
+        .header__left
+            a.logo(href="/")
+                img(src="img/logo.svg", alt="Бизнес-школа")
+        nav.header__nav
+            .navbar__toggle
+            ul.navbar
+                each navLink, i in [{name: 'О школе', href: 'about.html'},{name: 'Новости', href: 'news.html'},{name: 'Кампус', href: 'campus.html'},{name: 'Программы обучения', href: 'programm.html'},{name: 'Преподаватели и спикеры', href: 'teachers.html'},]
+                    li.navbar__item
+                        if activePage == navLink.name
+                            a.navbar__link.active(href=navLink.href)= navLink.name
+                        else
+                            a.navbar__link(href=navLink.href)= navLink.name
+
+        .header__right
+            .header__info
+                .lang
+                    .lang__current RU
+                    ul.lang__list
+                        li
+                            a(href="#") RU
+                        li
+                            a(href="#") EN
+                .user
+                    .user__icons
+                        i.icon_search
+                        i.icon_view
+                        if isLogin
+                            a.icon_chat(href="")
+                                .counter 3
+                            a.icon_bell(href="")
+                                .counter 9
+
+                    .user__info
+                        if !isLogin
+                            .user__auth
+                                a(href="#" data-toggle="modal" data-target="#register") Регистрация
+                                | |
+                                a(href="#" data-toggle="modal" data-target="#login") Вход
+                        else
+                            .user__row
+                                .user__avatar
+                                    img(src="img/ava.png", alt="")
+                                .user__name Иванов И.И.
+                                    i.icon_caret
+                                    .user__drop
+                                        .user__dropItem
+                                            a(href="")
+                                                i.icon_logout 
+                                                | Выход

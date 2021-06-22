@@ -1,0 +1,17 @@
+mixin breadcrumb(items)
+    .breadcrumb
+        ul
+            li
+                a(href="/") Главная страница
+            each item in items
+                li
+                    a(href="")=item
+
+
+mixin sert(arr)
+    .lkSerts
+        each item in arr
+            .lkSerts__item
+                .lkSerts__img
+                    img(src="img/sert-"+item+".jpg", alt="")
+                .lkSerts__name «Сертифицированный <br>менеджер»

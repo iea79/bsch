@@ -1,0 +1,54 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Непроверенные работы'])
+
+            .lk__head
+                h1.page__title Непроверенные работы
+
+            .lk__body
+                .lk__content
+                    // begin lkForCheck
+                    .lkForCheck
+                        each item in ['Высший менеджмент', 'Средний менеджмент', 'География для менеджеров', 'Эффективный менеджер: пособие', 'Старший менеджер', 'География для менеджеров', 'Эффективный менеджер: пособие', 'Секреты эффективных менеджеров', 'География для менеджеров', 'Эффективный менеджер: пособие', 'Старший менеджер', 'География для менеджеров', 'Эффективный менеджер: пособие', 'Старший менеджер', 'География для менеджеров', 'Эффективный менеджер: пособие', 'Старший менеджер', 'География для менеджеров', 'Эффективный менеджер: пособие', 'Старший менеджер', 'География для менеджеров']
+                            .lkForCheck__item.lkForCheck__item_tripple
+                                .lkForCheck__name=item
+                                .lkForCheck__props
+                                    .lkForCheck__prop
+                                        .lkForCheck__label Непроверенных работ:  
+                                        .lkForCheck__data.danger 5
+                                    .lkForCheck__prop
+                                        .lkForCheck__label Всего работ: 
+                                        .lkForCheck__data 100
+                                    .lkForCheck__prop
+                                        .lkForCheck__label Последняя работа сдана: 
+                                        .lkForCheck__data 01.04.2021
+                                .lkForCheck__check
+                                    a.btn.btn_small(href="#") Перейти к проверке
+
+                    // end lkForCheck
+
+                    // begin pagination
+                    ul.pagination
+                        li.prev
+                            a(href="") 
+                        li.current
+                            a(href="") 1
+                        li
+                            a(href="") 2
+                        li
+                            a(href="") 3
+                        li
+                            a(href="") 4
+                        li.dotts
+                            a(href="") ...
+                        li
+                            a(href="") 9
+                        li.next
+                            a(href="") 
+
+                    // end pagination

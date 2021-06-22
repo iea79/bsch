@@ -1,0 +1,21 @@
+extends layout/layout.pug
+block variables
+    - activePage = 'Преподаватели и спикеры';
+    - isLogin = true;
+
+block content
+    .container_center
+        +breadcrumb(['Преподаватели и спикеры'])
+
+        h1.page__title Преподаватели и спикеры
+
+        .teachersList
+            each item, i in ['', '', '', '', '']
+                .teachersList__item
+                    .teachersList__img
+                        img(src="img/teachers-"+i+".jpg", alt="")
+                    .teachersList__descr
+                        .teachersList__name Иванов Иван Иванович
+                        .teachersList__sub Преподает на 15 курсах
+                        .teachersList__text
+                            p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.

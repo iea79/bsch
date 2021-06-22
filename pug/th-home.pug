@@ -1,0 +1,217 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет'])
+
+            .lk__head
+                h1.page__title Личный кабинет
+
+            .lk__body
+                include inc/lk-aside.pug
+                .lk__content
+                    h2.subtitle Курсы в разработке
+
+                    // begin lkDeveloping
+                    .lkDeveloping
+                        each item in [{name: 'Высший менеджмент', status: 'Принято'},{name: 'Астрология', status: 'На модерации'},{name: 'Высший менеджмент', status: 'Просрочено'},{name: 'Астрология', status: 'Отклонено'},{name: 'Высший менеджмент', status: 'Отклонено'}]
+                            .lkDeveloping__item
+                                .lkDeveloping__descr
+                                    .lkDeveloping__tasks Заданий добавлено: 52/
+                                        span 143
+                                    .lkDeveloping__name=item.name
+                                    .lkDeveloping__deadline Необходимо сдать до: 22.04.2021 
+                                    .lkDeveloping__link
+                                        a(href="") Перейти к курсу 
+                                            i.icon_arrow
+                                .lkDeveloping__status
+                                    if item.status === "Принято"
+                                        .lkDeveloping__bage.success=item.status
+                                    else if item.status === "На модерации"
+                                        .lkDeveloping__bage.primary=item.status
+                                    else if item.status === "Просрочено"
+                                        .lkDeveloping__bage.danger=item.status
+                                    else
+                                        .lkDeveloping__bage=item.status 
+                                            i.icon_info
+
+
+                    // end lkDeveloping
+
+                    h2.subtitle Мое расписание
+
+                    .scheduleBox
+                        img(src="img/calendar.jpg", alt="")
+
+                    h2.subtitle Мои популярные курсы
+
+                    // begin lkPopular
+                    .lkPopular
+                        each item in ['Высший менеджмент', 'Название курса на котором я преподаю', 'Физика и геометрия. Полный курс', 'Астрономия и астрология', 'Гадание на картах Таро', 'Дихотомия добра и зла']
+                            .lkPopular__item
+                                .lkPopular__name=item
+                                .lkPopular__stats
+                                    .smallBox__rate
+                                        .rating
+                                            i.icon_star.active 
+                                            i.icon_star.active 
+                                            i.icon_star.active 
+                                            i.icon_star 
+                                            i.icon_star 
+                                        | (3.2)
+                                    .lkPopular__count
+                                        i.icon_user 
+                                        | 2450 
+
+                    .lk__more
+                        a.btn(href="#") все курсы
+                    // end lkPopular
+
+                    h2.subtitle Активность слушателей на курсах
+
+                    .chartBox
+                        img(src="img/chart.jpg", alt="")
+
+                    h2.subtitle Среднее выполнение заданий слушателями
+
+                    // begin lkAverage
+                    .lkAverage
+                        .lkAverage__item.primary
+                            .lkAverage__num 15
+                            .lkAverage__label Сейчас в моих <br>курсах 
+                        .lkAverage__item.danger
+                            .lkAverage__num 200
+                            .lkAverage__label Всего пользователей <br>в моих курсах
+                        .lkAverage__item.warning
+                            .lkAverage__num 43
+                            .lkAverage__label Пользователи, <br>завершившие мои курсы
+
+                    // end lkAverage
+
+                    h2.subtitle Последние непроверенные работы
+
+                    // begin lkForCheck
+                    .lkForCheck
+                        each item in ['', '', '', '']
+                            .lkForCheck__item
+                                .lkForCheck__name Высший менеджмент
+                                .lkForCheck__props
+                                    .lkForCheck__prop
+                                        .lkForCheck__label Тема:  
+                                        .lkForCheck__data Как общаться с клиентами
+                                    .lkForCheck__prop
+                                        .lkForCheck__label Было сдано: 
+                                        .lkForCheck__data 05.04.2021 в 17:30
+                                    .lkForCheck__prop
+                                        .lkForCheck__label Студент: 
+                                        .lkForCheck__data Иванов Ивана Ивановича
+                                    .lkForCheck__prop
+                                        .lkForCheck__label Статус: 
+                                        .lkForCheck__data.danger Не проверено
+                                .lkForCheck__check
+                                    a.btn.btn_small(href="#") Проверить
+
+                    .lk__more
+                        a.btn.btn_border(href="#") все работы
+                    // end lkForCheck
+
+                    h2.subtitle Общая статистика по курсам
+
+                    // begin lkStats
+                    .lkStats
+                        .lkStats__item
+                            .lkStats__body
+                                .lkStats__num 1516
+                                    .lkStats__icon
+                                        i.icon_user
+                                .lkStats__text Общее количество зарегистрированных слушателей
+                            .lkStats__link
+                                a(href="") Показать полностью
+                                    i.icon_caret
+
+                        .lkStats__item
+                            .lkStats__body
+                                .lkStats__num 234
+                                    .lkStats__icon
+                                        i.icon_flag
+                                .lkStats__text Слушателей дошли до конца курса
+                            .lkStats__link
+                                a(href="") Показать полностью
+                                    i.icon_caret
+
+                        .lkStats__item
+                            .lkStats__body
+                                .lkStats__num 112
+                                    .lkStats__icon
+                                        i.icon_eye
+                                .lkStats__text Активных слушателей за прошлую неделю
+                            .lkStats__link
+                                a(href="") Показать полностью
+                                    i.icon_caret
+
+                        .lkStats__item
+                            .lkStats__body
+                                .lkStats__num 12
+                                    .lkStats__icon
+                                        i.icon_trophy
+                                .lkStats__text Курсов полностью завершено
+                            .lkStats__link
+                                a(href="") Показать полностью
+                                    i.icon_caret
+
+                    // end lkStats
+
+                    .subtitle__inline
+                        h2.subtitle Полный отчет по курсам
+                        a.subtitle__link(href="") Загрузить полный отчет
+
+                    // begin thSort
+                    .thSort
+                        .thSort__label Показывать
+                        .thSort__group
+                            .thSort__item
+                                select.select(data-placeholder="Все курсы")
+                                    option(value="") 
+                                    option(value="Курс 1") Курс 1
+                                    option(value="Курс 2") Курс 2
+                                    option(value="Курс 3") Курс 3
+                            .thSort__item
+                                input.form__date(type="text", placeholder="Дата начала курса" onfocus="(this.type='date')" onblur="(this.type='text')")
+                            .thSort__item
+                                input(type="text", placeholder="Поиск по электронной почте")
+                        .thSort__action
+                            button.btn.btn_border(type="button") Применить
+
+                    // end thSort
+
+                    table.table
+                        thead
+                            tr
+                                th E-mail
+                                th Название курса
+                                th Цена курса
+                                th Дата начала
+                                th Дата окончания
+                                th Прогресс
+                                th Срок истекает
+                                th Статус
+                                th активность
+                        tbody
+                            each item in [true, false, true, true, false, true, true, true]
+                                tr
+                                    td
+                                        a(href="") pochta@pochta.ru
+                                    td.table__name Основы Веб-дизайна для чайников
+                                    td 159 000 руб.
+                                    td 12.02.2021
+                                    td 01.12.2021
+                                    td 12%
+                                    td 12.04.2021
+                                    if item === true
+                                        td.success Успешно
+                                    else
+                                        td.danger Успешно
+                                    td 01.03.2021

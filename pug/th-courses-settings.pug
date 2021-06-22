@@ -1,0 +1,104 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Управление курсами'])
+
+            .lk__head
+                h1.page__title Управление курсами
+                button.btn(data-toggle="modal" data-target="#add-course") добавить курс
+
+            .lk__body
+                include inc/lk-aside.pug
+                .lk__content
+
+                    .coursesList__row
+                        each item, i in ['Первый курс', 'Второй курс', 'Стопятнадцатый курс', 'Пятый курс', 'Первый курс', 'Первый курс', 'Первый курс', 'Первый курс', 'Первый курс', 'Первый курс', 'Первый курс', 'Первый курс']
+                            .coursesList__item.coursesList__item_2
+                                .coursesList__head.coursesList__head_short
+                                    .coursesList__duration
+                                        i.icon_clock 
+                                        | 18 месяцев
+                                    .coursesList__duration
+                                        i.icon_user
+                                        | 2354
+                                    .coursesList__complexity
+                                        | Сложность
+                                        .coursesList__progress
+                                            .progressCol
+                                                if i === 5
+                                                    each item in ['success', 'success', 'success', 'success', 'success', '', '', '', '', '']
+                                                        .progressCol__item(class=item)
+                                                else if i === 3
+                                                    each item in ['warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', '', '']
+                                                        .progressCol__item(class=item)
+                                                else
+                                                    each item in ['danger', 'danger', '', '', '', '', '', '', '', '']
+                                                        .progressCol__item(class=item)
+
+                                .coursesList__name=item
+                                .coursesList__description Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                                .coursesList__action
+                                    button.btn.btn_small(type="button") Редактировать 
+                                    .coursesList__delete(data-toggle="modal" data-target="#delete-course")
+                                        i.icon_trash 
+                                        | Удалить
+
+                    // begin pagination
+                    ul.pagination
+                        li.prev
+                            a(href="") 
+                        li.current
+                            a(href="") 1
+                        li
+                            a(href="") 2
+                        li
+                            a(href="") 3
+                        li
+                            a(href="") 4
+                        li.dotts
+                            a(href="") ...
+                        li
+                            a(href="") 9
+                        li.next
+                            a(href="") 
+
+                    // end pagination
+
+    //- // Button trigger modal add-course
+    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#add-course") Click to open modal
+    // Begin Modal add-course
+    .modal.fade.add-course#add-course
+        .modal-dialog
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-header
+                    .modal-title Запрос на добавление курса
+                .modal-body 
+                .form
+                    .form__row
+                        input(type="text", placeholder="Название курса")
+                    .form__row
+                        textarea(placeholder="описание курса")
+                    .form__row
+                        textarea(placeholder="предположительные темы курса")
+                    .form__row
+                        button.btn(type="submit") отправить запрос
+                    .form__info *заполнять курс можно будет после проверки модератором
+    // End modal add-course
+
+    //- // Button trigger modal delete-course
+    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#delete-course") Click to open modal
+    // Begin Modal delete-course
+    .modal.fade.modal-info#delete-course
+        .modal-dialog.modal-dialog_small
+            .modal-content
+                a(href="#" class="modal-close" data-dismiss="modal")
+                .modal-title Удаление курса
+                .modal-info__text Данный курс удалится после проверки модератором
+                .modal-info__action
+                    button.btn(data-dismiss="modal") Понятно
+    // End modal delete-course

@@ -1,0 +1,124 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Личный кабинет', 'Мои данные'])
+
+            .lk__head
+                h1.page__title Мои данные
+
+            .lk__body
+                include inc/lk-aside.pug
+                .lk__content
+                    h2.subtitle Основные данные
+
+                    .lkAlert.lkAlert_primary
+                        .lkAlert__icon
+                            i.icon_info
+                        .lkAlert__text
+                            b Ваш профиль заполнен на 50%. 
+                            | 
+                            | Для получения документа об образовании заполните дополнительную информацию
+                        .lkAlert__close
+                            i.icon_close
+
+                    .lkAvatar
+                        .lkAvatar__photo
+                            img(src="img/ava-lk.png", alt="")
+                            .lkAvatar__add
+                        .lkAvatar__delete
+                            i.icon_close 
+                            | Удалить
+
+                    .form.form_grid
+                        .form__col
+                            label.form__label Ваше имя
+                            input(type="text", placeholder="Введите имя")
+                        .form__col
+                            label.form__label Фамилия
+                            input(type="text", placeholder="Введите фамилию")
+                        .form__col
+                            label.form__label Ваше отчество
+                            input(type="text", placeholder="Введите отчество")
+                        .form__col
+                            label.form__label Электронная почта
+                            input(type="text", placeholder="Введите ваш e-mail")
+
+                    h2.subtitle Образование
+
+                    // begin lkEducation
+                    .lkEducation
+                        each item in ['Высшее образование', 'Средне-техническое образование']
+                            .lkEducation__item
+                                .lkEducation__name=item
+                                .lkEducation__list
+                                    .lkEducation__props
+                                        .lkEducation__label Наименование учебного заведения: 
+                                        .lkEducation__prop Московская высшая школа социальных и экономических наук
+                                    .lkEducation__props
+                                        .lkEducation__label Специализация: 
+                                        .lkEducation__prop Мировая политика
+                                    .lkEducation__props
+                                        .lkEducation__label Года обучения: 
+                                        .lkEducation__prop 2017 - 2021
+                                .lkEducation__doc
+                                    img(src="img/pdf.svg", alt="") 
+                                    | Документ об образовании.pdf
+
+                    // end lkEducation
+
+                    .lkForm
+                        .form__title Добавление образования
+
+                        .form.form_grid
+                            .form__col.form__col_3
+                                label.form__label Уровень образования
+                                select.select(data-placeholder="Нажмите для выбора")
+                                    option(value="") 
+                                    option(value="Вариант 1") Вариант 1
+                                    option(value="Вариант 2") Вариант 2
+                                    option(value="Вариант 3") Вариант 3
+                                    option(value="Вариант 4") Вариант 4
+                                    option(value="Вариант 5") Вариант 5
+                                    option(value="Вариант 6") Вариант 6
+                                    option(value="Вариант 7") Вариант 7
+                                    option(value="Вариант 8") Вариант 8
+                                    option(value="Вариант 9") Вариант 9
+                                    option(value="Вариант 10") Вариант 10
+                            .form__col.form__col_2_3
+                                label.form__label Учреждение
+                                input(type="text", placeholder="введите название учебного заведения")
+                            .form__col.form__col_3
+                                label.form__label Года обучения
+                                input(type="text", placeholder="Введите года обучения")
+                            .form__col.form__col_2_3
+                                .form__label Прикрепите подтверждающий документ
+                                label.form__file
+                                    .form__field(data-placeholder="Укажите путь до файла")
+                                    input(type="file")
+                                    button.btn.btn_border Прикрепить файл
+                            .form__action
+                                button.btn добавить ученую степень
+
+                    h2.subtitle Мои сертификаты
+
+                    +sert([1,2,3])
+
+                    .lkForm
+                        .form__title Добавление сертификата
+
+                        .form.form_grid
+                            .form__col.form__col_full
+                                label.form__label Название сертификата
+                                input(type="text", placeholder="введите название")
+                            .form__col.form__col_2_3
+                                .form__label Прикрепите подтверждающий документ
+                                label.form__file
+                                    .form__field(data-placeholder="Укажите путь до файла")
+                                    input(type="file")
+                                    button.btn.btn_border Прикрепить файл
+                            .form__action
+                                button.btn добавить ученую степень

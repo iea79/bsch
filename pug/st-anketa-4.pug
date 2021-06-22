@@ -1,0 +1,45 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Анкета'])
+
+            .lk__head
+                h1.page__title Анкета
+
+            .lk__body
+                .lk__content
+                    h2.subtitle Прошлое анкетирование 
+
+                    .lkPast
+                        each item in [{name: 'PR-Менеджер', perc: '25%', color: 'danger'},{name: 'PR-Менеджер', perc: '45%', color: 'warning'},{name: 'PR-Менеджер', perc: '100%', color: 'success'},{name: 'Аналитик', perc: '25%', color: 'warning'},{name: 'PR-Менеджер', perc: '75%', color: 'warning'}]
+                            .lkPast__item
+                                .lkPast__body
+                                    .lkPast__head
+                                        .lkPast__name=item.name
+                                        .lkPast__date
+                                            i.icon_calendar 
+                                            | 25.03.2021
+                                    .lkPast__props
+                                        dl
+                                            dt Рекомендовано дисциплин: 
+                                            dd 3
+                                        dl
+                                            dt Успешность прохождения: 
+                                            dd=item.perc
+                                    .lkPast__progress(style="width: "+item.perc+"" class=item.color)
+
+                    h2.subtitle Выберите направление 
+
+                    .lkChecked
+                        each item in ['PHP-разработчик', 'Разработчик интерфейсов', 'Менеджер проектов', 'Менеджер по продажам', 'Frontend-разработчик', 'Дизайнер', 'Python-разработчик', 'Frontend-разработчик', 'Microservice Architecture', 'Highload Architect']
+                            .lkChecked__item
+                                label.lkChecked__label
+                                    input(type="radio" name="dir")
+                                    span.lkChecked__name=item
+
+                    .lkNext
+                        button.btn Подобрать

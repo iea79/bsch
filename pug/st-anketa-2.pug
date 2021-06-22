@@ -1,0 +1,97 @@
+extends layout/layout.pug
+block variables
+    - isLogin = true;
+
+block content
+    .lk
+        .container_center
+            +breadcrumb(['Анкета', 'Заполнение анкеты'])
+
+            .lk__head
+                h1.page__title Анкета «Менеджер по продажам»
+
+            .lk__body
+                .lk__content
+                    h2.subtitle Выберите направление 
+
+
+                    .lkNumList
+                        .lkNumList__item
+                            .lkNumList__name 1. Выберите основные тонкости при работе с клиентом, которые вам нравятся?
+                            .lkNumList__body
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="1")
+                                    span Ощущение важности собственного дела
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="1")
+                                    span Когда я оказываю услугу, я ощущаю внутреннее удовлетворение
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="1")
+                                    span Мне не нравиться моя работа
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="1")
+                                    span Ничего из вышеперечисленного
+                        .lkNumList__item
+                            .lkNumList__name 2. Перечислите основные этапы становления Казахского ханства в XV-XVI веке?
+                            .lkNumList__body
+                                label.form__check.form__check_lg
+                                    input(type="checkbox")
+                                    span Объединение Младшего, Среднего и Старшего Жузов
+                                label.form__check.form__check_lg
+                                    input(type="checkbox")
+                                    span Распад Золотой Орды
+                                label.form__check.form__check_lg
+                                    input(type="checkbox")
+                                    span Смерть Абылай Хана
+                                label.form__check.form__check_lg
+                                    input(type="checkbox")
+                                    span Нашествие воинов Чингисхана
+                        .lkNumList__item
+                            .lkNumList__name 3. Как звали лошадь Чингис Хана?
+                            .lkNumList__body
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="2")
+                                    span Жусито
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="2")
+                                    span Чегеваро
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="2")
+                                    span Бусидо
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="2")
+                                    span Магара
+                        .lkNumList__item
+                            .lkNumList__name 4. Перечислите основные этапы становления Казахского ханства в XV-XVI веке?
+                            .lkNumList__body
+                                label.form__check.form__check_lg
+                                    input(type="checkbox")
+                                    span Объединение Младшего, Среднего и Старшего Жузов
+                                label.form__check.form__check_lg
+                                    input(type="checkbox")
+                                    span Распад Золотой Орды
+                                label.form__check.form__check_lg
+                                    input(type="checkbox")
+                                    span Смерть Абылай Хана
+                                label.form__check.form__check_lg
+                                    input(type="checkbox")
+                                    span Нашествие воинов Чингисхана
+                        .lkNumList__item
+                            .lkNumList__name 5. Как звали лошадь Чингис Хана?
+                            .lkNumList__body
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="3")
+                                    span Жусито
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="3")
+                                    span Чегеваро
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="3")
+                                    span Бусидо
+                                label.form__check.form__check_lg
+                                    input(type="radio" name="3")
+                                    span Магара
+
+
+                    .lkNext
+                        button.btn Отправить

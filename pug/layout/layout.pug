@@ -1,0 +1,27 @@
+-var version = '0.5';
+block variables
+    - activePage = '';
+    - isLogin = false;
+    - isLK = false;
+    - trsHead = false;
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
+    body
+        include mixins.pug
+        include header.pug
+
+        main.main_content
+            block content
+
+        include footer.pug
+
+        include scripts.pug

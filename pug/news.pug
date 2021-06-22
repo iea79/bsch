@@ -1,0 +1,51 @@
+extends layout/layout.pug
+block variables
+    - activePage = 'Новости';
+    - isLogin = true;
+
+block content
+    .container_center
+        +breadcrumb(['Новости'])
+
+        h1.page__title Новости и мероприятия
+
+        // begin newsSlider
+        .newsSlider__content
+            .newsSlider
+                each item in ['', '', '', '', '', '', '', '', '', '', '']
+                    .newsSlider__item
+                        .newsSlider__img
+                            img(src="img/news.jpg", alt="")
+                        .newsSlider__short
+                            .newsSlider__title Россия вводит удаленку во всех ВУЗах страны
+                            .newsSlider__text
+                                p Здесь будет текстовое описание новости которое может быть разной длинны. Здесь будет текстовое описание новости которое может быть разной длинны. Здесь будет текстовое описание новости которое может быть разной длинны. Здесь будет текстовое описание новости которое может быть разной длинны. Здесь будет текстовое описание новости которое может быть разной длинны. 
+                            .newsSlider__more
+                                a(href="") Подробнее
+
+            .newsSlider__footer
+                .slider__arrows
+                    .slick-arrow.slick-prev.newsSlider__prev
+                    .slick-arrow.slick-next.newsSlider__next
+
+                .newsSlider__count 
+
+
+        // end newsSlider
+
+        .newsCat
+            a.newsCat__link.active(href="") Все события
+            a.newsCat__link(href="") Новости
+            a.newsCat__link(href="") Мероприятия
+
+        h2.news__subtitle Новости
+
+        include inc/news.pug
+
+        h2.news__subtitle Мероприятия
+
+        include inc/news.pug
+
+        h2.news__subtitle Для СМИ
+
+        include inc/news.pug
