@@ -4,15 +4,17 @@ block variables
 block content
     // begin firstScreen
     .firstScreen
-        picture.firstScreen__bg
-            source(srcset="img/home-bg.jpg" media="(max-width: 767px)")
-            img(src="img/home-bg.jpg" alt="")
-        .container_center
-            .firstScreen__content
-                h1.firstScreen__title Бизнес-школа – современный и эффективный формат онлайн-обучения
-                .firstScreen__sub Бизнес-школа – современный и эффективный формат <br>онлайн-обучения (Текст 2-3 предложения о школе)
-                .firstScreen__action
-                    button.btn.btn_success начать обучение
+        each item in ['', '']
+            .firstScreen__item
+                picture.firstScreen__bg
+                    source(srcset="img/home-bg.jpg" media="(max-width: 767px)")
+                    img(src="img/home-bg.jpg" alt="")
+                .container_center
+                    .firstScreen__content
+                        h1.firstScreen__title Бизнес-школа – современный и эффективный формат онлайн-обучения
+                        .firstScreen__sub Бизнес-школа – современный и эффективный формат <br>онлайн-обучения (Текст 2-3 предложения о школе)
+                        .firstScreen__action
+                            button.btn.btn_success начать обучение
 
     // end firstScreen
 
@@ -88,6 +90,10 @@ block content
                         .coursesList__action
                             button.btn.btn_small(type="button") Записаться
 
+                        .coursesList__tags
+                            a(href="") Подборка Грефа
+                            a.danger(href="") IT-технологии
+                            a.success(href="") Продвижение
     // end coursesList
 
     .stepsLine.bg_primary(style="background-image: url('img/question-box.jpg')")

@@ -43,6 +43,14 @@ $(document).ready(function() {
     // checkOnResize();
     uploadYoutubeVideo();
 
+    $('.firstScreen').slick({
+        dots: false,
+        infinite: false,
+        arrows: true,
+        nextArrow: '<button class="slick-next"></button>',
+        prevArrow: '<button class="slick-prev"></button>',
+    });
+
     $('.leaders').slick({
         dots: false,
         infinite: false,
@@ -425,6 +433,14 @@ function toogleMoreText() {
 }
 
 toogleMoreText();
+
+function showCourseDescription() {
+    $('.courseItem__count i').on('click', () => {
+        $('.courseItem').addClass('show');
+    });
+}
+
+showCourseDescription();
 
 
 function setInputNumber() {

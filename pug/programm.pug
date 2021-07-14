@@ -28,6 +28,16 @@ block content
                     option(value="Вариант 2") Вариант 2
 
 
+        .coursesTags
+            a(href="") Подборка Грефа 
+                b 5
+            a.warning(href="") Управление и менеджмент
+                b 3
+            a.success(href="") IT-технологии
+                b 8
+            a.danger(href="") Продвижение
+                b 2
+
         .coursesList__row
             each item, i in ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
                 .coursesList__item
@@ -69,6 +79,11 @@ block content
                         .coursesList__description Стратегия определяет направления и ориентиры. <br>Вы определяете ориентиры и направления? <br>Тогда этот курс для Вас.
                     .coursesList__action
                         button.btn.btn_small(type="button") Записаться
+
+                    .coursesList__tags
+                        a(href="") Подборка Грефа
+                        a.danger(href="") IT-технологии
+                        a.success(href="") Продвижение
 
         // begin pagination
         ul.pagination

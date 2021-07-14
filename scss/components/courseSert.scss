@@ -1,0 +1,32 @@
+.courseSert {
+    padding: 57px 0 109px;
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__left {
+        max-width: 630px;
+        flex-grow: 1;
+        padding-bottom: 110px;
+        margin-right: 100px;
+    }
+
+    &__list {
+        line-height: 159.52%;
+        color: #656565;
+        margin: 39px 0;
+
+        &Item {
+            margin-bottom: 6px;
+
+            b {
+                color: #2F2B38;
+            }
+        }
+    }
+
+    &__img {}
+
+}

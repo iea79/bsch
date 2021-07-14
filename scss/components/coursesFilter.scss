@@ -1,0 +1,26 @@
+.coursesFilter {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -13px;
+    margin-bottom: 30px;
+
+    &__item {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 140%;
+        color: #2F2B38;
+        padding: 6px 13px;
+        border: 1px solid #A3A3A3;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+        cursor: pointer;
+    }
+
+    &__count {
+        margin-left: 4px;
+        color: #A3A3A3;
+    }
+
+}

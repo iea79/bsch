@@ -55,6 +55,13 @@ block content
                                 .courseHome__duration
                                     i.icon_clock 
                                     | 2 месяца и 7 дней
+                            .courseHome__play(data-toggle="modal" data-target="#courseVideo")
+                                // Button trigger modal courseVideo
+                                img(src="img/play.svg" alt="")
+                                span
+                                    .courseHome__playLabel О курсе
+                                    .courseHome__playTime 2:31
+
                         .courseHome__teacher
                             .courseHome__label Преподаватели курса
                             .courseHome__teacherList
@@ -63,97 +70,118 @@ block content
                                         .courseHome__teacherImg
                                             img(src="img/leaders-"+i+".jpg", alt="")
                                         .courseHome__teacherName Сергей Сергеев
-                                        .courseHome__teacherDescr доцент, доктор психиатрических наук
+                                        .courseHome__teacherDescr доцент, доктор психиатрических наук            
 
-                    .courseHome__state
+                    //- .courseHome__state
                         .courseHome__label Карьерные результаты учащихся
                         +state([{text: 'Сертификат, ссылками на который можно делиться с другними людьми', icon: 'certificate'}, {text: '100% онлайн', icon: 'globe'}, {text: 'Гибкие сроки', icon: 'calendar'}, {text: 'Приблизительно 19 часов <br>на выполнение', icon: 'chronometer'}, {text:'Английский', icon: 'english'}])
 
         .container_center
-            // begin course__content
-            .course__content
-                .course__body
-                    .page__title Темы курса
-                    // begin courseHead
-                    .courseHead
-                        .courseHead__rate
-                            .courseHead__label Оценка контента
-                            .rating
-                                i.icon_star.active 
-                                i.icon_star.active 
-                                i.icon_star.active 
-                                i.icon_star 
-                                i.icon_star 
-                            | (3.2)
-                        .courseHead__duration
-                            i.icon_clock 
-                            | 2 месяца 7 дней
 
-                    // end courseHead
+            h2.page__title Подробнее о курсе
+            .course__about.columns
+                p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
+                p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
 
-                    // begin courseItem
-                    each item, i in ['Неделя 1', 'Неделя 2', 'Неделя 3']
-                        .courseItem
-                            .courseItem__head
-                                .courseItem__name=item
-                                .courseItem__progress
-                                    | Сложность 
-                                    .progressCol
-                                        if i === 2
-                                            each item in ['warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', '', '']
-                                                .progressCol__item(class=item)
-                                        else
-                                            each item in ['danger', 'danger', '', '', '', '', '', '', '', '']
-                                                .progressCol__item(class=item)
+        // begin course__content
+        .course__wrap
+            .container_center
+                .course__content
+                    .course__short
+                        h2.page__title Программа обучения
+                        // begin courseHead
+                        .courseHead
+                            .courseHead__rate
+                                .courseHead__label Оценка контента
+                                .rating
+                                    i.icon_star.active 
+                                    i.icon_star.active 
+                                    i.icon_star.active 
+                                    i.icon_star 
+                                    i.icon_star 
+                                | (3.2)
+                            .courseHead__duration
+                                i.icon_clock 
+                                | 2 месяца 7 дней
 
-                            .courseItem__body
-                                .courseItem__row
-                                    .courseItem__title Введение
-                                    .courseItem__text(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
-                                        .courseItem__materials
-                                            i.icon_book 
-                                            | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
+                        // end courseHead
+
+                        .course__state
+                            .course__stateTitle Информация о курсе
+                            +state([{text: 'Сертификат, ссылками на который можно делиться с другними людьми', icon: 'certificate-blue'}, {text: '100% онлайн', icon: 'globe-blue'}, {text: 'Гибкие сроки', icon: 'calendar-blue'}, {text: 'Приблизительно 19 часов <br>на выполнение', icon: 'chronometer-blue'}, {text:'Английский', icon: 'english-blue'}])
+
+                            .course__tags
+                                a.course__tag.course__tag_primary(href="") Подборка Грефа
+                                a.course__tag(href="") IT-технологии
+                                a.course__tag(href="") Продвижение
+
+                    .course__body
+                        .courseItem__body
+                            // begin courseItem
+                            each item, i in ['Неделя 1, название темы обобщенное', 'Неделя 2, название темы обобщенное', 'Неделя 3, название темы обобщенное', 'Неделя 4, название темы обобщенное', 'Неделя 5, название темы обобщенное']
+                                .courseItem
+                                    .courseItem__count=(i+1)
+                                        if i==3
+                                            i.icon_caret
+                                    .courseItem__row
+                                        //- .courseItem__head
+                                        .courseItem__name=item
+                                        .courseItem__text(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                                            .courseItem__materials
+                                                i.icon_book 
+                                                | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
                                             a.courseItem__all(href="") Просмотреть все
-                                    .courseItem__show(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") Показать полностью
-                                .courseItem__row
-                                    .courseItem__title Первая часть
-                                    .courseItem__text.open(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
-                                        .courseItem__materials
-                                            i.icon_book 
-                                            | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
-                                            a.courseItem__all(href="") Просмотреть все
-                                    .courseItem__show.active(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") свернуть
-                                .courseItem__row
-                                    .courseItem__title Вторая часть
-                                    .courseItem__text(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
-                                        .courseItem__materials
-                                            i.icon_book 
-                                            | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
-                                            a.courseItem__all(href="") Просмотреть все
-                                    .courseItem__show(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") Показать полностью
-                                .courseItem__row
-                                    .courseItem__title Третья часть
-                                    .courseItem__text(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
-                                        .courseItem__materials
-                                            i.icon_book 
-                                            | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
-                                            a.courseItem__all(href="") Просмотреть все
-                                    .courseItem__show(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") Показать полностью
 
-                    // end courseItem
-                    .courseItem__more
-                        button.btn.btn_border показать больше
+                                    //- .courseItem__progress
+                                        | Сложность 
+                                        .progressCol
+                                            if i === 2
+                                                each item in ['warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', 'warning', '', '']
+                                                    .progressCol__item(class=item)
+                                            else
+                                                each item in ['danger', 'danger', '', '', '', '', '', '', '', '']
+                                                    .progressCol__item(class=item)
 
-                .course__state
-                    .course__stateTitle 
-                    +state([{text: 'Сертификат, ссылками на который можно делиться с другними людьми', icon: 'certificate-blue'}, {text: '100% онлайн', icon: 'globe-blue'}, {text: 'Гибкие сроки', icon: 'calendar-blue'}, {text: 'Приблизительно 19 часов <br>на выполнение', icon: 'chronometer-blue'}, {text:'Английский', icon: 'english-blue'}])
+                                //- .courseItem__body
+                                    .courseItem__row
+                                        .courseItem__title Введение
+                                        .courseItem__text(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                                            .courseItem__materials
+                                                i.icon_book 
+                                                | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
+                                                a.courseItem__all(href="") Просмотреть все
+                                        //- .courseItem__show(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") Показать полностью
+                                    .courseItem__row
+                                        .courseItem__title Первая часть
+                                        .courseItem__text(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                                            .courseItem__materials
+                                                i.icon_book 
+                                                | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
+                                                a.courseItem__all(href="") Просмотреть все
+                                        //- .courseItem__show.active(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") свернуть
+                                    .courseItem__row
+                                        .courseItem__title Вторая часть
+                                        .courseItem__text(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                                            .courseItem__materials
+                                                i.icon_book 
+                                                | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
+                                                a.courseItem__all(href="") Просмотреть все
+                                        //- .courseItem__show(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") Показать полностью
+                                    .courseItem__row
+                                        .courseItem__title Третья часть
+                                        .courseItem__text(data-more-text="") Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? Тогда этот курс для Вас. Стратегия определяет направления и ориентиры. Вы определяете ориентиры и направления? 
+                                            .courseItem__materials
+                                                i.icon_book 
+                                                | Материалы: 5 видео (всего 43 минуты, 9 материалов для самостоятельного изучения, 1 тест 
+                                                a.courseItem__all(href="") Просмотреть все
+                                        //- .courseItem__show(data-show="Показать полностью" data-hide="свернуть" data-more-toggle="") Показать полностью
 
-                    .course__tags
-                        a.course__tag.course__tag_primary(href="") Подборка Грефа
-                        a.course__tag(href="") IT-технологии
-                        a.course__tag(href="") Продвижение
+                        // end courseItem
+                        //- .courseItem__more
+                            button.btn.btn_border показать больше
 
-            // end course__content
+
+        // end course__content
 
         // begin courseReview
         .courseReview
@@ -200,6 +228,21 @@ block content
 
 
         // end courseReview
+
+        // begin courseOrder
+        .container_center
+            .courseOrder
+                .courseOrder__left
+                    h2.courseOrder__title Запись на курс
+                    .courseOrder__sub Вы можете записаться и оплатить как физическое или юридическое лицо
+                    .courseOrder__action
+                        button.btn.btn_success Для физических лиц
+                        button.btn.btn_contrast Для юридических лиц
+                .courseOrder__img
+                    img(src="img/order-img.jpg", alt="")
+
+
+        // end courseOrder
 
         // begin courseSert
         .courseSert
@@ -248,13 +291,6 @@ block content
         // end courseFaq
 
         .container_center
-            h2.page__title Подробнее о курсе
-
-            .columns
-                p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
-                p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. <br>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
-
-
             .slider__head
                 h2.page__title Партнеры курса
                 .slider__arrows
@@ -265,8 +301,8 @@ block content
                     .parthnersList__item
                         img(src="img/parthners-"+item+".png", alt="")
 
-        // begin courseOrder
-        .courseOrder.bg_primary(style="background-image: url('img/course-order.jpg')")
+        //- // begin courseOrder
+        //- .courseOrder.bg_primary(style="background-image: url('img/course-order.jpg')")
             .container_center
                 .courseOrder__content
                     .courseOrder__left
@@ -277,5 +313,12 @@ block content
                         button.btn.btn_contrast Для физических лиц
 
 
-        // end courseOrder
+        //- // end courseOrder
         // end course
+
+    // Begin Modal courseVideo
+    .modal.modal_video.fade.courseVideo#courseVideo
+        .modal-dialog
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .video__wrapper.js-youtube#OuOXvavAy1c
+    // End modal courseVideo

@@ -1,0 +1,19 @@
+.sorting {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &__label {
+        margin-right: 25px;
+    }
+
+    &__item {
+        width: 210px;
+        margin-right: 15px;
+
+        .select2 {
+            width: 100% !important;
+        }
+    }
+}

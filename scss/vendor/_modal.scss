@@ -23,6 +23,7 @@
         height: 14px;
         right: 28px;
         top: 38px;
+        color: #A3A3A3;
         // background: image-url('close.svg') no-repeat center center;
         &:after,
         &:before {
@@ -30,8 +31,14 @@
             position: absolute;
             display: block;
             width: 100%;
-            border-top: 1px solid #A3A3A3;
+            border-top: 1px solid;
             top: 50%;
+        }
+
+        .modal_video & {
+            top: -30px;
+            right: -30px;
+            color: $color_withe;
         }
 
         &:before {
@@ -67,6 +74,12 @@
         margin: auto;
         padding: 10px auto;
         max-width: 725px;
+
+        .modal_video & {
+            max-width: 1350px;
+            border-radius: 15px;
+            // overflow: hidden;
+        }
 
         &_lg {
             max-width: 880px;
@@ -145,6 +158,17 @@
             .btn {
                 width: 100%;
             }
+        }
+    }
+
+    &_video {
+        .video__play {
+            width: 120px;
+            height: 120px;
+        }
+
+        .video__wrapper {
+            border-radius: 15px;
         }
     }
 }

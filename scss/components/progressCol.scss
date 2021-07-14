@@ -1,0 +1,23 @@
+.progressCol {
+    display: flex;
+    height: 10px;
+    margin: 0 -1px;
+
+    &__item {
+        margin: 0 1px;
+        width: 4px;
+        background: #EAEAEA;
+
+        &.danger {
+            background: #04CF00;
+        }
+
+        &.success {
+            background: #F99C1C;
+        }
+
+        &.warning {
+            background: #FF0000;
+        }
+    }
+}

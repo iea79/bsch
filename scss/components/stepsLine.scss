@@ -1,0 +1,66 @@
+.stepsLine {
+    padding-bottom: 114px;
+
+    &__row {
+        position: relative;
+        top: -71px;
+        display: flex;
+        margin: 0 -15px 17px;
+    }
+
+    &__item {
+        width: calc(33.3% - 30px);
+        margin: 0 15px;
+        background: linear-gradient(180deg, rgba(248, 248, 248, 0.5) 0%, rgba(248, 248, 248, 0.175) 100%);
+        backdrop-filter: blur(20px);
+        border-radius: 15px;
+        min-height: 262px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__num {
+        font-weight: bold;
+        font-size: 100px;
+        line-height: 1;
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__descr {
+        margin-right: 30px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 138.3%;
+        margin: 0 0 18px;
+    }
+
+    &__text {
+        font-size: 22px;
+        line-height: 182.85%;
+    }
+
+    &__action {
+        width: 365px;
+        display: flex;
+        align-items: center;
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+}

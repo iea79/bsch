@@ -1,0 +1,49 @@
+@import "../variables/variables";
+
+.coursesTags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0 40px;
+
+    .sorting + & {
+        margin-top: -36px;
+    }
+
+    a {
+        background: #FFFFFF;
+        box-shadow: 0 4px 15px rgba(176, 187, 193, 0.25);
+        border-radius: 16px;
+        text-decoration: none;
+        margin-top: 10px;
+        margin-right: 16px;
+        font-size: 14px;
+        line-height: 140%;
+        color: $color_primary;
+        padding: 4px 8px;
+
+        b {
+            font-weight: 400;
+            font-size: 12px;
+            margin-left: 4px;
+            color: #A3A3A3;
+        }
+
+        &:hover {
+            box-shadow: 0 0 5px rgba(176, 187, 193, 0.25);
+        }
+
+        &.warning {
+            color: #F57C00;
+        }
+
+        &.danger {
+            color: #FF0000;
+        }
+
+        &.success {
+            color: #1BC100;
+        }
+    }
+
+}

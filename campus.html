@@ -97,19 +97,8 @@
             <div class="post__galleryItem"><img src="img/campus-2.jpg" alt=""/></div>
             <div class="post__galleryItem"><img src="img/campus-3.jpg" alt=""/></div>
             <div class="post__galleryItem"><img src="img/campus-4.jpg" alt=""/></div>
-            <div class="post__galleryItem"><img src="img/campus-5.jpg" alt=""/></div>
-            <div class="post__galleryItem"><img src="img/campus-6.jpg" alt=""/></div>
-            <div class="post__galleryItem"><img src="img/campus-7.jpg" alt=""/></div>
-            <div class="post__galleryItem"><img src="img/campus-8.jpg" alt=""/></div>
           </div>
-          <div class="post__content">
-            <p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
-            <p>Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
-          </div>
-          <div class="post__video">
-            <div class="post__videoItem">
-              <div class="video__wrapper js-youtube" id="OuOXvavAy1c"></div>
-            </div>
+          <div class="post__video post__video_full">
             <div class="post__videoItem">
               <div class="video__wrapper js-youtube" id="OuOXvavAy1c"></div>
             </div>
@@ -118,7 +107,7 @@
       </div>
       <div class="container_center">
         <div class="slider__head">
-          <h2 class="page__subtitle">Похожие новости</h2>
+          <h2 class="page__subtitle">Новости по теме</h2>
           <div class="slider__arrows">
             <div class="slick-arrow slick-prev similar__prev"></div>
             <div class="slick-arrow slick-next similar__next"></div>
@@ -189,6 +178,38 @@
         </div>
         <!-- end similarSlider-->
       </div>
+      <!-- begin contactMap-->
+      <div class="contactMap">
+        <div class="container_center">
+          <div class="contactMap__box">
+            <div class="contactMap__title">Контакты школы</div>
+            <div class="contactMap__list">
+              <ul>
+                <li>123123, Дом Гоголя, Никитский бул., 7А</li>
+                <li>+8 (900) 000 00 00, +8 (900) 000 00 00</li>
+                <li>info@info.ru</li>
+                <li>ИНН: 0001231111</li>
+                <li>ОГРН: 12345678910123</li>
+              </ul>
+            </div>
+            <button class="btn">Написать нам</button>
+          </div>
+        </div>
+        <div class="map" id="map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4v5N9THMUfeAqGbCXcSSYvf9UnbV5pL8&amp;callback=initMap&amp;libraries=&amp;v=weekly" async="async"></script>
+        <script>
+          let map;
+          
+          function initMap() {
+              map = new google.maps.Map(document.getElementById("map"), {
+                  center: { lat: -34.397, lng: 150.644 },
+                  zoom: 8,
+              });
+          }
+          
+        </script>
+      </div>
+      <!-- end contactMap-->
     </main>
     <footer class="footer">
       <div class="footer__top">

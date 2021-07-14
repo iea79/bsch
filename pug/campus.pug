@@ -26,24 +26,20 @@ block content
                 p Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.                
 
             .post__gallery
-                each item in [1,2,3,4,5,6,7,8]
+                each item in [1,2,3,4]
                     .post__galleryItem
                         img(src="img/campus-"+item+".jpg", alt="")
 
-            .post__content
-                p Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-                p Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-
-            .post__video
+            .post__video.post__video_full
                 .post__videoItem
                     .video__wrapper.js-youtube#OuOXvavAy1c
-                .post__videoItem
+                //- .post__videoItem
                     .video__wrapper.js-youtube#OuOXvavAy1c
 
 
     .container_center
         .slider__head
-            h2.page__subtitle Похожие новости
+            h2.page__subtitle Новости по теме
             .slider__arrows
                 .slick-arrow.slick-prev.similar__prev
                 .slick-arrow.slick-next.similar__next
@@ -53,3 +49,35 @@ block content
             include inc/news.pug
 
         // end similarSlider
+
+    // begin contactMap
+    .contactMap
+        .container_center
+            .contactMap__box
+                .contactMap__title Контакты школы
+                .contactMap__list
+                    ul
+                        li 123123, Дом Гоголя, Никитский бул., 7А
+                        li +8 (900) 000 00 00, +8 (900) 000 00 00
+                        li info@info.ru
+                        li ИНН: 0001231111
+                        li ОГРН: 12345678910123
+                button.btn Написать нам
+
+        .map#map
+        script(
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4v5N9THMUfeAqGbCXcSSYvf9UnbV5pL8&callback=initMap&libraries=&v=weekly"
+            async
+        )
+
+        script.
+            let map;
+
+            function initMap() {
+                map = new google.maps.Map(document.getElementById("map"), {
+                    center: { lat: -34.397, lng: 150.644 },
+                    zoom: 8,
+                });
+            }
+
+    // end contactMap

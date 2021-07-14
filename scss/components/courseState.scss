@@ -1,0 +1,49 @@
+.courseState {
+    &__charts {
+        display: flex;
+        margin-left: -58px;
+    }
+
+    &__col {
+        padding-left: 58px;
+        width: 50%;
+        margin-bottom: 28px;
+    }
+
+    &__donut {
+        margin-bottom: 9px;
+    }
+
+    &__text {
+        font-size: 13px;
+        line-height: 138.3%;
+    }
+
+    &__list {
+        letter-spacing: normal;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 11px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 138.3%;
+    }
+
+    &__icon {
+        flex: none;
+        width: 45px;
+        height: 45px;
+        background: #F5F5F5;
+        border-radius: 50%;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 25px;
+    }
+}

@@ -1,0 +1,19 @@
+.newsCat {
+    margin: 47px 0 49px;
+
+    &__link {
+        color: #616161;
+        display: inline-block;
+        text-decoration: none;
+        margin-right: 42px;
+        line-height: 1.56;
+        padding-bottom: 3px;
+        border-bottom: 1px solid transparent;
+
+        &.active {
+            color: $color_primary;
+            border-bottom-color: inherit;
+        }
+    }
+
+}

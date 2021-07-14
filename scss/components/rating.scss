@@ -1,0 +1,14 @@
+.rating {
+    display: flex;
+    font-size: 19px;
+    line-height: 1;
+
+    .icon_star {
+        color: #CBCBCB;
+        margin-right: 4px;
+
+        &.active {
+            color: #FFA800;
+        }
+    }
+}

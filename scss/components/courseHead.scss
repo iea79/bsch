@@ -1,0 +1,37 @@
+.courseHead {
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 70px;
+
+    &__rate {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 1;
+        margin-right: 37px;
+
+        .rating {
+            margin-top: -2px;
+
+            .icon_star:not(.active) {
+                color: $color_withe;
+            }
+        }
+    }
+
+    &__label {
+        margin-right: 8px;
+    }
+
+    &__duration {
+        display: flex;
+        align-items: center;
+
+        i {
+            color: #FFD337;
+            margin-right: 11px;
+        }
+    }
+
+}
