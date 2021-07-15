@@ -1,0 +1,35 @@
+extends layout/layout.pug
+block variables
+    - activePage = 'Новости';
+    - isLogin = true;
+
+block content
+    .newsHead
+        .newsHead__img
+            img(src="img/news-a.jpg", alt="")
+        .container_center
+            +breadcrumb(['Новости'])
+            .newsHead__wrap
+                h1.page__title Новости и мероприятия
+                .newsHead__content
+                    .newsHead__text Здесь будет текстовое описание что будет в этом разделе. Здесь будет текстовое описание что будет в этом разделе. Здесь будет текстовое описание что будет в этом разделе. 
+                    .newsParts
+                        .newsParts__title В этом разделе
+                        .newsParts__list
+                            a(href="") События
+                            a(href="") Новости
+                            a(href="") Мероприятия
+                            a(href="") Еще категория
+                            a(href="") Видео
+
+    .container_center
+        h2.page__subtitle Новости
+        .newsLinks
+            each item in [1, 2, 3, 4, 3, 2]
+                .newsLinks__item
+                    a.newsLinks__img(href="")
+                        img(src="img/news-"+item+".jpg", alt="")
+                    .newsLinks__descr
+                        .newsLinks__date 15 февраля 2021
+                        .newsLinks__name Россия вводит удаленку во всех ВУЗах страны
+                        .newsLinks__text Здесь будет текстовое описание новости которое может быть разной длинны

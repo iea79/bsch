@@ -1,7 +1,12 @@
 .post {
-    // border-bottom: 1px solid #D9DBE2;
-    // padding-bottom: 71px;
+    border-bottom: 1px solid #D9DBE2;
+    padding-bottom: 71px;
     margin-bottom: 52px;
+
+    &_camp {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
 
     &__date {
         font-weight: 500;
