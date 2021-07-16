@@ -49,25 +49,147 @@ block content
                         .form__col
                             label.form__label Электронная почта
                             input(type="text", placeholder="Введите ваш e-mail")
+                        .form__col
+                            label.form__label Пол
+                            label.form__check.form__check_inline.form__check_lg
+                                input(type="radio" name="gender")
+                                span Мужской
+                            label.form__check.form__check_inline.form__check_lg
+                                input(type="radio" name="gender")
+                                span Женский
+                        .form__col
+                            label.form__label Дата рождения
+                            input(type="text", placeholder="Выберите дату рождения")
+                        .form__col
+                            label.form__label Skype ID
+                            input(type="text", placeholder="Введите ваш ID SKYPE")
+                        .form__col
+                            label.form__label Дополнительный телефон
+                            input(type="text", placeholder="Введите дополнительный номер телефона")
+                        .form__col
+                            label.form__label Дополнительный телефон
+                            select.select(data-placeholder="Введите дополнительный номер телефона")
+                                option(value="")
+                                option(value="Значение 1") Значение 1
+                                option(value="Значение 2") Значение 2
+                                option(value="Значение 3") Значение 3
+                                option(value="Значение 4") Значение 4
+                        .form__col
+                            label.form__label Дополнительный телефон
+                            input(type="text", placeholder="Введите дополнительный номер телефона")
+                        .form__col
+                            label.form__label Адрес регистрации по месту жительства (по КЛАДР)
+                            input(type="text", placeholder="введите Адрес регистрации")
+                        .form__col
+                            label.form__label Адрес фактического проживания (по КЛАДР)
+                            input(type="text", placeholder="введите Адрес фактического проживания")
+                        .form__col
+                            label.form__label Место рождения
+                            input(type="text", placeholder="Введите место рождения")
+                        .form__col
+                            label.form__label Часовой пояс
+                            select.select(data-placeholder="Выберите часовой пояс")
+                                option(value="")
+                                option(value="GMT+1") GMT+1
+                                option(value="GMT+2") GMT+2
+                                option(value="GMT+3") GMT+3
+                                option(value="GMT+4") GMT+4
 
-                    h2.subtitle Дополнительные данные
+                    h2.subtitle Данные документов
 
                     .form.form_grid
+                        .form__col.form__col_3
+                            label.form__label ИИН
+                            input(type="number", placeholder="Введите свой ИИН")
+                        .form__col.form__col_3
+                            label.form__label СНИЛС
+                            input(type="number", placeholder="введите СНИЛС")
+                        .form__col.form__col_3
+                            label.form__label Дата выдачи СНИЛС
+                            input.form__date(type="date", placeholder="Дата выдачи СНИЛС")
+                        .form__col.form__col_3
+                            label.form__label Вид удостоверяющего документа 
+                            select.select(data-placeholder="Выберите вид документа")
+                                option(value="")
+                                option(value="Значение 1") Значение 1
+                                option(value="Значение 2") Значение 2
+                                option(value="Значение 3") Значение 3
+                                option(value="Значение 4") Значение 4
                         .form__col.form__col_3
                             label.form__label Серия
                             input(type="text", placeholder="Введите серию пасспорта")
                         .form__col.form__col_3
                             label.form__label Номер
                             input(type="text", placeholder="номер в формате N*****")
-                        .form__col.form__col_3
-                            label.form__label Дата получения
-                            input(type="text", placeholder="Введите дату")
-                        .form__col.form__col_3
-                            label.form__label Код подразделения
-                            input(type="text", placeholder="Введите код")
-                        .form__col.form__col_2_3
-                            label.form__label Кем выдан
+                        .form__col
+                            label.form__label Организация, выдавшая документ,
                             input(type="text", placeholder="к примеру: мимнистерство юстиции РФ")
+                        .form__col
+                            label.form__label Код подразделения (для документов, выданных на территории РФ)
+                            input(type="text", placeholder="Введите код подразделения")
+                        .form__col.form__col_3
+                            label.form__label Дата выдачи документа
+                            input.form__date(type="date", placeholder="выберите дату выдачи")
+                        .form__col.form__col_2_3
+                            label.form__label Скан копия документа удостоверяющего личность
+                            label.form__file
+                                input(type="file")
+                                .form__field(data-placeholder="файл формата doc, PDF, Jpeg, PNG, SVG")
+                                button.btn.btn_border Обзор
+
+
+
+
+                    h2.subtitle Данные об образовании
+
+                    .form.form_grid
+                        .form__col.form__col_3
+                            label.form__label Уровень образования
+                            select.select(data-placeholder="Нажмите для выбора")
+                                option(value="")
+                                    option(value="Значение 1") Значение 1
+                                    option(value="Значение 2") Значение 2
+                                    option(value="Значение 3") Значение 3
+                                    option(value="Значение 4") Значение 4
+                        .form__col.form__col_2_3
+                            label.form__label Наименование образовательного учреждения 
+                            input(type="text", placeholder="Введите наименование образовательного учреждения")
+                        .form__col.form__col_3
+                            label.form__label Год окончания
+                            select.select(data-placeholder="выберите год окончания")
+                                option(value="")
+                                    option(value="Значение 1") Значение 1
+                                    option(value="Значение 2") Значение 2
+                                    option(value="Значение 3") Значение 3
+                                    option(value="Значение 4") Значение 4
+                        .form__col.form__col_3
+                            label.form__label Специальность
+                            select.select(data-placeholder="выберите специальность")
+                                option(value="")
+                                    option(value="Значение 1") Значение 1
+                                    option(value="Значение 2") Значение 2
+                                    option(value="Значение 3") Значение 3
+                                    option(value="Значение 4") Значение 4
+                        .form__col.form__col_3
+                            label.form__label Номер и серия диплома об образовании
+                            input(type="text", placeholder="Введите номер и серию")
+                        .form__col.form__col_3
+                            label.form__label Дата выдачи диплома
+                            select.select(data-placeholder="Выберите дату выдачи")
+                                option(value="")
+                                    option(value="Значение 1") Значение 1
+                                    option(value="Значение 2") Значение 2
+                                    option(value="Значение 3") Значение 3
+                                    option(value="Значение 4") Значение 4
+                        .form__col.form__col_2_3
+                            label.form__label Скан копия документа об образовании
+                            label.form__file
+                                input(type="file")
+                                .form__field(data-placeholder="файл формата doc, PDF, Jpeg, PNG, SVG")
+                                button.btn.btn_border Обзор
+
+
+
                     .form__save
                         button.btn(type="submit") Сохранить
                         label.form__check

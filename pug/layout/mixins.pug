@@ -13,5 +13,10 @@ mixin sert(arr)
         each item in arr
             .lkSerts__item
                 .lkSerts__img
-                    img(src="img/sert-"+item+".jpg", alt="")
-                .lkSerts__name «Сертифицированный <br>менеджер»
+                    img(src="img/sert-"+item.img+".jpg", alt="")
+                if item.perc
+                    .lkSerts__progress
+                        .lkSerts__label Завершено #{item.perc}
+                        .lkSerts__bar
+                            span(style="width: "+item.perc+"")
+                .lkSerts__name «Сертифицированный менеджер»

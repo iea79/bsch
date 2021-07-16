@@ -118,9 +118,88 @@
                   <label class="form__label">Электронная почта</label>
                   <input type="text" placeholder="Введите ваш e-mail"/>
                 </div>
+                <div class="form__col">
+                  <label class="form__label">Пол</label>
+                  <label class="form__check form__check_inline form__check_lg">
+                    <input type="radio" name="gender"/><span>Мужской</span>
+                  </label>
+                  <label class="form__check form__check_inline form__check_lg">
+                    <input type="radio" name="gender"/><span>Женский</span>
+                  </label>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Дата рождения</label>
+                  <input type="text" placeholder="Выберите дату рождения"/>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Skype ID</label>
+                  <input type="text" placeholder="Введите ваш ID SKYPE"/>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Дополнительный телефон</label>
+                  <input type="text" placeholder="Введите дополнительный номер телефона"/>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Дополнительный телефон</label>
+                  <select class="select" data-placeholder="Введите дополнительный номер телефона">
+                    <option value=""></option>
+                    <option value="Значение 1">Значение 1</option>
+                    <option value="Значение 2">Значение 2</option>
+                    <option value="Значение 3">Значение 3</option>
+                    <option value="Значение 4">Значение 4</option>
+                  </select>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Дополнительный телефон</label>
+                  <input type="text" placeholder="Введите дополнительный номер телефона"/>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Адрес регистрации по месту жительства (по КЛАДР)</label>
+                  <input type="text" placeholder="введите Адрес регистрации"/>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Адрес фактического проживания (по КЛАДР)</label>
+                  <input type="text" placeholder="введите Адрес фактического проживания"/>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Место рождения</label>
+                  <input type="text" placeholder="Введите место рождения"/>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Часовой пояс</label>
+                  <select class="select" data-placeholder="Выберите часовой пояс">
+                    <option value=""></option>
+                    <option value="GMT+1">GMT+1</option>
+                    <option value="GMT+2">GMT+2</option>
+                    <option value="GMT+3">GMT+3</option>
+                    <option value="GMT+4">GMT+4</option>
+                  </select>
+                </div>
               </div>
-              <h2 class="subtitle">Дополнительные данные</h2>
+              <h2 class="subtitle">Данные документов</h2>
               <div class="form form_grid">
+                <div class="form__col form__col_3">
+                  <label class="form__label">ИИН</label>
+                  <input type="number" placeholder="Введите свой ИИН"/>
+                </div>
+                <div class="form__col form__col_3">
+                  <label class="form__label">СНИЛС</label>
+                  <input type="number" placeholder="введите СНИЛС"/>
+                </div>
+                <div class="form__col form__col_3">
+                  <label class="form__label">Дата выдачи СНИЛС</label>
+                  <input class="form__date" type="date" placeholder="Дата выдачи СНИЛС"/>
+                </div>
+                <div class="form__col form__col_3">
+                  <label class="form__label">Вид удостоверяющего документа </label>
+                  <select class="select" data-placeholder="Выберите вид документа">
+                    <option value=""></option>
+                    <option value="Значение 1">Значение 1</option>
+                    <option value="Значение 2">Значение 2</option>
+                    <option value="Значение 3">Значение 3</option>
+                    <option value="Значение 4">Значение 4</option>
+                  </select>
+                </div>
                 <div class="form__col form__col_3">
                   <label class="form__label">Серия</label>
                   <input type="text" placeholder="Введите серию пасспорта"/>
@@ -129,17 +208,88 @@
                   <label class="form__label">Номер</label>
                   <input type="text" placeholder="номер в формате N*****"/>
                 </div>
-                <div class="form__col form__col_3">
-                  <label class="form__label">Дата получения</label>
-                  <input type="text" placeholder="Введите дату"/>
+                <div class="form__col">
+                  <label class="form__label">Организация, выдавшая документ,</label>
+                  <input type="text" placeholder="к примеру: мимнистерство юстиции РФ"/>
+                </div>
+                <div class="form__col">
+                  <label class="form__label">Код подразделения (для документов, выданных на территории РФ)</label>
+                  <input type="text" placeholder="Введите код подразделения"/>
                 </div>
                 <div class="form__col form__col_3">
-                  <label class="form__label">Код подразделения</label>
-                  <input type="text" placeholder="Введите код"/>
+                  <label class="form__label">Дата выдачи документа</label>
+                  <input class="form__date" type="date" placeholder="выберите дату выдачи"/>
                 </div>
                 <div class="form__col form__col_2_3">
-                  <label class="form__label">Кем выдан</label>
-                  <input type="text" placeholder="к примеру: мимнистерство юстиции РФ"/>
+                  <label class="form__label">Скан копия документа удостоверяющего личность</label>
+                  <label class="form__file">
+                    <input type="file"/>
+                    <div class="form__field" data-placeholder="файл формата doc, PDF, Jpeg, PNG, SVG"></div>
+                    <button class="btn btn_border">Обзор</button>
+                  </label>
+                </div>
+              </div>
+              <h2 class="subtitle">Данные об образовании</h2>
+              <div class="form form_grid">
+                <div class="form__col form__col_3">
+                  <label class="form__label">Уровень образования</label>
+                  <select class="select" data-placeholder="Нажмите для выбора">
+                    <option value="">
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                    </option>
+                  </select>
+                </div>
+                <div class="form__col form__col_2_3">
+                  <label class="form__label">Наименование образовательного учреждения </label>
+                  <input type="text" placeholder="Введите наименование образовательного учреждения"/>
+                </div>
+                <div class="form__col form__col_3">
+                  <label class="form__label">Год окончания</label>
+                  <select class="select" data-placeholder="выберите год окончания">
+                    <option value="">
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                    </option>
+                  </select>
+                </div>
+                <div class="form__col form__col_3">
+                  <label class="form__label">Специальность</label>
+                  <select class="select" data-placeholder="выберите специальность">
+                    <option value="">
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                    </option>
+                  </select>
+                </div>
+                <div class="form__col form__col_3">
+                  <label class="form__label">Номер и серия диплома об образовании</label>
+                  <input type="text" placeholder="Введите номер и серию"/>
+                </div>
+                <div class="form__col form__col_3">
+                  <label class="form__label">Дата выдачи диплома</label>
+                  <select class="select" data-placeholder="Выберите дату выдачи">
+                    <option value="">
+                      <option value="Значение 1">Значение 1</option>
+                      <option value="Значение 2">Значение 2</option>
+                      <option value="Значение 3">Значение 3</option>
+                      <option value="Значение 4">Значение 4</option>
+                    </option>
+                  </select>
+                </div>
+                <div class="form__col form__col_2_3">
+                  <label class="form__label">Скан копия документа об образовании</label>
+                  <label class="form__file">
+                    <input type="file"/>
+                    <div class="form__field" data-placeholder="файл формата doc, PDF, Jpeg, PNG, SVG"></div>
+                    <button class="btn btn_border">Обзор</button>
+                  </label>
                 </div>
               </div>
               <div class="form__save">

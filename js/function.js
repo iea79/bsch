@@ -5,7 +5,6 @@
  * Skype: ivanov_ea
  *
  */
-
 var app = {
     pageScroll: '',
     lgWidth: 1200,

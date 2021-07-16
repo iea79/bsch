@@ -19,11 +19,25 @@ block content
 
                     .lkBox
                         .lkProgress
-                            each item in [{name: 'Стратегический менеджмент в контексте управления государством', percent: '35%'},{name: 'Стратегический менеджмент', percent: '50%'},{name: 'Стратегический менеджмент', percent: '15%'},{name: 'Стратегический менеджмент в контексте управления государством', percent: '75%'},{name: 'Стратегический менеджмент', percent: '92%'},{name: 'Стратегический менеджмент в контексте управления государством', percent: '60'}]
+                            each item, i in [{name: 'Стратегический менеджмент в контексте управления государством', percent: '35%'},{name: 'Стратегический менеджмент', percent: '50%'},{name: 'Стратегический менеджмент', percent: '15%'},{name: 'Стратегический менеджмент в контексте управления государством', percent: '75%'},{name: 'Стратегический менеджмент', percent: '92%'},{name: 'Стратегический менеджмент в контексте управления государством', percent: '60%'}]
+                                if i == 0
+                                    -var color = 'warning'
+                                if i == 1
+                                    -var color = 'success'
+                                if i == 2
+                                    -var color = 'danger'
+                                if i == 3
+                                    -var color = 'seccondary'
+                                if i == 4
+                                    -var color = 'primary'
+                                if i == 5
+                                    -var color = 'muted'
+
+
                                 .lkProgress__item
                                     .lkProgress__label=item.name
                                     .lkProgress__line
-                                        span(style="width: "+item.percent+"")
+                                        span(style="width: "+item.percent+"" class=color)
                                     .lkProgress__percent= item.percent + " пройдено"
 
                     h2.subtitle Мое расписание
@@ -35,10 +49,10 @@ block content
                     include inc/lkRecomend.pug
 
 
-                    h2.subtitle Личный прогресс
+                    //- h2.subtitle Личный прогресс
 
-                    // begin progressBar
-                    .progressBar__wrap
+                    //- // begin progressBar
+                    //- .progressBar__wrap
                         .progressBar
                             .progressBar__line(style="width: 100%; background: #2B89F8")
                                 .progressBar__text(style="color: #FFFFFF") Первый курс 100%
@@ -55,7 +69,7 @@ block content
                             .progressBar__line(style="width: 35%; background: #D937BF")
                                 .progressBar__text(style="color: #FFFFFF") Вторая программа обучения 35%
 
-                    // end progressBar
+                    //- // end progressBar
 
                     h2.subtitle Общий прогресс
 

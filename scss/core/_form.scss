@@ -131,6 +131,10 @@
 
 	&__label {
 		margin-bottom: 5px;
+
+		+ .form__check_inline {
+			margin-top: 28px;
+		}
 	}
 
 	&__save {
@@ -159,7 +163,7 @@
 	}
 
 	.btn:not(.btn_add) {
-		padding: 22px 33px;
+		// padding: 22px 33px;
 	}
 
 	&__file {
@@ -247,6 +251,11 @@ textarea {
 	line-height: 1.7;
 	letter-spacing: 0.05em;
 
+	.lk & {
+		background: #FFFFFF;
+		border: 1px solid #E3E3E3;
+	}
+
 	&:hover {
 		border: 1px solid $input_hover_border_color;
 		background-color: $input_hover_bg_color;
@@ -264,11 +273,6 @@ textarea {
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
 		color: $input_placeholder_color;
-	}
-
-	.lk & {
-		background: #FFFFFF;
-		border: 1px solid #E3E3E3;
 	}
 
 	&.form__date {
@@ -331,6 +335,11 @@ input[type=radio] {
 	border: 1px solid #E3E3E3;
 	font-size: 7px;
 
+	.form__check_lg & {
+		width: 24px;
+		height: 24px;
+	}
+
 	&:not(:disabled),
 	&:not(:disabled) {
 		cursor: pointer;
@@ -368,8 +377,8 @@ input[type=radio] {
 
 		&:before {
 			content: '';
-			width: 7px;
-			height: 7px;
+			width: 8px;
+			height: 8px;
 			display: block;
 			border-radius: 50%;
 			background: $color_withe;
