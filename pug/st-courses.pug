@@ -12,11 +12,59 @@ block content
                 h1.page__title Мои курсы
                 button.btn Подобрать курсы
 
+
             .lk__body
                 include inc/lk-aside.pug
                 .lk__content
                     h2.subtitle Рекомендательная система
                     p Выберите, в каком направлении Вы хотели бы развиваться, и подберем индивидуальную программу обучения для Вас
+
+                    // begin lkTags
+                    .lkTags__grid
+                        .lkTags__col
+                            .lkTags__title Я могу...
+                            .lkTags
+                                each item in [{text: 'Я владею стратегией переговоров', color: ''}, {text: 'Я умею вести переговоры', color: ''}, {text: 'Переговоры на иностранном языке', color: ''}, {text: 'Управленческие навыки', color: 'warning'}, {text: 'Менеджмент персонала', color: 'warning'}, {text: 'Умелый руководитель', color: 'warning'}, {text: 'MySQL', color: 'success'}, {text: 'Аналитика баз данных', color: 'success'}]
+                                    .lkTags__tag(class=item.color)=item.text 
+                                        .lkTags__delete
+                        .lkTags__col
+                            .lkTags__title Я хочу...
+                            .lkTags
+                                each item in [{text: 'Общение без стеснения', color: ''}, {text: 'Ясная поставленная речь', color: ''}, {text: 'Хорошая дикция', color: ''}, {text: 'Навыки администратора', color: 'warning'}, {text: 'Навыки лидера', color: 'warning'}, {text: 'Администрирование баз данных', color: 'success'}]
+                                    .lkTags__tag(class=item.color)=item.text 
+                                        .lkTags__delete
+
+
+                    .lkTags__grid
+                        .lkTags__col
+                            .lkTags__sub Начните ввод для выбора тега в категорию «Я могу» 
+                            each item, i in ['Стратегическое мышление', 'Системное мышление', 'Инновационное мышление', 'Критическое мышление']
+                                - open = '';
+                                if i === 0
+                                    - open = 'open';
+                                .lkTags__item(class=open data-collapse-body="")
+                                    .lkTags__toggle(data-collapse-toggle="")=item 
+                                        i.icon_caret
+                                    .lkTags__drop
+                                        each prop in ['Навыки переговоров', 'Переговоры на английском языке', 'Сложные диалоги', 'Общение']
+                                            label.lkTags__check
+                                                input(type="checkbox")
+                                                span=prop
+                        .lkTags__col
+                            .lkTags__sub Начните ввод для выбора тега в категорию «Я хочу» 
+                            each item, i in ['Стратегическое мышление', 'Системное мышление', 'Инновационное мышление', 'Критическое мышление']
+                                - open = '';
+                                if i === 0
+                                    - open = 'open';
+                                .lkTags__item(class=open data-collapse-body="")
+                                    .lkTags__toggle(data-collapse-toggle="")=item 
+                                        i.icon_caret
+                                    .lkTags__drop
+                                        each prop in ['Навыки переговоров', 'Переговоры на английском языке', 'Сложные диалоги', 'Общение']
+                                            label.lkTags__check
+                                                input(type="checkbox")
+                                                span=prop
+                    // end lkTags
 
                     h2.subtitle Компетенции
 
