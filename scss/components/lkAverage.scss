@@ -1,0 +1,47 @@
+.lkAverage {
+    display: flex;
+    margin: 0 -15px 20px;
+
+    &__item {
+        width: calc(33.3% - 30px);
+        margin: 0 15px 30px;
+        padding: 51px 25px 25px;
+        box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        min-height: 255px;
+        color: $color_withe;
+
+        &.primary {
+            background: $color_primary;
+        }
+
+        &.danger {
+            background: $color_danger;
+        }
+
+        &.warning {
+            background: $color_warning;
+            color: #2F2B38;
+        }
+
+    }
+
+    &__num {
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 138.3%;
+        margin-bottom: 6px;
+    }
+
+    &__label {
+        font-size: 18px;
+        line-height: 21px;
+        max-width: 200px;
+        height: 60px;
+    }
+
+}

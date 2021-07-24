@@ -9,34 +9,47 @@ block content
 
         h1.page__title Программы обучения
 
-        .sorting
-            .sorting__label Сортировка
-            .sorting__item
-                select.select(name="" data-placeholder="по категории")
-                    option(value="")
-                    option(value="Вариант 1") Вариант 1
-                    option(value="Вариант 2") Вариант 2
-            .sorting__item
-                select.select(name="" data-placeholder="по популярности")
-                    option(value="")
-                    option(value="Вариант 1") Вариант 1
-                    option(value="Вариант 2") Вариант 2
-            .sorting__item
-                select.select(name="" data-placeholder="по дате добавления")
-                    option(value="")
-                    option(value="Вариант 1") Вариант 1
-                    option(value="Вариант 2") Вариант 2
+        .mobileSort__toggle.mobile.js_sort_toggle Фильтр 
+            i.icon_plus
+        .mobileSort
+            .mobileSort__head.mobile
+                .mobileSort__close.js_sort_toggle
+                    i.icon_close
+            .mobileSort__body
+                .sorting
+                    .sorting__label Сортировка
+                    .sorting__item
+                        select.select(name="" data-placeholder="по категории")
+                            option(value="")
+                            option(value="Вариант 1") Вариант 1
+                            option(value="Вариант 2") Вариант 2
+                    .sorting__item
+                        select.select(name="" data-placeholder="по популярности")
+                            option(value="")
+                            option(value="Вариант 1") Вариант 1
+                            option(value="Вариант 2") Вариант 2
+                    .sorting__item
+                        select.select(name="" data-placeholder="по дате добавления")
+                            option(value="")
+                            option(value="Вариант 1") Вариант 1
+                            option(value="Вариант 2") Вариант 2
 
 
-        .coursesTags
-            a(href="") Подборка Грефа 
-                b 5
-            a.warning(href="") Управление и менеджмент
-                b 3
-            a.success(href="") IT-технологии
-                b 8
-            a.danger(href="") Продвижение
-                b 2
+                .coursesTags
+                    a(href="") Подборка Грефа 
+                        b 5
+                    a.warning(href="") Управление и менеджмент
+                        b 3
+                    a.success(href="") IT-технологии
+                        b 8
+                    a.danger(href="") Продвижение
+                        b 2
+
+            .mobileSort__footer.mobile
+                button.btn Применить
+                .mobileSort__reset
+                    i.icon_close 
+                    | Сбросить все
 
         .coursesList__row
             each item, i in ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']

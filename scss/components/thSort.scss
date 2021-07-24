@@ -1,0 +1,77 @@
+.thSort {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+
+    &__label {
+        margin-right: 18px;
+    }
+
+    &__group {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+    }
+
+    &__item {
+        margin-right: 20px;
+
+        &:first-child {
+            width: 24.4%;
+        }
+
+        &:nth-child(2) {
+            width: 24.4%;
+        }
+
+        &:last-child {
+            flex-grow: 1;
+        }
+
+        .select2-container {
+            width: 100% !important;
+
+            &--default {
+                .select2-selection {
+                    height: 47px;
+                    font-size: 13px;
+
+                    &--single .select2-selection__rendered {
+                        height: 47px;
+                        line-height: 47px;
+                    }
+                }
+            }
+        }
+
+        input:not([type]),
+        input[type=date],
+        input[type=datetime],
+        input[type=email],
+        input[type=number],
+        input[type=password],
+        input[type=search],
+        input[type=tel],
+        input[type=text],
+        input[type=url],
+        textarea {
+            padding: 11px 16px;
+            font-size: 13px;
+            line-height: 182.85%;
+            width: 100%;
+            text-transform: none;
+            height: 47px;
+
+        }
+
+    }
+
+    &__action {
+        .btn {
+            font-size: 12px;
+            padding: 11px 20px;
+            width: 204px;
+        }
+    }
+}

@@ -13,20 +13,24 @@
     <header class="header">
       <div class="header__content">
         <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="Бизнес-школа"/></a></div>
-        <nav class="header__nav">
-          <div class="navbar__toggle"></div>
-          <ul class="navbar">
-            <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link active" href="programm.html">Программы обучения</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
-            </li>
-          </ul>
+        <div class="navbar__toggle"></div>
+        <nav class="header__nav nav">
+          <div class="nav__header"></div>
+          <div class="nav__body">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link active" href="programm.html">Программы обучения</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav__footer"></div>
         </nav>
         <div class="header__right">
           <div class="header__info">
@@ -66,31 +70,43 @@
               </ul>
             </div>
         <h1 class="page__title">Программы обучения</h1>
-        <div class="sorting">
-          <div class="sorting__label">Сортировка</div>
-          <div class="sorting__item">
-            <select class="select" name="" data-placeholder="по категории">
-              <option value=""></option>
-              <option value="Вариант 1">Вариант 1</option>
-              <option value="Вариант 2">Вариант 2</option>
-            </select>
+        <div class="mobileSort__toggle mobile js_sort_toggle">Фильтр <i class="icon_plus"></i></div>
+        <div class="mobileSort">
+          <div class="mobileSort__head mobile">
+            <div class="mobileSort__close js_sort_toggle"><i class="icon_close"></i></div>
           </div>
-          <div class="sorting__item">
-            <select class="select" name="" data-placeholder="по популярности">
-              <option value=""></option>
-              <option value="Вариант 1">Вариант 1</option>
-              <option value="Вариант 2">Вариант 2</option>
-            </select>
+          <div class="mobileSort__body">
+            <div class="sorting">
+              <div class="sorting__label">Сортировка</div>
+              <div class="sorting__item">
+                <select class="select" name="" data-placeholder="по категории">
+                  <option value=""></option>
+                  <option value="Вариант 1">Вариант 1</option>
+                  <option value="Вариант 2">Вариант 2</option>
+                </select>
+              </div>
+              <div class="sorting__item">
+                <select class="select" name="" data-placeholder="по популярности">
+                  <option value=""></option>
+                  <option value="Вариант 1">Вариант 1</option>
+                  <option value="Вариант 2">Вариант 2</option>
+                </select>
+              </div>
+              <div class="sorting__item">
+                <select class="select" name="" data-placeholder="по дате добавления">
+                  <option value=""></option>
+                  <option value="Вариант 1">Вариант 1</option>
+                  <option value="Вариант 2">Вариант 2</option>
+                </select>
+              </div>
+            </div>
+            <div class="coursesTags"><a href="">Подборка Грефа <b>5</b></a><a class="warning" href="">Управление и менеджмент<b>3</b></a><a class="success" href="">IT-технологии<b>8</b></a><a class="danger" href="">Продвижение<b>2</b></a></div>
           </div>
-          <div class="sorting__item">
-            <select class="select" name="" data-placeholder="по дате добавления">
-              <option value=""></option>
-              <option value="Вариант 1">Вариант 1</option>
-              <option value="Вариант 2">Вариант 2</option>
-            </select>
+          <div class="mobileSort__footer mobile">
+            <button class="btn">Применить</button>
+            <div class="mobileSort__reset"><i class="icon_close"> </i>Сбросить все</div>
           </div>
         </div>
-        <div class="coursesTags"><a href="">Подборка Грефа <b>5</b></a><a class="warning" href="">Управление и менеджмент<b>3</b></a><a class="success" href="">IT-технологии<b>8</b></a><a class="danger" href="">Продвижение<b>2</b></a></div>
         <div class="coursesList__row">
           <div class="coursesList__item">
             <div class="coursesList__head">
@@ -803,7 +819,8 @@
     <footer class="footer">
       <div class="footer__top">
         <div class="footer__content">
-          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a>
+          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div>
+          <div class="footer__links"><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a></div>
         </div>
       </div>
       <div class="footer__middle">

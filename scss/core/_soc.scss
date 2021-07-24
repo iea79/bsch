@@ -2,10 +2,14 @@
 
 .soc {
 	// float: left;
-	font-size: 39px;
+	font-size: 31px;
 	display: flex;
 	flex-wrap: wrap;
 	margin-left: -24px;
+
+	@media (min-width: 768px) {
+		font-size: 39px;
+	}
 
 	&__link {
 		padding-left: 24px;

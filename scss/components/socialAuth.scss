@@ -1,0 +1,35 @@
+.socialAuth {
+    &__label {
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.6;
+        font-weight: 500;
+        margin-bottom: 22px;
+
+        &:before {
+            content: '';
+            border-top: 1px solid #A3A3A3;
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+        }
+
+        span {
+            position: relative;
+            background-color: $color_withe;
+            padding: 0 14px;
+        }
+    }
+
+    &__links {
+        text-align: center;
+
+        a {
+            color: #C4C4C4;
+            font-size: 40px;
+            text-decoration: none;
+        }
+    }
+}

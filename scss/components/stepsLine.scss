@@ -1,62 +1,120 @@
 .stepsLine {
-    padding-bottom: 114px;
+    padding-bottom: 63px;
+
+    @media (min-width: 992px) {
+        padding-bottom: 114px;
+    }
 
     &__row {
         position: relative;
-        top: -71px;
-        display: flex;
-        margin: 0 -15px 17px;
+        top: -86px;
+        margin: 0 0 -24px;
+
+        @media (min-width: 768px) {
+            display: flex;
+            margin: 0 -15px 17px;
+        }
+
+        @media (min-width: 992px) {
+            top: -71px;
+        }
     }
 
     &__item {
-        width: calc(33.3% - 30px);
-        margin: 0 15px;
+        margin: 0 0 20px;
         background: linear-gradient(180deg, rgba(248, 248, 248, 0.5) 0%, rgba(248, 248, 248, 0.175) 100%);
         backdrop-filter: blur(20px);
         border-radius: 15px;
-        min-height: 262px;
+        min-height: 183px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        @media (min-width: 768px) {
+            width: calc(33.3% - 30px);
+            margin: 0 15px;
+        }
+
+        @media (min-width: 992px) {
+            min-height: 262px;
+        }
     }
 
     &__num {
         font-weight: bold;
-        font-size: 100px;
+        font-size: 60px;
         line-height: 1;
+
+        @media (min-width: 992px) {
+            font-size: 100px;
+        }
     }
 
     &__name {
         font-weight: 600;
-        font-size: 20px;
+        font-size: 16px;
+
+        @media (min-width: 992px) {
+            font-size: 20px;
+        }
     }
 
     &__content {
-        display: flex;
-        justify-content: space-between;
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     &__descr {
-        margin-right: 30px;
+        @media (min-width: 768px) {
+            margin-right: 30px;
+        }
     }
 
     &__title {
         font-weight: 600;
-        font-size: 48px;
+        font-size: 26px;
         line-height: 138.3%;
-        margin: 0 0 18px;
+        margin: 0 0 14px;
+
+        @media (min-width: 768px) {
+            font-size: 38px;
+            margin: 0 0 18px;
+        }
+
+        @media (min-width: 992px) {
+            font-size: 48px;
+        }
     }
 
     &__text {
-        font-size: 22px;
-        line-height: 182.85%;
+        font-size: 16px;
+        line-height: 167.85%;
+        margin-bottom: 22px;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            line-height: 182.85%;
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 992px) {
+            font-size: 22px;
+        }
     }
 
     &__action {
-        width: 365px;
-        display: flex;
-        align-items: center;
+
+        @media (min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            width: 365px;
+        }
 
         .btn {
             width: 100%;

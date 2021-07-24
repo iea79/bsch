@@ -1,7 +1,12 @@
 .post {
     border-bottom: 1px solid #D9DBE2;
-    padding-bottom: 71px;
-    margin-bottom: 52px;
+    padding-bottom: 34px;
+    margin-bottom: 34px;
+
+    @media (min-width: 768px) {
+        padding-bottom: 71px;
+        margin-bottom: 52px;
+    }
 
     &_camp {
         border-bottom: 0;
@@ -10,57 +15,100 @@
 
     &__date {
         font-weight: 500;
-        font-size: 18px;
+        font-size: 12px;
         line-height: 159.52%;
         color: #686472;
-        margin-bottom: 49px;
+        margin-bottom: 25px;
+
+        @media (min-width: 768px) {
+            font-size: 18px;
+            margin-bottom: 49px;
+        }
     }
 
     &__cover {
         display: block;
-        height: 626px;
+        // height: 626px;
+        padding: 0 0 72%;
         border-radius: 15px;
-        margin-bottom: 51px;
+        margin-bottom: 25px;
         overflow: hidden;
+        position: relative;
+
+        @media (min-width: 768px) {
+            height: 626px;
+            padding: 0;
+            margin-bottom: 51px;
+        }
 
         img {
+            position: absolute;
             display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
+
+            @media (min-width: 768px) {
+                position: static;
+            }
         }
     }
 
     &__content {
-        max-width: 976px;
-        margin: auto;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 174%;
         color: #0C0B0D;
+
+        @media (min-width: 768px) {
+            margin: auto;
+            max-width: 976px;
+            font-size: 16px;
+        }
 
         h2,
         h3 {
             font-weight: 600;
-            font-size: 24px;
+            font-size: 16px;
             line-height: 138.3%;
             display: flex;
             align-items: center;
             color: #2F2B38;
-            margin: 36px 0 15px;
+            margin: 43px 0 14px;
+
+            @media (min-width: 768px) {
+                margin: 36px 0 15px;
+                font-size: 24px;
+            }
         }
 
         p {
-            margin: 15px 0;
+            margin: 13px 0;
+
+            @media (min-width: 768px) {
+                margin: 15px 0;
+            }
         }
     }
 
     &__grid {
-        margin: 50px 0 60px -30px;
+        margin: 38px 0 0 -30px;
         display: flex;
+        flex-wrap: wrap;
+
+        @media (min-width: 768px) {
+            margin: 50px 0 60px -30px;
+        }
 
         &Item {
             padding-left: 30px;
-            width: 33.3%;
+            margin-bottom: 20px;
+            width: 300px;
+            flex-grow: 1;
+
+            @media (min-width: 768px) {
+                width: 33.3%;
+                margin-bottom: 0;
+            }
 
             img {
                 width: 100%;
@@ -73,12 +121,26 @@
     &__gallery {
         display: flex;
         flex-wrap: wrap;
-        margin: 50px 0 50px -30px;
+        margin: 26px -15px 0;
+
+        @media (min-width: 768px) {
+            margin: 50px 0 50px -30px;
+        }
+
+        @media (max-width: 767px) {
+            @include asyncSlider;
+        }
 
         &Item {
-            padding-left: 30px;
-            margin-bottom: 30px;
+            padding-left: 15px;
+            margin-bottom: 26px;
             width: 33.3%;
+
+            @media (min-width: 768px) {
+                padding-left: 30px;
+                margin-bottom: 30px;
+
+            }
 
             @media (min-width: 992px) {
                 width: 25%;
@@ -87,6 +149,7 @@
             img {
                 display: block;
                 border-radius: 10px;
+                width: 100%;
             }
         }
     }
@@ -101,7 +164,11 @@
             position: relative;
             left: 50%;
             transform: translateX(-50%);
-            margin: 65px 0 0;
+            margin: 0 0 43px;
+
+            @media (min-width: 768px) {
+                margin: 65px 0 0;
+            }
         }
 
         &Item {
@@ -120,16 +187,17 @@
                 .post__video_full & {
                     border-radius: 0;
                     box-shadow: none;
-                    padding-bottom: 0;
-                    height: 645px;
+
+                    @media (min-width: 992px) {
+                        padding-bottom: 0;
+                        height: 645px;
+                    }
                 }
             }
 
             .video__play {
                 width: 64px;
                 height: 64px;
-                margin-top: -32px;
-                margin-left: -32px;
             }
         }
     }

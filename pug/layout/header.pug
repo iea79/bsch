@@ -7,15 +7,18 @@ header.header(class=trs)
         .header__left
             a.logo(href="/")
                 img(src="img/logo.svg", alt="Бизнес-школа")
-        nav.header__nav
-            .navbar__toggle
-            ul.navbar
-                each navLink, i in [{name: 'О школе', href: 'about.html'},{name: 'Новости', href: 'news.html'},{name: 'Кампус', href: 'campus.html'},{name: 'Программы обучения', href: 'programm.html'},{name: 'Преподаватели и спикеры', href: 'teachers.html'},]
-                    li.navbar__item
-                        if activePage == navLink.name
-                            a.navbar__link.active(href=navLink.href)= navLink.name
-                        else
-                            a.navbar__link(href=navLink.href)= navLink.name
+        .navbar__toggle
+        nav.header__nav.nav
+            .nav__header
+            .nav__body
+                ul.navbar
+                    each navLink, i in [{name: 'О школе', href: 'about.html'},{name: 'Новости', href: 'news.html'},{name: 'Кампус', href: 'campus.html'},{name: 'Программы обучения', href: 'programm.html'},{name: 'Преподаватели и спикеры', href: 'teachers.html'},]
+                        li.navbar__item
+                            if activePage == navLink.name
+                                a.navbar__link.active(href=navLink.href)= navLink.name
+                            else
+                                a.navbar__link(href=navLink.href)= navLink.name
+            .nav__footer
 
         .header__right
             .header__info

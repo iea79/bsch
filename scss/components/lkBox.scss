@@ -1,0 +1,21 @@
+.lkBox {
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
+    border-radius: 15px;
+    padding: 40px 45px;
+    margin-bottom: 50px;
+}
+
+.chartBox,
+.scheduleBox {
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
+    border-radius: 15px;
+    margin-bottom: 50px;
+    overflow: hidden;
+
+    // fix
+    img {
+        display: block;
+    }
+}

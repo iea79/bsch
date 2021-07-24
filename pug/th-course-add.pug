@@ -101,13 +101,13 @@ block content
 
                     .lkGroup
                         .form.form_grid
-                            .form__col
+                            .form__col.form__col_3
                                 label.form__label Введите партнера 1
                                 input(type="text", placeholder="Введите имя партнера")
-                            .form__col
+                            .form__col.form__col_3
                                 label.form__label Введите партнера 2
                                 input(type="text", placeholder="Введите имя партнера")
-                            .form__col
+                            .form__col.form__col_3
                                 label.form__label Введите партнера 3
                                 input(type="text", placeholder="Введите имя партнера")
 
@@ -125,19 +125,19 @@ block content
                         button.btn(data-toggle="modal" data-target="#delete-course") Опубликовать
 
 
-    // begin courseOrder
-    .courseOrder.bg_primary(style="background-image: url('img/course-order.jpg')")
+    // begin courseOrdered
+    .courseOrdered.bg_primary(style="background-image: url('img/course-order.jpg')")
         .container_center
-            .courseOrder__content
-                .courseOrder__left
-                    h2.courseOrder__title Запись на курс
-                    .courseOrder__sub Вы можете записаться и оплатить как физическое или юридическое лицо
-                .courseOrder__action
+            .courseOrdered__content
+                .courseOrdered__left
+                    h2.courseOrdered__title Запись на курс
+                    .courseOrdered__sub Вы можете записаться и оплатить как физическое или юридическое лицо
+                .courseOrdered__action
                     button.btn.btn_success Для юридических лиц
                     button.btn.btn_contrast Для физических лиц
 
 
-    // end courseOrder
+    // end courseOrdered
     //- // Button trigger modal delete-course
     //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#delete-course") Click to open modal
     // Begin Modal delete-course

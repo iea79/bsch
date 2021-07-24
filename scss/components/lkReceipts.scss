@@ -1,0 +1,86 @@
+.lkReceipts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+    &:after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid #D1D1D1;
+        width: 100%;
+        margin: 10px 15px 0;
+    }
+
+    &__item {
+        width: calc(50% - 30px);
+        margin: 0 15px 30px;
+        background: #FFFFFF;
+        box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
+        border-radius: 15px;
+
+        @media (min-width: 1200px) {
+            width: calc(33.3% - 30px);
+        }
+    }
+
+    &__head {
+        background: $color_primary;
+        color: $color_withe;
+        border-radius: 15px 15px 0 0;
+        padding: 24px 22px 19px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 600;
+        line-height: 1.38;
+    }
+
+    &__body {
+        padding: 17px 22px 28px;
+    }
+
+    &__list {
+        margin-bottom: 15px;
+
+        dl {
+            display: flex;
+            font-size: 14px;
+            line-height: 1.57;
+            margin: 0 0 5px;
+
+            dt {
+                color: #656565;
+            }
+
+            dd {
+                font-weight: 600;
+                margin-left: 5px;
+
+                &.success {
+                    color: #0ECE44;
+                }
+
+                &.danger {
+                    color: #FF0000;
+                }
+            }
+        }
+    }
+
+    &__link {
+        a {
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 182.85%;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: $color_primary;
+            text-decoration-color: transparent;
+
+            &:hover {
+                text-decoration-color: inherit;
+            }
+        }
+    }
+
+}

@@ -13,20 +13,24 @@
     <header class="header header_transition">
       <div class="header__content">
         <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="Бизнес-школа"/></a></div>
-        <nav class="header__nav">
-          <div class="navbar__toggle"></div>
-          <ul class="navbar">
-            <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
-            </li>
-          </ul>
+        <div class="navbar__toggle"></div>
+        <nav class="header__nav nav">
+          <div class="nav__header"></div>
+          <div class="nav__body">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav__footer"></div>
         </nav>
         <div class="header__right">
           <div class="header__info">
@@ -63,13 +67,22 @@
         <div class="courseHome">
           <div class="courseHome__bg"><img src="img/course-bg.jpg" alt=""/></div>
           <div class="container_center">
-                <div class="breadcrumb">
-                  <ul>
-                    <li><a href="/">Главная страница</a></li>
-                    <li><a href="">Программы обучения</a></li>
-                    <li><a href="">Стратегический менеджмент в контексте управления государством</a></li>
-                  </ul>
-                </div>
+            <div class="desktop">
+                  <div class="breadcrumb">
+                    <ul>
+                      <li><a href="/">Главная страница</a></li>
+                      <li><a href="">Программы обучения</a></li>
+                      <li><a href="">Стратегический менеджмент в контексте управления государством</a></li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="mobile">
+              <div class="breadcrumb">
+                <ul>
+                  <li><a href=""><i class="icon_arrow"> </i>Назад</a></li>
+                </ul>
+              </div>
+            </div>
             <div class="courseHome__content">
               <div class="courseHome__left">
                 <h1 class="courseHome__title">Стратегический менеджмент <br>в контексте управления государством</h1>
@@ -370,7 +383,7 @@
         <!-- begin courseFaq-->
         <div class="courseFaq">
           <div class="container_center">
-            <h2 class="page__title"> </h2>
+            <h2 class="page__title">Часто задаваемые вопросы</h2>
             <div class="courseFaq__content">
               <div class="courseFaq__list">
                 <div class="courseFaq__item open" data-collapse-body="">
@@ -431,7 +444,8 @@
     <footer class="footer">
       <div class="footer__top">
         <div class="footer__content">
-          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a>
+          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div>
+          <div class="footer__links"><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a></div>
         </div>
       </div>
       <div class="footer__middle">

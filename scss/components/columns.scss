@@ -1,0 +1,16 @@
+.columns {
+    columns: 300px 2;
+    column-gap: 30px;
+    line-height: 1.74;
+    margin-bottom: 30px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+
+    @media (min-width: 768px) {
+        margin-bottom: 55px;
+    }
+
+    > p:first-child {
+        margin-top: 0;
+    }
+}

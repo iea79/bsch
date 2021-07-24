@@ -43,7 +43,15 @@ block content
             .courseHome__bg
                 img(src="img/course-bg.jpg", alt="")
             .container_center
-                +breadcrumb(['Программы обучения', 'Стратегический менеджмент в контексте управления государством'])
+                .desktop
+                    +breadcrumb(['Программы обучения', 'Стратегический менеджмент в контексте управления государством'])
+                .mobile
+                    .breadcrumb
+                        ul
+                            li
+                                a(href="")
+                                    i.icon_arrow 
+                                    | Назад
 
                 .courseHome__content
                     .courseHome__left
@@ -265,7 +273,7 @@ block content
         // begin courseFaq
         .courseFaq
             .container_center
-                h2.page__title 
+                h2.page__title Часто задаваемые вопросы
                 .courseFaq__content
                     .courseFaq__list
                         .courseFaq__item.open(data-collapse-body="")

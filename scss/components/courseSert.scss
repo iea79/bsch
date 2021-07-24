@@ -1,22 +1,50 @@
 .courseSert {
-    padding: 57px 0 109px;
+    padding: 20px 0 53px;
+
+    @media (min-width: 768px) {
+        padding: 57px 0 70px;
+    }
+
+    @media (min-width: 992px) {
+        padding: 57px 0 109px;
+    }
 
     &__content {
         display: flex;
         align-items: center;
+        flex-direction: column;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
     }
 
     &__left {
-        max-width: 630px;
         flex-grow: 1;
-        padding-bottom: 110px;
-        margin-right: 100px;
+        // padding-bottom: 50px;
+
+        @media (min-width: 768px) {
+            max-width: 630px;
+            margin-right: 30px;
+            padding-bottom: 70px;
+
+        }
+
+        @media (min-width: 992px) {
+            margin-right: 100px;
+            padding-bottom: 110px;
+
+        }
     }
 
     &__list {
         line-height: 159.52%;
         color: #656565;
-        margin: 39px 0;
+        margin: 15px 0 0;
+
+        @media (min-width: 768px) {
+            margin: 39px 0;
+        }
 
         &Item {
             margin-bottom: 6px;
@@ -27,6 +55,14 @@
         }
     }
 
-    &__img {}
+    &__img {
+        order: -1;
+        margin-bottom: 10px;
+
+        @media (min-width: 768px) {
+            order: 2;
+            margin-bottom: 0;
+        }
+    }
 
 }

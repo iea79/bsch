@@ -1,22 +1,39 @@
 .courseState {
     &__charts {
         display: flex;
-        margin-left: -58px;
+        margin-left: -39px;
+
+        @media (min-width: 992px) {
+            margin-left: -58px;
+        }
     }
 
     &__col {
-        padding-left: 58px;
+        padding-left: 39px;
         width: 50%;
-        margin-bottom: 28px;
+        margin-bottom: 17px;
+
+        @media (min-width: 992px) {
+            padding-left: 58px;
+            margin-bottom: 28px;
+        }
     }
 
     &__donut {
-        margin-bottom: 9px;
+        margin-bottom: 7px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 9px;
+        }
     }
 
     &__text {
-        font-size: 13px;
+        font-size: 11px;
         line-height: 138.3%;
+
+        @media (min-width: 768px) {
+            font-size: 13px;
+        }
     }
 
     &__list {
@@ -28,10 +45,15 @@
     &__row {
         display: flex;
         align-items: center;
-        margin-bottom: 11px;
+        font-size: 12px;
+        margin-bottom: 20px;
         font-weight: 600;
-        font-size: 14px;
         line-height: 138.3%;
+
+        @media (min-width: 768px) {
+            font-size: 14px;
+            margin-bottom: 11px;
+        }
     }
 
     &__icon {
@@ -44,6 +66,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 25px;
+        margin-right: 11px;
+
+        @media (min-width: 768px) {
+            margin-right: 25px;
+        }
     }
 }

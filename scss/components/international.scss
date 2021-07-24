@@ -1,0 +1,47 @@
+.international {
+    margin: 20px -15px 54px;
+    padding: 0 0 0 15px;
+
+    @media (min-width: 768px) {
+        margin: 40px 0 70px;
+        padding: 0;
+    }
+
+    @media (min-width: 992px) {
+        margin: 40px 0 110px;
+    }
+
+    @include asyncSlider;
+
+    &__item {
+        padding: 27px;
+        align-items: center;
+        justify-content: center;
+        height: 108px;
+        background: $color_withe;
+        border-left: 1px solid $color_withe;
+
+        @media (min-width: 768px) {
+            padding: 30px;
+            height: 180px;
+        }
+
+        @media (min-width: 992px) {
+            height: 242px;
+        }
+
+        .slick-initialized & {
+            display: flex;
+        }
+
+        &:nth-child(n+2) {
+            border-left: 1px solid #F2F5FA;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            max-height: 100%;
+        }
+    }
+}

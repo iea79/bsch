@@ -1,0 +1,46 @@
+.count {
+    display: inline-flex;
+    vertical-align: middle;
+    margin: 0 8px 0 11px;
+
+    input[type="number"] {
+        width: 32px;
+        height: 30px;
+        background: #F5F6FA;
+        border: 1px solid #E3E3E3;
+        box-sizing: border-box;
+        border-radius: 6px;
+        padding: 3px;
+        text-align: center;
+        font-size: 14px;
+        color: #636363;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        font-size: 8px;
+        line-height: 1;
+
+        > div {
+            flex-grow: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 1px 3px;
+            cursor: pointer;
+
+            &:before {
+                content: '▲';
+            }
+
+            &:last-child {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .plus {}
+
+    .minus {}
+}

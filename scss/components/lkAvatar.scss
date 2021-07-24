@@ -1,0 +1,73 @@
+.lkAvatar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &__photo {
+        position: relative;
+        width: 144px;
+        height: 144px;
+        flex: none;
+        margin-right: 26px;
+        background: #DCDEE7 url("../img/user.svg") center no-repeat;
+        background-size: 67px;
+        border-radius: 50%;
+
+        .lkAvatar_small & {
+            width: 119px;
+            height: 119px;
+            background-size: 52px;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    &__add {
+        position: absolute;
+        right: 12px;
+        bottom: 0;
+        width: 27px;
+        height: 27px;
+        background: $color_primary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            width: 11px;
+            height: 3px;
+            border-radius: 2px;
+            background: $color_withe;
+        }
+
+        &:before {
+            transform: rotate(90deg);
+        }
+
+        &:after {}
+    }
+
+    &__delete {
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #585858;
+
+        .icon_close {
+            font-size: 10px;
+            // margin-right: 7px;
+            line-height: 1;
+        }
+    }
+}

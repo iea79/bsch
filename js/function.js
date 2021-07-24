@@ -39,7 +39,7 @@ $(document).ready(function() {
     // $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
     // formSubmit();
 
-    // checkOnResize();
+    checkOnResize();
     uploadYoutubeVideo();
 
     $('.firstScreen').slick({
@@ -48,6 +48,15 @@ $(document).ready(function() {
         arrows: true,
         nextArrow: '<button class="slick-next"></button>',
         prevArrow: '<button class="slick-prev"></button>',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    dots: true,
+                    arrows: false
+                }
+            }
+        ]
     });
 
     $('.leaders').slick({
@@ -60,11 +69,21 @@ $(document).ready(function() {
         slidesToScroll: 4,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
                 }
             }
         ]
@@ -80,11 +99,21 @@ $(document).ready(function() {
         slidesToScroll: 4,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
                 }
             }
         ]
@@ -100,11 +129,28 @@ $(document).ready(function() {
         slidesToScroll: 3,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1200,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
                 }
             }
         ]
@@ -120,11 +166,21 @@ $(document).ready(function() {
         slidesToScroll: 5,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    // dots: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    // dots: true,
+                    arrows: false,
                 }
             }
         ]
@@ -140,11 +196,21 @@ $(document).ready(function() {
         slidesToScroll: 5,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    // dots: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    // dots: true,
+                    arrows: false,
                 }
             }
         ]
@@ -160,11 +226,21 @@ $(document).ready(function() {
         slidesToScroll: 4,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
                 }
             }
         ]
@@ -182,11 +258,31 @@ $(document).ready(function() {
         focusOnSelect: true,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 768,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    speed: 500,
+                    infinite: false,
+                    draggable: true,
+                    centerMode: false,
+                    variableWidth: false,
+                    dots: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    speed: 500,
+                    infinite: false,
+                    draggable: true,
+                    centerMode: false,
+                    variableWidth: false,
+                    dots: true,
+                    arrows: false,
                 }
             }
         ]
@@ -219,6 +315,15 @@ $(document).ready(function() {
         $('.postSlider').slick({
             dots: true,
             arrows: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        dots: false,
+                        fade: true
+                    }
+                }
+            ]
         });
     }
 
@@ -266,11 +371,74 @@ $(window).resize(function(event) {
     if (app.resized == windowWidth) { return; }
     app.resized = windowWidth;
 
-	// checkOnResize();
+	checkOnResize();
 });
 
 function checkOnResize() {
-    // fontResize();
+    replaceHeaderElements();
+    initMobileSlider();
+    toggleMobileSort();
+    initPostGallerySlider();
+}
+
+function initPostGallerySlider() {
+    let slider = $('.post__gallery');
+
+    if (isXsWidth()) {
+        if (!slider.hasClass('slick-initialized')) {
+            $(slider).slick({
+                slidesToShow: 1,
+                dots: true,
+                arrows: false,
+                infinite: false
+            });
+        }
+    } else {
+        if (slider.hasClass('slick-initialized')) {
+            slider.slick('destroy');
+        }
+    }
+}
+
+function initMobileSlider() {
+    let slider = $('.js_mobile_slider');
+
+    if (isXsWidth()) {
+        if (!slider.hasClass('slick-initialized')) {
+            $(slider).slick({
+                dots: true,
+                arrows: false,
+                variableWidth: true,
+                infinite: false
+            });
+        }
+    } else {
+        if (slider.hasClass('slick-initialized')) {
+            slider.slick('destroy');
+        }
+    }
+}
+
+function toggleMobileSort() {
+    $('.js_sort_toggle').on('click', () => {
+        let top = $(window).scrollTop(),
+            wrap = $('.mobileSort'),
+            hh = $('.header').outerHeight();
+        console.log(top);
+        if (top > 0) {
+            wrap.css({
+                top: '0',
+                height: $(window).height()
+            });
+        } else {
+            wrap.css({
+                top: hh,
+                height: $(window).height() - hh
+            });
+        }
+        wrap.toggleClass('open');
+        $('body').toggleClass('mobileSort_open');
+    });
 }
 
 function toggleSwicher() {
@@ -334,13 +502,45 @@ function stikyMenu() {
 }
 
 function openMobileNav() {
-    $('.navbar__toggle').on('click', function() {
-        var wrapp = $('.nav');
+    const wrapp = $('.nav');
 
+    $('.navbar__toggle').on('click', function() {
         wrapp.toggleClass('open');
+        toggleBackdrop();
     });
+
+    $('body').on('click', '.nav__backdrop', function() {
+        wrapp.toggleClass('open');
+        toggleBackdrop();
+    });
+
+    function toggleBackdrop() {
+        if (wrapp.hasClass('open')) {
+            $('body').append('<div class="nav__backdrop" />').addClass('nav_open');
+        } else {
+            $('.nav__backdrop').remove();
+            $('body').removeClass('nav_open');
+        }
+    }
 }
 openMobileNav();
+
+function replaceHeaderElements() {
+    const nav = $('.nav'),
+          navHeader = $('.nav__header'),
+          navFooter = $('.nav__footer'),
+          headerRight = $('.header__right'),
+          headerInfo = $('.header__info');
+
+    if (isXsWidth() || isSmWidth() || isMdWidth()) {
+        headerInfo.appendTo(navHeader);
+        $('.user__auth').appendTo('.nav__body');
+    } else {
+        headerInfo.appendTo(headerRight);
+        $('.user__auth').appendTo('.user__info');
+    }
+}
+
 
 // Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
 function srollToId() {

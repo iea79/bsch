@@ -9,27 +9,49 @@
     }
 
     &__img {
-        height: 638px;
+        overflow: hidden;
+        padding-bottom: 76.9%;
+
+        @media (min-width: 768px) {
+            height: 500px;
+            padding-bottom: 0;
+        }
+
+        @media (min-width: 992px) {
+            height: 638px;
+        }
 
         img {
+            position: absolute;
             display: block;
             object-fit: cover;
             width: 100%;
             height: 100%;
+            border-radius: 15px;
+
+            @media (min-width: 768px) {
+                position: static;
+            }
         }
     }
 
     &__name {
-        position: absolute;
-        z-index: 5;
-        bottom: 71px;
-        left: 0;
-        padding: 0 50px;
-        width: 100%;
-        max-width: 500px;
-        color: $color_withe;
-        font-size: 20px;
-        font-weight: 500;
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+            position: absolute;
+            z-index: 5;
+            bottom: 71px;
+            left: 0;
+            padding: 0 50px;
+            width: 100%;
+            max-width: 500px;
+            color: $color_withe;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
     }
 
     .slick-dots {

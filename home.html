@@ -13,20 +13,24 @@
     <header class="header header_transition">
       <div class="header__content">
         <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="Бизнес-школа"/></a></div>
-        <nav class="header__nav">
-          <div class="navbar__toggle"></div>
-          <ul class="navbar">
-            <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
-            </li>
-          </ul>
+        <div class="navbar__toggle"></div>
+        <nav class="header__nav nav">
+          <div class="nav__header"></div>
+          <div class="nav__body">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav__footer"></div>
         </nav>
         <div class="header__right">
           <div class="header__info">
@@ -101,7 +105,8 @@
       <div class="coursesList section">
         <div class="container_center">
           <div class="page__titleInline">
-            <h2 class="page__title">Популярные курсы</h2><a class="page__titleMore" href="">Все курсы</a>
+            <h2 class="page__title">Популярные курсы</h2>
+            <div class="page__titleMore desktop"><a href="">Все курсы</a></div>
           </div>
           <div class="coursesFilter">
             <div class="coursesFilter__item">Подборка Грефа
@@ -117,7 +122,7 @@
               <div class="coursesFilter__count">2</div>
             </div>
           </div>
-          <div class="coursesList__row">
+          <div class="coursesList__row js_mobile_slider">
             <div class="coursesList__item">
               <div class="coursesList__head">
                 <div class="coursesList__duration"><i class="icon_clock"> </i>18 месяцев</div>
@@ -318,6 +323,7 @@
             </div>
           </div>
         </div>
+        <div class="mobile page__titleMore"><a href="">Все курсы</a></div>
       </div>
       <!-- end coursesList-->
       <div class="stepsLine bg_primary" style="background-image: url('img/question-box.jpg')">
@@ -361,7 +367,8 @@
     <footer class="footer">
       <div class="footer__top">
         <div class="footer__content">
-          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a>
+          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div>
+          <div class="footer__links"><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a></div>
         </div>
       </div>
       <div class="footer__middle">

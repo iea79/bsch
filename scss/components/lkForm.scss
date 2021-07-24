@@ -1,0 +1,24 @@
+.lkForm {
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
+    border-radius: 15px;
+    padding: 33px 30px 57px;
+    margin-bottom: 50px;
+
+    .select2-container--default .select2-selection {
+        background-color: $input_bg_color;
+    }
+
+    .form__action {
+        margin-top: 0;
+    }
+
+    &Edit {
+        max-width: 1103px;
+
+        input[type=checkbox],
+        input[type=radio] {
+            border: 1px solid #E3E3E3;
+        }
+    }
+}

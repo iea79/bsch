@@ -1,0 +1,114 @@
+.awards {
+    margin: 20px -15px 24px;
+
+    @media (min-width: 768px) {
+        margin: 46px 0 70px -30px;
+    }
+
+    @media (min-width: 992px) {
+        margin: 46px 0 108px -30px;
+    }
+
+    @include asyncSlider;
+
+    &__item {
+        padding-left: 15px;
+        position: relative;
+        z-index: 1;
+        align-items: center;
+        color: #2F2B38;
+
+        @media (min-width: 768px) {
+            color: $color_withe;
+            padding-left: 30px;
+        }
+
+        .slick-initialized & {
+
+            @media (min-width: 768px) {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 768px) {
+            &:before {
+                content: '';
+                z-index: -1;
+                display: block;
+                position: absolute;
+                left: 30px;
+                top: 23px;
+                right: 0;
+                bottom: 23px;
+                background: $color_primary;
+                border-radius: 15px;
+
+            }
+        }
+    }
+
+    &__img {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        background-color: $color_primary;
+        border-radius: 15px;
+        padding: 0 0 142%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            width: 163px;
+            background-color: transparent;
+            border-radius: 0;
+            padding: 0;
+        }
+
+        img {
+            flex: none;
+            display: block;
+            width: auto;
+            height: calc(100% - 44px);
+            position: absolute;
+            top: 22px;
+
+            @media (min-width: 768px) {
+                height: auto;
+                margin: auto;
+                position: static;
+            }
+        }
+    }
+
+    &__descr {
+        padding: 17px 0 26px;
+
+        @media (min-width: 768px) {
+            padding: 30px 27px;
+        }
+    }
+
+    &__name {
+        font-size: 16px;
+        line-height: 138%;
+        font-weight: 500;
+        margin-bottom: 5px;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__text {
+        line-height: 134.52%;
+        font-size: 14px;
+
+        @media (min-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+}

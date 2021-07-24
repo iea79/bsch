@@ -1,0 +1,74 @@
+.taskComment {
+    &__title {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 138.3%;
+        margin: 0 0 24px;
+    }
+
+    &__bage {
+        background: #69DA42;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 166.52%;
+        color: $color_withe;
+        display: flex;
+        align-items: center;
+        padding: 7px 10px;
+        margin-left: 30px;
+    }
+
+    &__ball {
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    &__body {
+        margin-bottom: 50px;
+        max-width: 705px;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    &__photo {
+        width: 57px;
+        height: 57px;
+        flex: none;
+        margin-right: 14px;
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__user {}
+
+    &__name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 156.52%;
+    }
+
+    &__prof {
+        font-size: 13px;
+        line-height: 166.52%;
+        color: #7B7B7B;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.57;
+    }
+
+}

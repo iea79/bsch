@@ -1,0 +1,81 @@
+.inverseGrid {
+    margin: 50px 0;
+
+    &__row {
+        margin-bottom: 40px;
+
+        @media (min-width: 992px) {
+            display: flex;
+            align-items: center;
+            margin-bottom: 140px;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+
+                .inverseGrid__pict {
+                    margin-left: 96px;
+                }
+            }
+
+            &:nth-child(odd) {
+                .inverseGrid__pict {
+                    margin-right: 96px;
+                }
+            }
+        }
+    }
+
+    &__pict {
+        display: block;
+        margin-bottom: 25px;
+
+        @media (min-width: 992px) {
+            margin-bottom: 0;
+        }
+        @media (min-width: 1200px) {
+            flex: none;
+        }
+
+        img {
+            display: block;
+            border-radius: 15px;
+            height: auto;
+        }
+    }
+
+    &__descr {
+
+        @media (min-width: 992px) {
+            max-width: 50%;
+        }
+
+        @media (min-width: 1200px) {
+            max-width: none;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 22px;
+        margin: 0 0 23px;
+
+        @media (min-width: 768px) {
+            font-size: 24px;
+        }
+
+        @media (min-width: 992px) {
+            font-size: 28px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.74;
+        color: #0C0B0D;
+
+        @media (min-width: 992px) {
+            font-size: 16px;
+        }
+    }
+
+}

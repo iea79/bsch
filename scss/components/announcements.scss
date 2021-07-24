@@ -1,18 +1,37 @@
 .announcements {
     display: flex;
+    flex-wrap: wrap;
 
     &__item {
-        width: 33.3%;
+        width: 100%;
         display: flex;
         background: $color_primary;
         color: $color_withe;
+        margin-top: 1px;
+
+        @media (min-width: 768px) {
+            width: 33.3%;
+            margin-top: 0;
+        }
     }
 
     &__img {
         flex: none;
-        width: 220px;
-        min-height: 200px;
-        // height: 200px;
+        width: 33.3%;
+        max-width: 220px;
+
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+
+        @media (min-width: 1200px) {
+            width: 180px;
+        }
+
+        @media (min-width: 1400px) {
+            width: 220px;
+            min-height: 200px;
+        }
 
         img {
             display: block;
@@ -25,10 +44,24 @@
     &__text {
         display: flex;
         align-items: center;
-        padding: 30px 76px;
+        padding: 25px;
         font-weight: 500;
-        font-size: 20px;
-        line-height: 1.8285;
+        font-size: 14px;
+        line-height: 1.55;
+
+        @media (min-width: 768px) {
+            font-size: 16px;
+            line-height: 1.8285;
+        }
+
+        @media (min-width: 1200px) {
+            padding: 30px;
+            font-size: 18px;
+        }
+        @media (min-width: 1400px) {
+            font-size: 20px;
+            padding: 30px 76px;
+        }
     }
 
 }

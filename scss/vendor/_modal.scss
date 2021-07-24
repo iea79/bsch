@@ -163,8 +163,11 @@
 
     &_video {
         .video__play {
-            width: 120px;
-            height: 120px;
+
+            @media (min-width: 768px) {
+                width: 120px;
+                height: 120px;
+            }
         }
 
         .video__wrapper {

@@ -16,7 +16,11 @@
 
 	&__col,
 	&__row {
-		margin-bottom: 30px;
+		margin-bottom: 20px;
+
+		@media (min-width: 768px) {
+			margin-bottom: 30px;
+		}
 
 		.btn:not(.btn_add),
 		input:not([type]),
@@ -41,7 +45,11 @@
 			max-width: 100%;
 			max-width: 100%;
 			resize: vertical;
-			height: 138px;
+			height: 147px;
+
+			@media (min-width: 768px) {
+				height: 138px;
+			}
 
 			&.lg {
 				height: 207px;
@@ -64,22 +72,26 @@
 
 	&__col {
 		padding-left: 30px;
-		width: 50%;
+		width: 100%;
 
-		&_3 {
-			width: 33.3%;
-		}
+		@media (min-width: 768px) {
+			width: 50%;
 
-		&_2_3 {
-			width: 66.6%;
-		}
+			&_3 {
+				width: 33.3%;
+			}
 
-		&_3_4 {
-			width: 75%;
-		}
+			&_2_3 {
+				width: 66.6%;
+			}
 
-		&_full {
-			width: 100%;
+			&_3_4 {
+				width: 75%;
+			}
+
+			&_full {
+				width: 100%;
+			}
 		}
 
 		&_middle {
@@ -124,9 +136,13 @@
 
 	&__title {
 		font-weight: 500;
-		font-size: 22px;
+		font-size: 18px;
 		line-height: 1.383;
 		margin-bottom: 25px;
+
+		@media (min-width: 768px) {
+			font-size: 22px;
+		}
 	}
 
 	&__label {
@@ -211,6 +227,83 @@
 	&__number {
 		max-width: 294px;
 	}
+
+	&__links {
+		display: flex;
+		justify-content: space-between;
+		font-size: 16px;
+
+		a {
+			font-weight: 600;
+		}
+	}
+
+	&__label {
+		font-weight: normal;
+		display: block;
+		font-size: 16px;
+		line-height: 182.85%;
+	}
+
+	&_grid {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -30px;
+
+		.form__row {
+			width: 50%;
+			padding-left: 30px;
+
+			&_full {
+				width: 100%;
+			}
+
+			&_center {
+				align-self: center;
+			}
+		}
+	}
+
+	&__date {
+		position: relative;
+
+		input {
+			padding-right: 66px;
+		}
+
+		.icon_calendar {
+			top: 0;
+			bottom: 0;
+			right: 0;
+			width: 66px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			cursor: pointer;
+			color: #A3A3A3;
+			font-size: 20px;
+		}
+	}
+
+	&__check {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+
+		&_inline {
+			display: inline-flex;
+			margin-right: 13px;
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+
+	&__checks {
+		margin-top: 14px;
+	}
 }
 // Input text and textarea ================================================
 .form__field,
@@ -241,15 +334,20 @@ textarea {
 	border: 1px solid $input_border_color;
 	font-family: $main_font_family;
 	color: $input_color;
-	padding: 20px 24px;
+	padding: 14px 15px;
 	outline: none;
-	font-size: 16px;
+	font-size: 12px;
 	font-weight: 400;
 	border-radius: 10px;
 	transition: 0.3s;
 	text-transform: uppercase;
 	line-height: 1.7;
 	letter-spacing: 0.05em;
+
+	@media (min-width: 768px) {
+		font-size: 16px;
+		padding: 20px 24px;
+	}
 
 	.lk & {
 		background: #FFFFFF;

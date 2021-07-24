@@ -1,0 +1,84 @@
+.lkStats {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px 20px;
+
+    &__item {
+        width: calc(50% - 30px);
+        margin: 0 15px 30px;
+        background: #FFFFFF;
+        box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__body {
+        flex-grow: 1;
+        padding: 33px 38px;
+    }
+
+    &__num {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 138.3%;
+        color: $color_primary;
+        margin-bottom: 18px;
+    }
+
+    &__icon {
+        font-size: 22px;
+        background: #F5F6FA;
+        width: 59px;
+        height: 59px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon_user {}
+
+        .icon_eye {}
+
+        .icon_trophy {}
+
+        .icon_flag {}
+
+    }
+
+    &__text {
+        max-width: 278px;
+        line-height: 160.02%;
+    }
+
+    &__link {
+        border-top: 1px solid #E9E9E9;
+        padding: 22px 38px 27px;
+
+        a {
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 182.85%;
+            /* identical to box height, or 26px */
+
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+
+            /* акцентный */
+
+            color: $color_primary;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .icon_caret {
+            font-weight: 600;
+            font-size: 9px;
+            margin-left: 8px;
+        }
+    }
+}

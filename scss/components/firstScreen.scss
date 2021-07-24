@@ -1,17 +1,36 @@
 .firstScreen {
     position: relative;
-    height: 1000px;
+    min-height: inherit;
     display: flex;
     background: #1E80F4;
+
+    @media (min-width: 768px) {
+        min-height: 800px;
+
+    }
+
+    @media (min-width: 992px) {
+        // min-height: 800px;
+
+    }
+
+    @media (min-width: 1200px) {
+        min-height: 1000px;
+
+    }
 
     .container_center {}
 
     &__item {
         width: 100%;
-        padding: 110px 70px 96px;
         position: relative;
+        padding: 100px 0 76px;
         display: flex !important;
         align-items: center;
+
+        @media (min-width: 1200px) {
+            padding: 110px 70px 96px;
+        }
 
         @media (min-width: 1400px) {
             padding: 110px 140px 96px;
@@ -23,7 +42,11 @@
         right: 0;
         top: 0;
         height: 100%;
-        width: 66.7%;
+        width: 50%;
+
+        @media (min-width: 768px) {
+            width: 66.7%;
+        }
 
         &:after {
             content: '';
@@ -65,22 +88,45 @@
 
     &__title {
         font-weight: 600;
-        font-size: 60px;
-        line-height: 1.385;
-        margin: 0 0 41px;
+        font-size: 28px;
+        line-height: 1.29;
+        margin: 0 0 13px;
+
+        @media (min-width: 768px) {
+            font-size: 50px;
+            margin: 0 0 41px;
+            line-height: 1.385;
+        }
+
+        @media (min-width: 992px) {}
+
+        @media (min-width: 1200px) {
+            font-size: 60px;
+
+        }
     }
 
     &__sub {
         font-weight: normal;
-        font-size: 22px;
-        line-height: 1.825;
-        margin: 0 0 70px;
+        font-size: 16px;
+        line-height: 154.35%;
+        margin: 0 0 21px;
+
+        @media (min-width: 768px) {
+            font-size: 22px;
+            line-height: 1.825;
+            margin: 0 0 70px;
+        }
     }
 
     &__action {
         .btn {
             width: 100%;
-            max-width: 285px;
+            max-width: 350px;
+
+            @media (min-width: 768px) {
+                max-width: 285px;
+            }
         }
     }
 
@@ -130,6 +176,31 @@
 
     .slick-track {
         display: flex;
+    }
+
+    .slick-dots {
+        margin: 0;
+        position: absolute;
+        bottom: 26px;
+        left: 0;
+        right: 0;
+
+        li {
+            color: $color_withe;
+
+            &.slick-active {
+                cursor: default;
+                background-color: $color_withe;
+            }
+
+        }
+
+        button {
+            display: none;
+        }
+        @media (min-width: 1200px) {
+            // display: none;
+        }
     }
 
 }

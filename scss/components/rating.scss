@@ -1,11 +1,19 @@
 .rating {
     display: flex;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 1;
+
+    @media (min-width: 992px) {
+        font-size: 19px;
+    }
 
     .icon_star {
         color: #CBCBCB;
-        margin-right: 4px;
+        margin-right: 1px;
+
+        @media (min-width: 992px) {
+            margin-right: 4px;
+        }
 
         &.active {
             color: #FFA800;

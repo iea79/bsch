@@ -1,0 +1,38 @@
+.subtitle {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 138.3%;
+    margin: 0 0 14px;
+
+    @media (min-width: 768px) {
+        font-size: 25px;
+        margin: 0 0 18px;
+    }
+
+    @media (min-width: 992px) {
+        font-size: 28px;
+        margin: 0 0 23px;
+    }
+
+    &__inline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 47px;
+        font-weight: 500;
+
+        .subtitle {
+            margin: 0;
+
+            &__link {
+                font-weight: 600;
+                line-height: 138.3%;
+                text-align: right;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #2B89F8;
+                text-decoration: none;
+            }
+        }
+    }
+}

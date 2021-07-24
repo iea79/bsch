@@ -1,8 +1,17 @@
 .courseFaq {
-    padding-bottom: 84px;
+    padding-bottom: 30px;
+
+    @media (min-width: 768px) {
+        padding-bottom: 84px;
+    }
 
     &__content {
-        display: flex;
+        // display: flex;
+
+        @media (min-width: 992px) {
+            display: flex;
+
+        }
     }
 
     &__list {}
@@ -11,21 +20,31 @@
         background: #FFFFFF;
         box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
         border-radius: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 30px;
+        }
 
         &.open {}
     }
 
     &__name {
-        padding: 28px 30px;
+        padding: 19px 23px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         color: #2F2B38;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.4;
         font-weight: 600;
         cursor: pointer;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            padding: 28px 30px;
+
+        }
 
         .icon_caret {
             font-size: 13px;
@@ -43,22 +62,35 @@
     }
 
     &__text {
-        padding: 0 30px;
+        padding: 0 20px;
         transition: 0.3s;
         line-height: 174%;
         height: 0;
         overflow: hidden;
 
+        @media (min-width: 768px) {
+            padding: 0 30px;
+        }
+
         .open & {
             height: auto;
             border-top: 1px solid #ddd;
-            padding: 30px 30px 54px;
+            padding: 20px 23px 31px;
+
+            @media (min-width: 768px) {
+                padding: 30px 30px 54px;
+            }
         }
     }
 
     &__img {
-        flex: none;
-        margin-left: 30px;
+        display: none;
+
+        @media (min-width: 992px) {
+            display: block;
+            flex: none;
+            margin-left: 30px;
+        }
     }
 
 }

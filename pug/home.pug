@@ -33,7 +33,8 @@ block content
         .container_center
             .page__titleInline
                 h2.page__title Популярные курсы
-                a.page__titleMore(href="") Все курсы
+                .page__titleMore.desktop
+                    a(href="") Все курсы
 
             .coursesFilter
                 .coursesFilter__item
@@ -49,7 +50,7 @@ block content
                     | Продвижение
                     .coursesFilter__count 2
 
-            .coursesList__row
+            .coursesList__row.js_mobile_slider
                 each item, i in ['', '', '', '', '', '']
                     .coursesList__item
                         .coursesList__head
@@ -94,6 +95,10 @@ block content
                             a(href="") Подборка Грефа
                             a.danger(href="") IT-технологии
                             a.success(href="") Продвижение
+
+        .mobile.page__titleMore
+            a(href="") Все курсы
+
     // end coursesList
 
     .stepsLine.bg_primary(style="background-image: url('img/question-box.jpg')")

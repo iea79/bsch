@@ -1,0 +1,60 @@
+.leaders {
+    margin: 30px -15px 24px;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+        margin: 30px 0 70px -30px;
+    }
+    @media (min-width: 992px) {
+        margin: 42px 0 110px -30px;
+    }
+
+    @include asyncSlider();
+
+    &__item {
+        padding-left: 15px;
+        margin-bottom: 26px;
+
+        @media (min-width: 768px) {
+            padding-left: 30px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        margin-bottom: 13px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 20px;
+        }
+
+        img {
+            display: block;
+            border-radius: 15px;
+        }
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.383;
+        color: #2F2B38;
+        margin-bottom: 5px;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__prof {
+        font-size: 14px;
+        line-height: 1.3452;
+        color: #5A5A5A;
+
+        @media (min-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+}

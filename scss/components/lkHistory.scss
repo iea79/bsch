@@ -1,0 +1,32 @@
+.lkHistory {
+    margin-bottom: 40px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        background: #FFFFFF;
+        border: 1px solid #E3E3E3;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 9px 28px 9px 21px;
+        min-height: 48px;
+    }
+
+    &__col {
+        width: 33.3%;
+
+        &:first-child {
+            width: 55%;
+        }
+
+        &:nth-child(2) {
+            // text-align: center;
+            padding: 0 20px;
+        }
+
+        &:nth-child(3) {
+            text-align: right;
+        }
+    }
+}

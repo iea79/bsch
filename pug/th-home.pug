@@ -46,10 +46,16 @@ block content
                     .scheduleBox
                         img(src="img/calendar.jpg", alt="")
 
-                    h2.subtitle Мои популярные курсы
 
-                    // begin lkPopular
-                    .lkPopular
+                    h2.subtitle Активность слушателей на курсах
+
+                    .chartBox
+                        img(src="img/chart.jpg", alt="")
+
+                    //- h2.subtitle Мои популярные курсы
+
+                    //- // begin lkPopular
+                    //- .lkPopular
                         each item in ['Высший менеджмент', 'Название курса на котором я преподаю', 'Физика и геометрия. Полный курс', 'Астрономия и астрология', 'Гадание на картах Таро', 'Дихотомия добра и зла']
                             .lkPopular__item
                                 .lkPopular__name=item
@@ -66,14 +72,9 @@ block content
                                         i.icon_user 
                                         | 2450 
 
-                    .lk__more
+                    //- .lk__more
                         a.btn(href="#") все курсы
-                    // end lkPopular
-
-                    h2.subtitle Активность слушателей на курсах
-
-                    .chartBox
-                        img(src="img/chart.jpg", alt="")
+                    //- // end lkPopular
 
                     h2.subtitle Среднее выполнение заданий слушателями
 
@@ -164,12 +165,12 @@ block content
 
                     // end lkStats
 
-                    .subtitle__inline
+                    //- .subtitle__inline
                         h2.subtitle Полный отчет по курсам
                         a.subtitle__link(href="") Загрузить полный отчет
 
-                    // begin thSort
-                    .thSort
+                    //- // begin thSort
+                    //- .thSort
                         .thSort__label Показывать
                         .thSort__group
                             .thSort__item
@@ -185,9 +186,9 @@ block content
                         .thSort__action
                             button.btn.btn_border(type="button") Применить
 
-                    // end thSort
+                    //- // end thSort
 
-                    table.table
+                    //- table.table
                         thead
                             tr
                                 th E-mail

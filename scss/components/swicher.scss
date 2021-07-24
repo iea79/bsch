@@ -1,0 +1,40 @@
+.swicher {
+    input {
+        display: none;
+
+        &:checked {
+            + span {
+                background: #A4CDFE;
+
+                &:before {
+                    left: 20px;
+                    background: $color_primary;
+                }
+            }
+        }
+    }
+
+    &__box {
+        position: relative;
+        display: block;
+        width: 38px;
+        height: 21px;
+        background: #EBEBEB;
+        border-radius: 18px;
+        transition: 0.3s;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: 3px;
+            left: 3px;
+            background: #D1D1D1;
+            border-radius: 50%;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    }
+}

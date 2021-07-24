@@ -10,10 +10,15 @@
         content: '';
         display: block;
         position: absolute;
-        left: 37px;
-        top: 76px;
+        left: 20px;
+        top: 41px;
         bottom: 0;
         border-left: 1px solid #FFFFFF;
+
+        @media (min-width: 992px) {
+            top: 76px;
+            left: 38px;
+        }
     }
 
     &:last-child {
@@ -64,9 +69,14 @@
 
     &__name {
         font-weight: 600;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 138.3%;
-        margin-bottom: 7px;
+        margin-bottom: 11px;
+
+        @media (min-width: 1200px) {
+            font-size: 20px;
+            margin-bottom: 7px;
+        }
     }
 
     &__progress {
@@ -88,7 +98,11 @@
     &__row {
         // display: flex;
         // padding: 31px 0;
-        padding-top: 21px;
+        padding-top: 10px;
+
+        @media (min-width: 992px) {
+            padding-top: 21px;
+        }
 
         &:not(:last-child) {
             // border-bottom: 1px solid #E9E9E9;
@@ -96,8 +110,8 @@
     }
 
     &__count {
-        width: 76px;
-        height: 76px;
+        width: 41px;
+        height: 41px;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid #FFFFFF;
@@ -105,11 +119,17 @@
         align-items: center;
         justify-content: center;
         flex: none;
-        font-size: 24px;
+        font-size: 14px;
         font-weight: 300;
         margin-right: 20px;
         position: relative;
         z-index: 2;
+
+        @media (min-width: 992px) {
+            width: 76px;
+            height: 76px;
+            font-size: 24px;
+        }
 
         .icon_caret {
             font-size: 9px;
@@ -139,14 +159,20 @@
     }
 
     &__text {
-        margin-bottom: 66px;
+        margin-bottom: 20px;
         // overflow: hidden;
         // white-space: nowrap;
         // text-overflow: ellipsis;
         // height: 18px;
-        font-size: 16px;
-        line-height: 1.63;
+        font-size: 12px;
+        line-height: 1.47;
         color: #C7E1FF;
+
+        @media (min-width: 992px) {
+            font-size: 16px;
+            margin-bottom: 66px;
+            line-height: 1.63;
+        }
 
         &.open {
             height: auto;

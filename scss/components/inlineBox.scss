@@ -1,0 +1,24 @@
+.inlineBox {
+    margin-bottom: 60px;
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+
+    .page__subtitle {}
+
+    &__text {
+
+        @media (min-width: 768px) {
+            width: 67.1%;
+        }
+
+        p {
+            margin: 0 0 20px;
+            line-height: 174%;
+            color: #0C0B0D;
+        }
+    }
+}

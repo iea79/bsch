@@ -26,6 +26,19 @@
 	column-width: $width; // Min width for columns
 }
 
+@mixin asyncSlider {
+	.slick-list {
+		padding-right: 50px;
+		overflow: inherit;
+		min-width: 0;
+
+		@media (min-width: 768px) {
+			padding-right: 0;
+			overflow: hidden;
+		}
+	}
+}
+
 // Float el clear
 %clear_a {
 	&:after {

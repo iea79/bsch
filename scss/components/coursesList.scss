@@ -1,23 +1,52 @@
 .coursesList {
-    padding: 78px 0 154px;
+    padding: 40px 0 90px;
+
+    @media (min-width: 768px) {
+        padding: 78px 0 154px;
+    }
 
     &__row {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -15px;
+
+        // @media (min-width: 768px) {
+        //     // margin: 0 -15px;
+        // }
+
+        .slick-list {
+            padding: 0 0 0 15px;
+
+            @media (min-width: 768px) {
+                padding: 0;
+            }
+        }
     }
 
     &__item {
-        width: calc(50% - 30px);
+        width: 272px;
         margin: 0 15px 30px;
         background: #FFFFFF;
         box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
         border-radius: 15px;
-        padding: 30px 30px 34px;
+        padding: 25px 20px 24px;
         font-size: 14px;
         display: flex;
         flex-direction: column;
         transition: 0.3s;
+        flex-grow: 1;
+
+        @media (min-width: 768px) {
+            width: calc(50% - 30px);
+
+            &:hover {
+                box-shadow: 0 25px 65px rgba(24, 33, 42, 0.12);
+            }
+        }
+
+        @media (min-width: 992px) {
+            padding: 30px 30px 34px;
+        }
 
         @media (min-width: 1200px) {
             width: calc(33.3% - 30px);
@@ -29,10 +58,6 @@
             @media (min-width: 1200px) {
                 width: calc(50% - 30px);
             }
-        }
-
-        &:hover {
-            box-shadow: 0 25px 65px rgba(24, 33, 42, 0.12);
         }
     }
 
@@ -69,16 +94,20 @@
     }
 
     &__name {
-        min-height: 56px;
         display: flex;
         align-items: center;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.383;
         display: flex;
         align-items: center;
         color: #2F2B38;
         margin: 0 0 15px;
+
+        @media (min-width: 992px) {
+            font-size: 20px;
+            min-height: 56px;
+        }
 
         // .lk & {
         //     min-height: inherit;
@@ -87,27 +116,41 @@
     }
 
     &__middle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 26px;
+        margin-bottom: 15px;
+
+        @media (min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 26px;
+        }
     }
 
     &__rate {
         display: flex;
         align-items: center;
-        line-height: 1;
+
+        @media (min-width: 768px) {
+            line-height: 1;
+        }
 
         .rating {
-            margin-right: 9px;
             margin-top: -4px;
+            margin-right: 9px;
+
         }
 
     }
 
     &__price {
         font-weight: 600;
-        font-size: 15px;
+        font-size: 14px;
+        margin-top: 12px;
+        @media (min-width: 992px) {
+            margin-top: 0;
+            font-size: 15px;
+
+        }
     }
 
     &__description {
@@ -115,6 +158,11 @@
         margin-bottom: 22px;
         font-size: 14px;
         line-height: 1.571;
+
+        @media (min-width: 768px) {
+            margin-bottom: 22px;
+
+        }
     }
 
     &__action {
@@ -123,8 +171,12 @@
 
         .btn {
             width: 100%;
-            max-width: 201px;
-            margin-right: 47px;
+
+            @media (min-width: 768px) {
+                max-width: 201px;
+                margin-right: 47px;
+
+            }
         }
     }
 

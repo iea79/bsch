@@ -1,0 +1,109 @@
+.task {
+    width: 100%;
+
+    &__head {
+        display: flex;
+        margin-bottom: 30px;
+        align-items: center;
+        align-items: center;
+    }
+
+    &__status {
+        background: #BDBDBD;
+        border-radius: 38px;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 138.3%;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 10px 19px;
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+
+        &.danger {
+            background: #F72323;
+        }
+
+        &.primary {
+            background: $color_primary;
+        }
+
+        &.success {
+            background: $color_success;
+
+            .icon_checked {
+                background: $color_withe;
+                border-radius: 50%;
+                color: $color_success;
+                width: 12px;
+                height: 12px;
+                margin-right: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 6px;
+
+                &:before {
+                    margin-right: -2px;
+                }
+            }
+        }
+
+    }
+
+    &__time {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 1.2;
+        display: flex;
+        align-items: flex-end;
+        color: #000000;
+
+        .icon_clock {
+            color: $color_primary;
+            font-size: 18px;
+            margin-right: 9px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        max-width: 1103px;
+        margin-bottom: 37px;
+
+        + .task__body {
+            border-top: 1px solid #DEDEDE;
+            padding-top: 50px;
+            margin-top: 50px;
+        }
+    }
+
+    &__content {
+        flex-grow: 1;
+        min-width: 0;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 138.3%;
+        margin: 0 0 18px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.64;
+
+        p {
+            margin: 14px 0;
+        }
+    }
+
+    &__aside {
+        flex: none;
+        margin-left: 50px;
+    }
+}

@@ -1,0 +1,30 @@
+.progressBar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__wrap {
+        margin-bottom: 50px;
+    }
+
+    &__line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 37px;
+        background: $color_primary;
+        box-shadow: 0 8px 25px rgba(43, 137, 248, 0.45);
+        border-radius: 10px;
+    }
+
+    &__text {
+        padding: 0 13px;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 182.85%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $color_withe;
+    }
+
+}

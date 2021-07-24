@@ -1,0 +1,7 @@
+.logo {
+    display: inline-block;
+    width: 90px;
+    @media (min-width: 1400px) {
+        width: 119px;
+    }
+}

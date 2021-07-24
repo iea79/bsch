@@ -34,12 +34,17 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 7.2em;
-		height: 7.2em;
-		margin-top: -3.6em;
-		margin-left: -3.6em;
+		width: 54px;
+		height: 54px;
+		transform: translate(-50%, -50%);
 		border-radius: 50%;
 		cursor: pointer;
 		// background-color: #f00;
+
+		@media (min-width: 768px) {
+			width: 92px;
+			height: 92px;
+
+		}
 	}
 }

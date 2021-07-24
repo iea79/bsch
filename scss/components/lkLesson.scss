@@ -1,0 +1,28 @@
+.lkLesson {
+    + .lkLesson {
+        border-top: 1px solid #DEDEDE;
+        margin-top: 60px;
+        padding-top: 60px;
+    }
+
+    &__head {
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin-bottom: 35px;
+        padding: 27px 24px;
+        font-size: 14px;
+        display: flex;
+    }
+
+    &__headItem {
+        display: flex;
+        margin-right: 56px;
+    }
+
+    &__headLabel {
+        margin-right: 5px;
+        color: #656565;
+    }
+
+    &__headName {}
+}

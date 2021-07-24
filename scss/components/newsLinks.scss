@@ -1,0 +1,115 @@
+.newsLinks {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0 0 -30px;
+
+    @media (min-width: 768px) {
+        margin: 42px 0 108px -76px;
+    }
+    // max-width: 1420px;
+
+    &__item {
+        width: 50%;
+        // margin: 0 15px;
+        padding-bottom: 78px;
+        position: relative;
+        display: flex;
+        padding-left: 30px;
+        flex-grow: 1;
+        min-width: 300px;
+        margin-bottom: 30px;
+
+        @media (min-width: 768px) {
+            padding-left: 76px;
+            padding-bottom: 135px;
+            margin-bottom: 0;
+        }
+
+        &:nth-child(2n) {
+
+            @media (min-width: 1200px) {
+                border-left: 1px solid #DEDEDE;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 230px;
+        display: block;
+        border-radius: 15px;
+        overflow: hidden;
+
+        @media (min-width: 768px) {
+            width: 475px;
+            height: 365px;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: 0.3s;
+            transform: scale(1);
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__descr {
+        position: absolute;
+        background: #F5F6FA;
+        right: 0;
+        bottom: 0;
+        padding: 12px 0 8px 18px;
+        width: 404px;
+        max-width: 86%;
+
+        @media (min-width: 768px) {
+            bottom: 63px;
+            padding: 24px 28px;
+            max-width: 80%;
+        }
+    }
+
+    &__date {
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 159.52%;
+        letter-spacing: 0.045em;
+        text-transform: uppercase;
+        color: #686472;
+        margin-bottom: 6px;
+
+        @media (min-width: 768px) {
+            font-size: 12px;
+            margin-bottom: 13px;
+
+        }
+    }
+
+    &__name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 138.3%;
+        margin-bottom: 5px;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            margin-bottom: 9px;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 159.52%;
+
+        @media (min-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+}

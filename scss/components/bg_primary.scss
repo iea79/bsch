@@ -1,0 +1,26 @@
+.bg_primary {
+    background: center no-repeat;
+    background-size: cover;
+    color: $color_withe;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $color_primary;
+        opacity: 0.94;
+
+        @media (min-width: 768px) {
+            opacity: 0.7;
+        }
+    }
+
+    .container_center {
+        position: relative;
+    }
+}

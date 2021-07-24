@@ -13,20 +13,24 @@
     <header class="header">
       <div class="header__content">
         <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="Бизнес-школа"/></a></div>
-        <nav class="header__nav">
-          <div class="navbar__toggle"></div>
-          <ul class="navbar">
-            <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a>
-            </li>
-            <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
-            </li>
-          </ul>
+        <div class="navbar__toggle"></div>
+        <nav class="header__nav nav">
+          <div class="nav__header"></div>
+          <div class="nav__body">
+            <ul class="navbar">
+              <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="news.html">Новости</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="campus.html">Кампус</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="programm.html">Программы обучения</a>
+              </li>
+              <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav__footer"></div>
         </nav>
         <div class="header__right">
           <div class="header__info">
@@ -147,66 +151,6 @@
               <!-- end lkDeveloping-->
               <h2 class="subtitle">Мое расписание</h2>
               <div class="scheduleBox"><img src="img/calendar.jpg" alt=""/></div>
-              <h2 class="subtitle">Мои популярные курсы</h2>
-              <!-- begin lkPopular-->
-              <div class="lkPopular">
-                <div class="lkPopular__item">
-                  <div class="lkPopular__name">Высший менеджмент</div>
-                  <div class="lkPopular__stats">
-                    <div class="smallBox__rate">
-                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
-                    </div>
-                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
-                  </div>
-                </div>
-                <div class="lkPopular__item">
-                  <div class="lkPopular__name">Название курса на котором я преподаю</div>
-                  <div class="lkPopular__stats">
-                    <div class="smallBox__rate">
-                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
-                    </div>
-                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
-                  </div>
-                </div>
-                <div class="lkPopular__item">
-                  <div class="lkPopular__name">Физика и геометрия. Полный курс</div>
-                  <div class="lkPopular__stats">
-                    <div class="smallBox__rate">
-                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
-                    </div>
-                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
-                  </div>
-                </div>
-                <div class="lkPopular__item">
-                  <div class="lkPopular__name">Астрономия и астрология</div>
-                  <div class="lkPopular__stats">
-                    <div class="smallBox__rate">
-                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
-                    </div>
-                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
-                  </div>
-                </div>
-                <div class="lkPopular__item">
-                  <div class="lkPopular__name">Гадание на картах Таро</div>
-                  <div class="lkPopular__stats">
-                    <div class="smallBox__rate">
-                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
-                    </div>
-                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
-                  </div>
-                </div>
-                <div class="lkPopular__item">
-                  <div class="lkPopular__name">Дихотомия добра и зла</div>
-                  <div class="lkPopular__stats">
-                    <div class="smallBox__rate">
-                      <div class="rating"><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star active"> </i><i class="icon_star"> </i><i class="icon_star"> </i></div>(3.2)
-                    </div>
-                    <div class="lkPopular__count"><i class="icon_user"> </i>2450 </div>
-                  </div>
-                </div>
-              </div>
-              <div class="lk__more"><a class="btn" href="#">все курсы</a></div>
-              <!-- end lkPopular-->
               <h2 class="subtitle">Активность слушателей на курсах</h2>
               <div class="chartBox"><img src="img/chart.jpg" alt=""/></div>
               <h2 class="subtitle">Среднее выполнение заданий слушателями</h2>
@@ -361,138 +305,6 @@
                 </div>
               </div>
               <!-- end lkStats-->
-              <div class="subtitle__inline">
-                <h2 class="subtitle">Полный отчет по курсам</h2><a class="subtitle__link" href="">Загрузить полный отчет</a>
-              </div>
-              <!-- begin thSort-->
-              <div class="thSort">
-                <div class="thSort__label">Показывать</div>
-                <div class="thSort__group">
-                  <div class="thSort__item">
-                    <select class="select" data-placeholder="Все курсы">
-                      <option value=""> </option>
-                      <option value="Курс 1">Курс 1</option>
-                      <option value="Курс 2">Курс 2</option>
-                      <option value="Курс 3">Курс 3</option>
-                    </select>
-                  </div>
-                  <div class="thSort__item">
-                    <input class="form__date" type="text" placeholder="Дата начала курса" onfocus="(this.type='date')" onblur="(this.type='text')"/>
-                  </div>
-                  <div class="thSort__item">
-                    <input type="text" placeholder="Поиск по электронной почте"/>
-                  </div>
-                </div>
-                <div class="thSort__action">
-                  <button class="btn btn_border" type="button">Применить</button>
-                </div>
-              </div>
-              <!-- end thSort-->
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>E-mail</th>
-                    <th>Название курса</th>
-                    <th>Цена курса</th>
-                    <th>Дата начала</th>
-                    <th>Дата окончания</th>
-                    <th>Прогресс</th>
-                    <th>Срок истекает</th>
-                    <th>Статус</th>
-                    <th>активность</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a href="">pochta@pochta.ru</a></td>
-                    <td class="table__name">Основы Веб-дизайна для чайников</td>
-                    <td>159 000 руб.</td>
-                    <td>12.02.2021</td>
-                    <td>01.12.2021</td>
-                    <td>12%</td>
-                    <td>12.04.2021</td>
-                    <td class="success">Успешно</td>
-                    <td>01.03.2021</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">pochta@pochta.ru</a></td>
-                    <td class="table__name">Основы Веб-дизайна для чайников</td>
-                    <td>159 000 руб.</td>
-                    <td>12.02.2021</td>
-                    <td>01.12.2021</td>
-                    <td>12%</td>
-                    <td>12.04.2021</td>
-                    <td class="danger">Успешно</td>
-                    <td>01.03.2021</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">pochta@pochta.ru</a></td>
-                    <td class="table__name">Основы Веб-дизайна для чайников</td>
-                    <td>159 000 руб.</td>
-                    <td>12.02.2021</td>
-                    <td>01.12.2021</td>
-                    <td>12%</td>
-                    <td>12.04.2021</td>
-                    <td class="success">Успешно</td>
-                    <td>01.03.2021</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">pochta@pochta.ru</a></td>
-                    <td class="table__name">Основы Веб-дизайна для чайников</td>
-                    <td>159 000 руб.</td>
-                    <td>12.02.2021</td>
-                    <td>01.12.2021</td>
-                    <td>12%</td>
-                    <td>12.04.2021</td>
-                    <td class="success">Успешно</td>
-                    <td>01.03.2021</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">pochta@pochta.ru</a></td>
-                    <td class="table__name">Основы Веб-дизайна для чайников</td>
-                    <td>159 000 руб.</td>
-                    <td>12.02.2021</td>
-                    <td>01.12.2021</td>
-                    <td>12%</td>
-                    <td>12.04.2021</td>
-                    <td class="danger">Успешно</td>
-                    <td>01.03.2021</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">pochta@pochta.ru</a></td>
-                    <td class="table__name">Основы Веб-дизайна для чайников</td>
-                    <td>159 000 руб.</td>
-                    <td>12.02.2021</td>
-                    <td>01.12.2021</td>
-                    <td>12%</td>
-                    <td>12.04.2021</td>
-                    <td class="success">Успешно</td>
-                    <td>01.03.2021</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">pochta@pochta.ru</a></td>
-                    <td class="table__name">Основы Веб-дизайна для чайников</td>
-                    <td>159 000 руб.</td>
-                    <td>12.02.2021</td>
-                    <td>01.12.2021</td>
-                    <td>12%</td>
-                    <td>12.04.2021</td>
-                    <td class="success">Успешно</td>
-                    <td>01.03.2021</td>
-                  </tr>
-                  <tr>
-                    <td><a href="">pochta@pochta.ru</a></td>
-                    <td class="table__name">Основы Веб-дизайна для чайников</td>
-                    <td>159 000 руб.</td>
-                    <td>12.02.2021</td>
-                    <td>01.12.2021</td>
-                    <td>12%</td>
-                    <td>12.04.2021</td>
-                    <td class="success">Успешно</td>
-                    <td>01.03.2021</td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </div>
         </div>
@@ -501,7 +313,8 @@
     <footer class="footer">
       <div class="footer__top">
         <div class="footer__content">
-          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a>
+          <div class="footer__logo"><a class="logo" href="/"><img src="img/logo.svg" alt=""/></a></div>
+          <div class="footer__links"><a class="footer__link" href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a class="footer__link" href="tel: +7 (495) 000 00 00"> <i class="icon_call"> </i>+7 (495) 000 00 00</a></div>
         </div>
       </div>
       <div class="footer__middle">

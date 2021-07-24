@@ -1,0 +1,19 @@
+.lkNumList {
+    border-bottom: 1px solid #D1D1D1;
+    padding-bottom: 30px;
+    margin-bottom: 60px;
+
+    &__item {}
+
+    &__name {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 180.52%;
+        margin-bottom: 16px;
+    }
+
+    &__body {
+        margin-bottom: 30px;
+    }
+
+}

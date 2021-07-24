@@ -1,0 +1,45 @@
+.courseOrdered {
+    color: $color_withe;
+    overflow: hidden;
+    padding: 112px 0 120px;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        position: relative;
+        flex-grow: 1;
+        max-width: 580px;
+        margin-right: 40px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 138.3%;
+        margin: 0 0 16px;
+    }
+
+    &__sub {
+        font-size: 22px;
+        line-height: 170.85%;
+        margin-bottom: 18px;
+        max-width: 690px;
+    }
+
+    &__action {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+
+        .btn {
+            margin: 15px 38px 15px 0;
+            width: 100%;
+            max-width: 364px;
+            padding: 34px 30px;
+        }
+    }
+}

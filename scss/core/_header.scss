@@ -1,5 +1,66 @@
 /* Header
  ----------------------------------------------------------------------------- */
+.header {
+	padding: 23px 0 20px;
+
+	@media (min-width: 1200px) {
+		color: $color_withe;
+		padding: 31px 0 34px;
+	}
+
+	&:not(.header_transition) {
+		background: #2A83EB;
+	}
+
+	&_transition {
+		border-bottom: 1px solid rgba(#FFFEFE, 0.1);
+		background-color: transparent;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 20;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: -10;
+		}
+	}
+
+	&__content {
+		@extend .container_center;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__left {}
+
+	&__nav {
+
+		@media (min-width: 1200px) {
+			flex-grow: 1;
+			padding: 0 20px;
+		}
+
+		@media (min-width: 1400px) {
+			padding: 0 42px;
+		}
+	}
+
+	&__right {}
+
+	&__info {
+		display: flex;
+		align-items: center;
+	}
+
+}
 
 // stiky menu
 .stiky {

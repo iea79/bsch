@@ -1,0 +1,102 @@
+.newsHead {
+    position: relative;
+    z-index: 1;
+    // min-height: 600px;
+    margin-bottom: 60px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 70px;
+    }
+
+    @media (min-width: 1400px) {
+        min-height: 866px;
+    }
+
+    .breadcrumb {
+        color: $color_withe;
+        margin-top: 0;
+        padding-top: 15px;
+
+        @media (min-width: 768px) {
+            padding-top: 35px;
+        }
+    }
+
+    .page__title {
+        color: $color_withe;
+
+        @media (min-width: 768px) {
+            width: 50%;
+            flex: none;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        // padding-bottom: 100%;
+        height: 360px;
+
+        @media (min-width: 768px) {
+            width: 51.5%;
+            height: 100%;
+        }
+
+        img {
+            position: absolute;
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+
+            @media (min-width: 768px) {
+                border-radius: 0 0 95px 0;
+                position: static;
+            }
+        }
+    }
+
+    &__wrap {
+        margin-top: 54px;
+
+        @media (min-width: 768px) {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        @media (min-width: 1400px) {
+            align-items: flex-start;
+            margin-top: 195px;
+        }
+    }
+
+    &__content {}
+
+    &__text {
+        background: #2B89F8;
+        border-radius: 15px;
+        color: $color_withe;
+        padding: 34px 23px;
+        font-size: 16px;
+        line-height: 165.52%;
+        margin-bottom: 25px;
+        margin-top: 75px;
+
+        @media (min-width: 768px) {
+            font-size: 22px;
+            padding: 50px;
+            margin-top: 0;
+            margin-bottom: 56px;
+        }
+
+        @media (min-width: 992px) {
+            padding: 71px 82px 98px 104px;
+            margin-bottom: 56px;
+        }
+    }
+
+}
