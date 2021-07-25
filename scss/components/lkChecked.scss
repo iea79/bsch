@@ -1,13 +1,20 @@
 .lkChecked {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -30px;
+
+    @media (min-width: 768px) {
+        margin-left: -30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     &__item {
-        padding-left: 30px;
-        margin-bottom: 30px;
-        width: 50%;
         display: flex;
+        margin-bottom: 10px;
+
+        @media (min-width: 768px) {
+            width: 50%;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
 
         @media (min-width: 1200px) {
             width: 33.3%;
@@ -21,8 +28,12 @@
         justify-content: space-between;
         position: relative;
         z-index: 1;
-        padding: 30px;
+        padding: 19px 24px;
         cursor: pointer;
+
+        @media (min-width: 768px) {
+            padding: 30px;
+        }
 
         &:hover {
             .lkChecked__name {
@@ -37,10 +48,14 @@
 
     &__name {
         font-weight: 600;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 138.3%;
         color: #868686;
         overflow: hidden;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+        }
 
         &:before {
             content: '';
@@ -73,18 +88,29 @@
     input[type=radio]:not([class]) {
         background: #FAFAFA;
         border: 1px solid #DEDEDE;
-        width: 27px;
-        height: 27px;
-        margin-left: 30px;
+        width: 21px;
+        height: 21px;
+        margin-left: 10px;
         order: 2;
+
+        @media (min-width: 768px) {
+            width: 27px;
+            height: 27px;
+            margin-left: 30px;
+        }
 
         &:checked {
             background: $color_primary;
             border-color: $color_primary;
 
             &:before {
-                width: 13px;
-                height: 13px;
+                width: 11px;
+                height: 11px;
+
+                @media (min-width: 768px) {
+                    width: 13px;
+                    height: 13px;
+                }
             }
 
             + .lkChecked__name {

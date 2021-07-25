@@ -334,15 +334,6 @@ $(document).ready(function() {
         });
     }
 
-    if ($('.lkRecomend')) {
-        $('.lkRecomend').slick({
-            dots: false,
-            nextArrow: $('.lkRecomend__next'),
-            prevArrow: $('.lkRecomend__prev'),
-        });
-    }
-
-
     $('.modal').on('show.bs.modal', function() {
         const modalsCount = $('.modal.in').length;
         console.log(modalsCount);
@@ -379,6 +370,49 @@ function checkOnResize() {
     initMobileSlider();
     toggleMobileSort();
     initPostGallerySlider();
+    initLkReccomendSlider();
+}
+
+function initLkReccomendSlider() {
+    let slider = $('.lkRecomend'),
+        item = $('.smallBox__item');
+
+    if (isXsWidth()) {
+        if (!slider.hasClass('slick-initialized')) {
+            init();
+        }
+    } else {
+        // slider.append('<div class="smallBox lkRecomend__group" />');
+        if (!slider.hasClass('slick-initialized')) {
+            item.each(function(i, el) {
+                if (i % 4 === 0) {
+                    slider.append('<div class="smallBox lkRecomend__group" />');
+                }
+
+                $(el).appendTo($('.lkRecomend__group').last());
+            });
+
+            init();
+        }
+    }
+
+    function init() {
+        slider.slick({
+            infinite: false,
+            dots: false,
+            nextArrow: $('.lkRecomend__next'),
+            prevArrow: $('.lkRecomend__prev'),
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                    }
+                }
+            ]
+        });
+    }
 }
 
 function initPostGallerySlider() {

@@ -88,7 +88,7 @@
                 &-selection {
                     padding: 0;
                     outline: none;
-                    font-size: 14px;
+                    font-size: 12px;
                     font-weight: 400;
                     font-family: $main_font_family;
                     border-radius: 6px;
@@ -97,10 +97,11 @@
                     border: 1px solid #E7E7E7;
                     box-sizing: border-box;
                     border-radius: 10px;
-                    height: 69px;
+                    height: 50px;
                     color: $main_color;
 
                     @media (min-width: 768px) {
+                        height: 69px;
                         font-size: 16px;
                     }
 
@@ -123,10 +124,15 @@
                         .select2 {
                             &-selection {
                                 &__rendered {
-                                    line-height: 69px;
-                                    height: 69px;
+                                    height: 50px;
+                                    line-height: 50px;
                                     padding-left: 14px;
                                     padding-right: 40px;
+
+                                    @media (min-width: 768px) {
+                                        height: 69px;
+                                        line-height: 69px;
+                                    }
 
                                     .sorting & {
                                         line-height: 42px;

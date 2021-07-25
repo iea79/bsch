@@ -9,8 +9,14 @@
         box-sizing: border-box;
         border-radius: 10px;
         margin-bottom: 10px;
-        padding: 9px 28px 9px 21px;
+        padding: 9px 20px;
         min-height: 48px;
+        font-size: 12px;
+
+        @media (min-width: 768px) {
+            padding: 9px 28px 9px 21px;
+            font-size: 16px;
+        }
     }
 
     &__col {
@@ -22,7 +28,11 @@
 
         &:nth-child(2) {
             // text-align: center;
-            padding: 0 20px;
+            padding: 0 7px;
+
+            @media (min-width: 768px) {
+                padding: 0 20px;
+            }
         }
 
         &:nth-child(3) {

@@ -1,59 +1,93 @@
 .lk {
-    padding-bottom: 68px;
+    padding-bottom: 30px;
+
+    @media (min-width: 768px) {
+        padding-bottom: 68px;
+    }
 
     &__head {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
 
         .page__title {
-            margin-right: 30px;
-            margin-bottom: 0;
+
+            @media (min-width: 768px) {
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
         }
 
         .btn {
-            padding: 17px 41px;
-            font-size: 14px;
             width: 100%;
-            max-width: 234px;
+            max-width: 350px;
+
+            @media (min-width: 768px) {
+                padding: 17px 41px;
+                font-size: 14px;
+                max-width: 234px;
+
+            }
         }
     }
 
     &__body {
-        display: flex;
-        align-items: flex-start;
         position: relative;
 
+        @media (min-width: 1200px) {
+            display: flex;
+            align-items: flex-start;
+        }
+
         .subtitle {
-            margin: 0 0 30px;
-            font-weight: 500;
-            font-size: 28px;
-            line-height: 138.3%;
-            color: #2F2B38;
+            font-size: 18px;
+            margin: 0 0 18px;
+
+            @media (min-width: 768px) {
+                margin: 0 0 30px;
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 138.3%;
+                color: #2F2B38;
+            }
         }
 
         .smalltitle {
+            font-size: 16px;
             font-weight: 600;
-            font-size: 20px;
             line-height: 138.3%;
-            margin: 0 0 21px;
+            margin: 0 0 15px;
             color: #2F2B38;
+
+            @media (min-width: 768px) {
+                font-size: 20px;
+                margin: 0 0 21px;
+            }
         }
 
         .slider__head {
             .subtitle {
-                margin-bottom: 0;
+                @media (min-width: 768px) {
+                    margin-bottom: 0;
+                }
             }
         }
     }
 
     &__aside {
-        flex: none;
-        width: 348px;
-        margin-right: 30px;
         // position: sticky;
         // top: 0;
+
+        @media (min-width: 1200px) {
+            flex: none;
+            width: 348px;
+            margin-right: 30px;
+        }
     }
 
     &__content {

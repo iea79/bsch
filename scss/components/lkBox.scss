@@ -2,8 +2,13 @@
     background: #FFFFFF;
     box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
     border-radius: 15px;
-    padding: 40px 45px;
-    margin-bottom: 50px;
+    padding: 25px 23px;
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+        padding: 40px 45px;
+        margin-bottom: 50px;
+    }
 }
 
 .chartBox,

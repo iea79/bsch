@@ -1,13 +1,22 @@
 .smallBox {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 0 30px -30px;
+    margin: 0 0 30px -15px;
+
+    @media (min-width: 768px) {
+        margin: 0 0 30px -30px;
+    }
 
     &__item {
         width: 100%;
-        margin: 0 0 30px;
+        margin: 0 0 23px;
         display: flex;
-        padding-left: 30px;
+        padding-left: 15px;
+
+        @media (min-width: 768px) {
+            margin: 0 0 30px;
+            padding-left: 30px;
+        }
 
         @media (min-width: 1200px) {
             width: 50%;
@@ -18,22 +27,30 @@
         background: #FFFFFF;
         box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
         border-radius: 15px;
-        padding: 30px 30px 34px;
+        padding: 26px 21px 34px;
         font-size: 14px;
         transition: 0.3s;
         width: 100%;
 
-        &:hover {
-            box-shadow: 0 25px 65px rgba(24, 33, 42, 0.12);
+        @media (min-width: 768px) {
+            padding: 30px 30px 34px;
+
+            &:hover {
+                box-shadow: 0 25px 65px rgba(24, 33, 42, 0.12);
+            }
         }
     }
 
     &__head {
-        margin-bottom: 12px;
         font-size: 12px;
+        margin-bottom: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (min-width: 768px) {
+            margin-bottom: 12px;
+        }
     }
 
     &__duration {
@@ -57,16 +74,19 @@
     }
 
     &__name {
-        min-height: 56px;
-        display: flex;
-        align-items: center;
+        font-size: 16px;
         font-weight: 600;
-        font-size: 20px;
         line-height: 1.383;
-        display: flex;
-        align-items: center;
         color: #2F2B38;
-        margin: 0 0 15px;
+        margin: 0 0 11px;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            margin: 0 0 15px;
+            min-height: 56px;
+            display: flex;
+            align-items: center;
+        }
     }
 
     &__middle {
@@ -82,8 +102,11 @@
         line-height: 1;
 
         .rating {
-            margin-right: 9px;
             margin-top: -4px;
+
+            @media (min-width: 768px) {
+                margin-right: 9px;
+            }
         }
 
     }
@@ -103,7 +126,11 @@
     &__action {
         .btn {
             width: 100%;
-            max-width: 201px;
+            max-width: 350px;
+
+            @media (min-width: 768px) {
+                max-width: 201px;
+            }
         }
     }
 

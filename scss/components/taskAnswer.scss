@@ -2,17 +2,29 @@
     background: $color_withe;
     box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
     border-radius: 10px;
-    padding: 32px 48px 43px;
-    border-left: 10px solid $color_primary;
+    padding: 21px 20px 38px;
     margin-bottom: 50px;
+    border-top: 7px solid $color_primary;
+
+    @media (min-width: 768px) {
+        padding: 32px 48px 43px;
+        border-left: 10px solid $color_primary;
+        border-top: 0;
+    }
 
     &__edit {
         .icon_pencil {
             color: $color_primary;
-            margin-right: 10px;
-            font-size: 23px;
+            font-size: 18px;
             line-height: 1;
-            margin-top: -5px;
+            margin-top: -2px;
+            margin-right: 7px;
+
+            @media (min-width: 768px) {
+                font-size: 23px;
+                margin-top: -5px;
+                margin-right: 10px;
+            }
         }
 
         a {
@@ -20,11 +32,15 @@
             align-items: center;
             text-decoration: none;
             font-weight: 800;
-            font-size: 16px;
+            font-size: 12px;
             line-height: 182.85%;
             letter-spacing: 0.05em;
             text-transform: uppercase;
             color: #2F2B38;
+
+            @media (min-width: 768px) {
+                font-size: 16px;
+            }
         }
     }
 

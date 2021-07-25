@@ -1,5 +1,9 @@
 .lkDownload {
-    margin: 33px 0 68px;
+    margin: 25px 0 40px;
+
+    @media (min-width: 768px) {
+        margin: 33px 0 68px;
+    }
 
     a {
         display: inline-flex;
@@ -10,7 +14,13 @@
         text-transform: uppercase;
         color: #2F2B38;
         text-decoration: none;
-        margin: 10px 50px 10px 0;
+        margin: 10px 0;
+        font-size: 12px;
+
+        @media (min-width: 768px) {
+            margin: 10px 50px 10px 0;
+            font-size: 16px;
+        }
     }
 
     .icon_arrowlg {

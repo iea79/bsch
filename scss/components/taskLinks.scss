@@ -1,11 +1,20 @@
 .taskLinks {
-    width: 353px;
+
+    @media (min-width: 768px) {
+        width: 353px;
+    }
 
     &__title {
         font-weight: 500;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 138.3%;
-        margin: 0 0 17px;
+        margin: 0 0 16px;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            margin: 0 0 17px;
+
+        }
     }
 
     &__list {
@@ -56,8 +65,13 @@
 
     &__icon {
         flex: none;
-        width: 27px;
-        margin-right: 15px;
+        width: 21px;
+        margin-right: 8px;
+
+        @media (min-width: 768px) {
+            width: 27px;
+            margin-right: 15px;
+        }
     }
 
 }

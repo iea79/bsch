@@ -5,32 +5,32 @@
         .slick-arrow.slick-next.lkRecomend__next
 
 .lkRecomend
-    each group in ['', '', '']
+    //- each group in ['', '', '']
         .smallBox.lkRecomend__group
-            each item, i in ['', '', '', '']
-                .smallBox__item
-                    .smallBox__body
-                        .smallBox__head
-                            .smallBox__duration
-                                i.icon_clock 
-                                | 18 месяцев
-                            if i === 0
-                                .smallBox__complexity
-                                    | Сложность
-                                    .smallBox__progress
-                                        .progressCol
-                                            each item in ['danger', 'danger', '', '', '', '', '', '', '', '']
-                                                .progressCol__item(class=item)
+    each item, i in ['', '', '', '', '', '', '', '', '', '', '', '']
+        .smallBox__item
+            .smallBox__body
+                .smallBox__head
+                    .smallBox__duration
+                        i.icon_clock 
+                        | 18 месяцев
+                    if i === 0
+                        .smallBox__complexity
+                            | Сложность
+                            .smallBox__progress
+                                .progressCol
+                                    each item in ['danger', 'danger', '', '', '', '', '', '', '', '']
+                                        .progressCol__item(class=item)
 
-                        .smallBox__name Стратегический менеджмент в контексте управления государством
-                        .smallBox__middle
-                            .smallBox__rate
-                                .rating
-                                    i.icon_star.active 
-                                    i.icon_star.active 
-                                    i.icon_star.active 
-                                    i.icon_star 
-                                    i.icon_star 
-                                | (3.2)
-                        .smallBox__action
-                            button.btn.btn_small(type="button") Подробнее
+                .smallBox__name Стратегический менеджмент в контексте управления государством
+                .smallBox__middle
+                    .smallBox__rate
+                        .rating
+                            i.icon_star.active 
+                            i.icon_star.active 
+                            i.icon_star.active 
+                            i.icon_star 
+                            i.icon_star 
+                        | (3.2)
+                .smallBox__action
+                    button.btn.btn_small(type="button") Подробнее

@@ -10,7 +10,10 @@
 
         .page__subtitle,
         .subtitle {
-            margin: 0;
+
+            @media (min-width: 768px) {
+                margin: 0;
+            }
         }
     }
 

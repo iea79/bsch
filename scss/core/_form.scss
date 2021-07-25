@@ -60,8 +60,10 @@
 			width: 100% !important;
 			text-transform: uppercase;
 
-			&--default .select2-selection--single .select2-selection__rendered {
-				padding: 0 24px;
+			@media (min-width: 768px) {
+				&--default .select2-selection--single .select2-selection__rendered {
+					padding: 0 24px;
+				}
 			}
 
 			+ .form__check {
@@ -118,18 +120,26 @@
 		}
 
 		&_lg {
-			margin-bottom: 17px;
+			margin-bottom: 9px;
 
-			span {
-				font-size: 16px;
+			@media (min-width: 768px) {
+				margin-bottom: 17px;
+
+				span {
+					font-size: 16px;
+
+					font-size: 16px;
+				}
 			}
 
 			input[type=checkbox],
 			input[type=radio] {
-				width: 24px;
-				height: 24px;
 				margin-right: 10px;
 
+				@media (min-width: 768px) {
+					width: 24px;
+					height: 24px;
+				}
 			}
 		}
 	}
@@ -149,18 +159,33 @@
 		margin-bottom: 5px;
 
 		+ .form__check_inline {
-			margin-top: 28px;
+			margin-top: 9px;
+
+			@media (min-width: 768px) {
+				margin-top: 28px;
+			}
 		}
 	}
 
 	&__save {
+		margin-top: 15px;
 		margin-bottom: 40px;
-		display: flex;
-		align-items: center;
+
+		@media (min-width: 768px) {
+			display: flex;
+			align-items: center;
+			margin-top: 0;
+		}
 
 		.btn {
-			width: calc(33.3% - 20px);
-			margin-right: 30px;
+			width: 100%;
+			margin-bottom: 25px;
+
+			@media (min-width: 768px) {
+				width: calc(33.3% - 20px);
+				margin-right: 30px;
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -184,14 +209,24 @@
 
 	&__file {
 		display: flex;
+		flex-direction: column;
 		cursor: pointer;
 
+		@media (min-width: 768px) {
+			flex-direction: row;
+		}
+
 		.btn {
-			margin-left: 30px;
-			flex: none;
-			width: auto !important;
-			padding: 20px 23px;
 			min-width: 205px;
+			margin-top: 10px;
+
+			@media (min-width: 768px) {
+				padding: 20px 23px;
+				flex: none;
+				width: auto !important;
+				margin-left: 30px;
+				margin-top: 0;
+			}
 		}
 
 		.form__field {
@@ -241,21 +276,30 @@
 	&__label {
 		font-weight: normal;
 		display: block;
-		font-size: 16px;
+		// font-size: 16px;
 		line-height: 182.85%;
+
+		@media (min-width: 768px) {
+			}
 	}
 
 	&_grid {
-		display: flex;
-		flex-wrap: wrap;
-		margin-left: -30px;
+
+		@media (min-width: 768px) {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -30px;
+		}
 
 		.form__row {
-			width: 50%;
-			padding-left: 30px;
 
-			&_full {
-				width: 100%;
+			@media (min-width: 768px) {
+				padding-left: 30px;
+				width: 50%;
+
+				&_full {
+					width: 100%;
+				}
 			}
 
 			&_center {
@@ -434,8 +478,13 @@ input[type=radio] {
 	font-size: 7px;
 
 	.form__check_lg & {
-		width: 24px;
-		height: 24px;
+		width: 20px;
+		height: 20px;
+
+		@media (min-width: 768px) {
+			width: 24px;
+			height: 24px;
+		}
 	}
 
 	&:not(:disabled),
