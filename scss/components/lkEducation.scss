@@ -4,22 +4,34 @@
     margin: 0 -15px 10px;
 
     &__item {
-        width: calc(50% - 30px);
-        margin: 0 15px 30px;
+        width: 250px;
+        margin: 0 15px 20px;
         background: #FFFFFF;
         box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
         border-radius: 15px;
         display: flex;
         flex-direction: column;
-        padding: 30px;
+        padding: 29px 20px 34px;
+        flex-grow: 1;
+
+        @media (min-width: 768px) {
+            width: calc(50% - 30px);
+            margin: 0 15px 30px;
+            flex-grow: 0;
+        }
     }
 
     &__name {
         font-weight: 500;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 138.3%;
         color: $color_primary;
-        margin-bottom: 11px;
+        margin-bottom: 15px;
+
+        @media (min-width: 768px) {
+            font-size: 20px;
+            margin-bottom: 11px;
+        }
     }
 
     &__list {
@@ -28,7 +40,11 @@
         font-size: 14px;
         line-height: 1.43;
         margin-left: -20px;
-        margin-bottom: 21px;
+        margin-bottom: 9px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 21px;
+        }
     }
 
     &__props {

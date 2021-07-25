@@ -63,11 +63,20 @@
     }
 
     &__head {
-        margin-bottom: 12px;
         font-size: 12px;
+        margin-bottom: 3px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+
+        @media (min-width: 768px) {
+            margin-bottom: 12px;
+        }
+
+        @media (min-width: 768px) {
+            flex-wrap: nowrap;
+        }
 
         &_short {
             max-width: 390px;
@@ -77,6 +86,11 @@
     &__duration {
         display: flex;
         align-items: center;
+        margin-bottom: 9px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
 
         i {
             font-size: 16px;
@@ -88,6 +102,11 @@
     &__complexity {
         display: flex;
         align-items: center;
+        margin-bottom: 9px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 0;
+        }
     }
 
     &__progress {
@@ -169,6 +188,12 @@
     &__action {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+            justify-content: flex-start;
+        }
 
         .btn {
             width: 100%;
@@ -190,6 +215,11 @@
         letter-spacing: 0.05em;
         text-transform: uppercase;
         cursor: pointer;
+        margin-top: 30px;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
 
         i {
             font-size: 18px;

@@ -18,10 +18,9 @@
             margin-right: 18px;
             position: relative;
             text-decoration: none;
+            color: $color_withe;
 
-            @media (min-width: 1200px) {
-                color: $color_withe;
-            }
+            @media (min-width: 1200px) {}
 
             @media (min-width: 1400px) {
                 font-size: 17px;
@@ -66,11 +65,17 @@
     }
 
     &__avatar {
-        width: 39px;
-        height: 39px;
+        width: 30px;
+        height: 30px;
         overflow: hidden;
         border-radius: 50%;
-        margin-right: 13px;
+        margin-right: 0;
+
+        @media (min-width: 768px) {
+            width: 39px;
+            height: 39px;
+            margin-right: 13px;
+        }
 
         img {
             display: block;
@@ -91,6 +96,14 @@
         align-items: center;
         cursor: pointer;
         font-size: 14px;
+        color: $color_withe;
+
+        span {
+            display: none;
+            @media (min-width: 768px) {
+                display: block;
+            }
+        }
 
         @media (min-width: 1400px) {
             font-size: 16px;
@@ -98,8 +111,12 @@
 
         .icon_caret {
             font-size: 8px;
-            margin-left: 16px;
+            margin-left: 9px;
             transition: 0.3s;
+
+            @media (min-width: 768px) {
+                margin-left: 16px;
+            }
         }
 
         &:hover {
@@ -118,14 +135,19 @@
         position: absolute;
         // top: calc(100% + 32px);
         top: 100%;
-        left: 0;
-        width: 100%;
+        right: 0;
         background: #FFFFFF;
         box-shadow: 0 35px 65px rgba(24, 33, 42, 0.08);
         // border-radius: 0 0 10px 10px;
         border-radius: 8px;
         padding: 19px 15px;
         animation: slideUp 0.5s;
+
+        @media (min-width: 768px) {
+            right: auto;
+            left: 0;
+            width: 100%;
+        }
 
         [class*="icon_"] {
             color: #C9C9C9;

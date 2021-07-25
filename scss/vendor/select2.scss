@@ -140,7 +140,11 @@
                                     }
                                 }
 
-                                &__placeholder {}
+                                &__placeholder {
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                }
 
                                 &__arrow {
                                     height: 100%;

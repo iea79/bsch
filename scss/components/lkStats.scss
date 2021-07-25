@@ -4,18 +4,29 @@
     margin: 0 -15px 20px;
 
     &__item {
-        width: calc(50% - 30px);
-        margin: 0 15px 30px;
+        width: 250px;
+        flex-grow: 1;
+        margin: 0 15px 20px;
         background: #FFFFFF;
         box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
         border-radius: 15px;
         display: flex;
         flex-direction: column;
+
+        @media (min-width: 768px) {
+            width: calc(50% - 30px);
+            margin: 0 15px 30px;
+            flex-grow: 0;
+        }
     }
 
     &__body {
         flex-grow: 1;
-        padding: 33px 38px;
+        padding: 17px 20px 25px;
+
+        @media (min-width: 768px) {
+            padding: 33px 38px;
+        }
     }
 
     &__num {
@@ -23,21 +34,32 @@
         align-items: center;
         justify-content: space-between;
         font-weight: 600;
-        font-size: 60px;
+        font-size: 40px;
         line-height: 138.3%;
         color: $color_primary;
-        margin-bottom: 18px;
+        margin-bottom: 5px;
+
+        @media (min-width: 768px) {
+            font-size: 60px;
+            margin-bottom: 18px;
+        }
     }
 
     &__icon {
-        font-size: 22px;
+        font-size: 14px;
         background: #F5F6FA;
-        width: 59px;
-        height: 59px;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media (min-width: 768px) {
+            width: 59px;
+            height: 59px;
+            font-size: 22px;
+        }
 
         .icon_user {}
 
@@ -56,23 +78,26 @@
 
     &__link {
         border-top: 1px solid #E9E9E9;
-        padding: 22px 38px 27px;
+        padding: 14px 20px 16px;
+
+        @media (min-width: 768px) {
+            padding: 22px 38px 27px;
+        }
 
         a {
             font-weight: 800;
-            font-size: 14px;
+            font-size: 12px;
             line-height: 182.85%;
-            /* identical to box height, or 26px */
-
             letter-spacing: 0.05em;
             text-transform: uppercase;
-
-            /* акцентный */
-
             color: $color_primary;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
+
+            @media (min-width: 768px) {
+                font-size: 14px;
+            }
         }
 
         .icon_caret {

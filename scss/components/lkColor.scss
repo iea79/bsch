@@ -4,12 +4,20 @@
     flex-wrap: wrap;
 
     &__item {
-        margin: 0 15px 30px;
+        width: 290px;
+        margin: 0 15px 20px;
         background: #FFFFFF;
         box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
         border-radius: 15px;
-        padding: 20px 36px 30px;
-        width: calc(50% - 30px);
+        padding: 21px 20px 37px;
+        flex-grow: 1;
+
+        @media (min-width: 768px) {
+            width: calc(50% - 30px);
+            padding: 20px 36px 30px;
+            margin: 0 15px 30px;
+            flex-grow: 0;
+        }
 
         @media (min-width: 1200px) {
             width: calc(33.3% - 30px);
@@ -17,9 +25,14 @@
     }
 
     &__name {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 180.52%;
-        margin-bottom: 16px;
+        margin-bottom: 19px;
+
+        @media (min-width: 768px) {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
     }
 
     &__fields {
@@ -96,7 +109,11 @@
         height: 11px;
         border-radius: 10px;
         overflow: hidden;
-        margin: 40px 0 50px;
+        margin: 12px 0 50px;
+
+        @media (min-width: 768px) {
+            margin: 40px 0 50px;
+        }
 
         > * {
             flex-grow: 1;

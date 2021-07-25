@@ -53,7 +53,13 @@
 		}
 	}
 
-	&__right {}
+	&__right {
+		margin-right: 46px;
+
+		@media (min-width: 768px) {
+			margin-right: 0;
+		}
+	}
 
 	&__info {
 		display: flex;

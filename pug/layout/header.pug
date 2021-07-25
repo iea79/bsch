@@ -7,9 +7,14 @@ header.header(class=trs)
         .header__left
             a.logo(href="/")
                 img(src="img/logo.svg", alt="Бизнес-школа")
-        .navbar__toggle
+        .navbar__toggle.js_toggle_nav
         nav.header__nav.nav
             .nav__header
+                i.icon_close.js_toggle_nav
+            .nav__search
+                .search
+                    input(type="text", placeholder="Поиск...")
+                    i.icon_search
             .nav__body
                 ul.navbar
                     each navLink, i in [{name: 'О школе', href: 'about.html'},{name: 'Новости', href: 'news.html'},{name: 'Кампус', href: 'campus.html'},{name: 'Программы обучения', href: 'programm.html'},{name: 'Преподаватели и спикеры', href: 'teachers.html'},]
@@ -18,7 +23,24 @@ header.header(class=trs)
                                 a.navbar__link.active(href=navLink.href)= navLink.name
                             else
                                 a.navbar__link(href=navLink.href)= navLink.name
+                    if isLogin
+                        li.navbar__item.mobile
+                            a.navbar__link(href="") Личный кабинет
+
             .nav__footer
+                .nav__contact
+                    a(href="mailto: info@mail.ru")
+                        i.icon_mail 
+                        | info@mail.ru
+                    a(href="tel: +7 (495) 000 00 00")
+                        i.icon_call 
+                        | +7 (495) 000 00 00
+                .soc
+                    a.soc__link.icon_vk(href="#")
+                    a.soc__link.icon_youtube(href="#")
+                    a.soc__link.icon_insta(href="#")
+                    a.soc__link.icon_watsapp(href="#")
+                    a.soc__link.icon_viber(href="#")
 
         .header__right
             .header__info
@@ -49,7 +71,8 @@ header.header(class=trs)
                             .user__row
                                 .user__avatar
                                     img(src="img/ava.png", alt="")
-                                .user__name Иванов И.И.
+                                .user__name
+                                    span Иванов И.И.
                                     i.icon_caret
                                     .user__drop
                                         .user__dropItem

@@ -3,10 +3,15 @@
     border-radius: 5px;
     color: $color_withe;
     display: flex;
+    align-items: flex-start;
     position: relative;
-    padding: 23px;
-    align-items: center;
+    padding: 12px 32px 12px 12px;
     margin: 24px 0 40px;
+
+    @media (min-width: 768px) {
+        align-items: center;
+        padding: 23px;
+    }
 
     &_primary {
         background: $color_primary;
@@ -21,22 +26,37 @@
     }
 
     &__icon {
-        font-size: 23px;
+        font-size: 19px;
         flex: none;
         margin-right: 11px;
         line-height: 1;
+
+        @media (min-width: 768px) {
+            font-size: 23px;
+
+        }
     }
 
-    &__text {}
+    &__text {
+        font-size: 12px;
+        @media (min-width: 768px) {
+            font-size: 16px;
+        }
+    }
 
     &__close {
-        font-size: 11px;
+        font-size: 8px;
         position: absolute;
         right: 13px;
         top: 12px;
         z-index: 1;
         cursor: pointer;
         transition: 0.3s;
+
+        @media (min-width: 768px) {
+            font-size: 11px;
+
+        }
 
         &:hover {
             opacity: 0.8;

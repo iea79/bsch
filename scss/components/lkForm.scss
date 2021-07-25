@@ -2,15 +2,25 @@
     background: #FFFFFF;
     box-shadow: 0 10px 30px rgba(24, 33, 42, 0.08);
     border-radius: 15px;
-    padding: 33px 30px 57px;
-    margin-bottom: 50px;
+    padding: 24px 20px 48px;
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+        padding: 33px 30px 57px;
+        margin-bottom: 50px;
+
+    }
 
     .select2-container--default .select2-selection {
         background-color: $input_bg_color;
     }
 
     .form__action {
-        margin-top: 0;
+        margin-top: 30px;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
     }
 
     &Edit {

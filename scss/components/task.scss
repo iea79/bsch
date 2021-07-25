@@ -92,8 +92,13 @@
 
         + .task__body {
             border-top: 1px solid #DEDEDE;
-            padding-top: 50px;
-            margin-top: 50px;
+            padding-top: 29px;
+            margin-top: 26px;
+
+            @media (min-width: 768px) {
+                padding-top: 50px;
+                margin-top: 50px;
+            }
         }
     }
 

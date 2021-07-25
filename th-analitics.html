@@ -13,9 +13,14 @@
     <header class="header">
       <div class="header__content">
         <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="Бизнес-школа"/></a></div>
-        <div class="navbar__toggle"></div>
+        <div class="navbar__toggle js_toggle_nav"></div>
         <nav class="header__nav nav">
-          <div class="nav__header"></div>
+          <div class="nav__header"><i class="icon_close js_toggle_nav"></i></div>
+          <div class="nav__search">
+            <div class="search">
+              <input type="text" placeholder="Поиск..."/><i class="icon_search"></i>
+            </div>
+          </div>
           <div class="nav__body">
             <ul class="navbar">
               <li class="navbar__item"><a class="navbar__link" href="about.html">О школе</a>
@@ -28,9 +33,13 @@
               </li>
               <li class="navbar__item"><a class="navbar__link" href="teachers.html">Преподаватели и спикеры</a>
               </li>
+              <li class="navbar__item mobile"><a class="navbar__link" href="">Личный кабинет</a></li>
             </ul>
           </div>
-          <div class="nav__footer"></div>
+          <div class="nav__footer">
+            <div class="nav__contact"><a href="mailto: info@mail.ru"><i class="icon_mail"> </i>info@mail.ru</a><a href="tel: +7 (495) 000 00 00"><i class="icon_call"> </i>+7 (495) 000 00 00</a></div>
+            <div class="soc"><a class="soc__link icon_vk" href="#"></a><a class="soc__link icon_youtube" href="#"></a><a class="soc__link icon_insta" href="#"></a><a class="soc__link icon_watsapp" href="#"></a><a class="soc__link icon_viber" href="#"></a></div>
+          </div>
         </nav>
         <div class="header__right">
           <div class="header__info">
@@ -49,7 +58,7 @@
               <div class="user__info">
                 <div class="user__row">
                   <div class="user__avatar"><img src="img/ava.png" alt=""/></div>
-                  <div class="user__name">Иванов И.И.<i class="icon_caret"></i>
+                  <div class="user__name"><span>Иванов И.И.</span><i class="icon_caret"></i>
                     <div class="user__drop">
                       <div class="user__dropItem"><a href=""><i class="icon_logout"> </i>Выход</a></div>
                     </div>
@@ -101,24 +110,48 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a href="">Стратегический менеджмент</a></td>
-                    <td>10%</td>
-                    <td>10 000</td>
+                    <td>
+                      <div class="table__label">Самый популярный курс</div><a href="">Стратегический менеджмент</a>
+                    </td>
+                    <td> 
+                      <div class="table__label">Интерес к моим курсам </div>10%
+                    </td>
+                    <td>
+                      <div class="table__label">Количество слушателей на моих курсах</div>10 000
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href="">Система управления аэропортом</a></td>
-                    <td>10%</td>
-                    <td>10 000</td>
+                    <td>
+                      <div class="table__label">Самый популярный курс</div><a href="">Система управления аэропортом</a>
+                    </td>
+                    <td>
+                      <div class="table__label">Интерес к моим курсам </div>10%
+                    </td>
+                    <td>
+                      <div class="table__label">Количество слушателей на моих курсах</div>10 000
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href="">Менеджмент в финансовой организации</a></td>
-                    <td>10%</td>
-                    <td>10 000</td>
+                    <td>
+                      <div class="table__label">Самый популярный курс</div><a href="">Менеджмент в финансовой организации</a>
+                    </td>
+                    <td>
+                      <div class="table__label">Интерес к моим курсам </div>10%
+                    </td>
+                    <td>
+                      <div class="table__label">Количество слушателей на моих курсах</div>10 000
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href="">Управление персоналом</a></td>
-                    <td>10%</td>
-                    <td>10 000</td>
+                    <td>
+                      <div class="table__label">Самый популярный курс</div><a href="">Управление персоналом</a>
+                    </td>
+                    <td>
+                      <div class="table__label">Интерес к моим курсам </div>10%
+                    </td>
+                    <td>
+                      <div class="table__label">Количество слушателей на моих курсах</div>10 000
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -133,24 +166,48 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a href="">Стратегический менеджмент</a></td>
-                    <td>1 000</td>
-                    <td>100% (1 000 человек)</td>
+                    <td>
+                      <div class="table__label">Наименование курса</div><a href="">Стратегический менеджмент</a>
+                    </td>
+                    <td>
+                      <div class="table__label">Записались на курс</div>1 000
+                    </td>
+                    <td>
+                      <div class="table__label">Завершили обучение</div>100% (1 000 человек)
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href="">Система управления аэропортом</a></td>
-                    <td>700</td>
-                    <td>50% (350 человек)</td>
+                    <td>
+                      <div class="table__label">Наименование курса</div><a href="">Система управления аэропортом</a>
+                    </td>
+                    <td>
+                      <div class="table__label">Записались на курс</div>700
+                    </td>
+                    <td>
+                      <div class="table__label">Завершили обучение</div>50% (350 человек)
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href="">Менеджмент в финансовой организации</a></td>
-                    <td>800</td>
-                    <td>25% (200 человек)</td>
+                    <td>
+                      <div class="table__label">Наименование курса</div><a href="">Менеджмент в финансовой организации</a>
+                    </td>
+                    <td>
+                      <div class="table__label">Записались на курс</div>800
+                    </td>
+                    <td>
+                      <div class="table__label">Завершили обучение</div>25% (200 человек)
+                    </td>
                   </tr>
                   <tr>
-                    <td><a href="">Управление персоналом</a></td>
-                    <td>15 000</td>
-                    <td>33% (5 000 человек)</td>
+                    <td>
+                      <div class="table__label">Наименование курса</div><a href="">Управление персоналом</a>
+                    </td>
+                    <td>
+                      <div class="table__label">Записались на курс</div>15 000
+                    </td>
+                    <td>
+                      <div class="table__label">Завершили обучение</div>33% (5 000 человек)
+                    </td>
                   </tr>
                 </tbody>
               </table>

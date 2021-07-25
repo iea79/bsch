@@ -4,19 +4,25 @@
     margin-bottom: 30px;
 
     &__photo {
+        width: 88px;
+        height: 88px;
+        margin-right: 20px;
         position: relative;
-        width: 144px;
-        height: 144px;
         flex: none;
-        margin-right: 26px;
         background: #DCDEE7 url("../img/user.svg") center no-repeat;
         background-size: 67px;
         border-radius: 50%;
 
-        .lkAvatar_small & {
-            width: 119px;
-            height: 119px;
-            background-size: 52px;
+        @media (min-width: 768px) {
+            width: 144px;
+            height: 144px;
+            margin-right: 26px;
+
+            .lkAvatar_small & {
+                width: 119px;
+                height: 119px;
+                background-size: 52px;
+            }
         }
 
         img {

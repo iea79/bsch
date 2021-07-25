@@ -7,14 +7,25 @@
         margin: 35px -15px 50px;
     }
 
+    &_slider {
+        @include asyncSlider;
+    }
+
     &__item {
         width: 320px;
         flex-grow: 1;
         margin: 0 15px 20px;
 
+        .lkSerts_slider & {
+            @media (max-width: 767px) {
+                margin: 0 0 20px 15px;
+            }
+        }
+
         @media (min-width: 768px) {
             width: calc(50% - 30px);
             margin: 0 15px 40px;
+            flex-grow: 0;
         }
 
         @media (min-width: 1200px) {

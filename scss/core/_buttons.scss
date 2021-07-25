@@ -123,7 +123,13 @@
 		font-weight: 400;
 		padding: 8px 20px 8px 16px;
 		border-radius: 20px;
-		margin-top: 30px;
+		margin-top: 25px;
+		margin-bottom: 40px;
+
+		@media (min-width: 768px) {
+			margin-top: 30px;
+			margin-bottom: 0;
+		}
 
 		&:before {
 			content: $icon_plus;
@@ -144,8 +150,13 @@
 		font-weight: 800;
 		color: $main_color;
 		padding: 0;
-		font-size: 16px;
+		font-size: 12px;
 		margin-top: 0;
+
+		@media (min-width: 768px) {
+			font-size: 16px;
+
+		}
 
 		&:before {
 			font-weight: 400;

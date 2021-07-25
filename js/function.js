@@ -371,6 +371,22 @@ function checkOnResize() {
     toggleMobileSort();
     initPostGallerySlider();
     initLkReccomendSlider();
+    replaceLkDeveloperElem();
+    initLkSertsSlider();
+}
+
+function replaceLkDeveloperElem() {
+    $('.lkDeveloping__item').each(function(i, el) {
+        let bage = $(el).find('.lkDeveloping__bage'),
+            bageWrap = $(el).find('.lkDeveloping__status'),
+            task = $(el).find('.lkDeveloping__tasks');
+
+        if (isXsWidth()) {
+            bage.insertAfter(task);
+        } else {
+            bage.appendTo(bageWrap);
+        }
+    });
 }
 
 function initLkReccomendSlider() {
@@ -413,6 +429,33 @@ function initLkReccomendSlider() {
             ]
         });
     }
+}
+
+function initLkSertsSlider() {
+    let slider = $('.lkSerts_slider .lkSerts');
+    if (isXsWidth()) {
+        if (!slider.hasClass('slick-initialized')) {
+            $(slider).slick({
+                slidesToShow: 2,
+                dots: true,
+                arrows: false,
+                infinite: false,
+                responsive: [
+                    {
+                        breakpoint: 400,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        }
+    } else {
+        if (slider.hasClass('slick-initialized')) {
+            slider.slick('destroy');
+        }
+    }
+
 }
 
 function initPostGallerySlider() {
@@ -538,7 +581,7 @@ function stikyMenu() {
 function openMobileNav() {
     const wrapp = $('.nav');
 
-    $('.navbar__toggle').on('click', function() {
+    $('.js_toggle_nav').on('click', function() {
         wrapp.toggleClass('open');
         toggleBackdrop();
     });
@@ -564,13 +607,16 @@ function replaceHeaderElements() {
           navHeader = $('.nav__header'),
           navFooter = $('.nav__footer'),
           headerRight = $('.header__right'),
-          headerInfo = $('.header__info');
+          lang = $('.lang'),
+          userView = $('.header .icon_view');
 
     if (isXsWidth() || isSmWidth() || isMdWidth()) {
-        headerInfo.appendTo(navHeader);
+        lang.appendTo(navHeader);
+        userView.appendTo(navHeader);
         $('.user__auth').appendTo('.nav__body');
     } else {
-        headerInfo.appendTo(headerRight);
+        userView.insertAfter('.user .icon_search');
+        lang.prependTo('.header__info');
         $('.user__auth').appendTo('.user__info');
     }
 }

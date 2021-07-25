@@ -73,10 +73,10 @@
 	}
 
 	&__col {
-		padding-left: 30px;
 		width: 100%;
 
 		@media (min-width: 768px) {
+			padding-left: 30px;
 			width: 50%;
 
 			&_3 {
@@ -193,8 +193,11 @@
 		margin-top: 20px;
 
 		.form_grid & {
-			padding-left: 30px;
 			width: 100%;
+
+			@media (min-width: 768px) {
+				padding-left: 30px;
+			}
 		}
 
 		.btn {
@@ -279,8 +282,7 @@
 		// font-size: 16px;
 		line-height: 182.85%;
 
-		@media (min-width: 768px) {
-			}
+		@media (min-width: 768px) {}
 	}
 
 	&_grid {
